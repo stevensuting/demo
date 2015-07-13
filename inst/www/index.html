@@ -11,6 +11,7 @@
         <hr><br><br>
         <p>List of OpenCpu Apps</p>
         
+<<<<<<< HEAD
         <table border="0">
           
             <tbody>
@@ -29,3 +30,51 @@
 <p align="center">Winnow Analytics</p>
     </body>
 </html>
+=======
+        //perform the request
+        var req = ocpu.rpc("hello", {
+          myname : myname
+        }, function(output){
+          $("#output").text(output.message);
+        });
+        
+        //if R returns an error, alert the error message
+        req.fail(function(){
+          alert("Server error: " + req.responseText);
+        });
+        
+        //after request complete, re-enable the button 
+        req.always(function(){
+          $("#submitbutton").removeAttr("disabled")
+        });
+      });
+    });
+    </script>
+    
+    <style>
+      #output{
+        height: 80px;
+        width: 500px;
+        border: 1px solid gray;
+        padding: 3px;
+      }
+    </style>
+    
+  </head>
+    
+  <body>
+    <h1>Hello, world!</h1>
+    
+    <b>Your name: </b> <input type="text" id="namefield">
+    
+    <button id="submitbutton" type="button">Submit to server!</button>
+    
+    <p id="output"></p>
+  
+    <br />
+
+    
+    
+  </body>
+</html>
+>>>>>>> parent of 6edb467... edit

@@ -1,0 +1,1 @@
+display <-function(data){View(data);}
