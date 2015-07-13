@@ -1,9 +1,9 @@
 printsummary <- function(mydata){
   #override default 
   options(max.print=99999999);
-  options(width=120);
+  options(width=180);
   
   #print
-  print(summary(mydata))
-  invisible()
+  print(mydata)
+  
 }
