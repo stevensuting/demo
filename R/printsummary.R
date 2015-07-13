@@ -1,1 +1,1 @@
-display <-function(data){View(data);}
+printsummary <-function(data){View(data);}
