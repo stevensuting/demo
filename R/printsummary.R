@@ -4,6 +4,6 @@ printsummary <- function(mydata){
   options(width=180);
   
   #print
-  View(mydata)
+  print(xtable(mydata, type = "html", include.rownames = F))
   
 }
