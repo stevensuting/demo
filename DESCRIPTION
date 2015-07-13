@@ -1,0 +1,10 @@
+Package: demo
+Type: Package
+Title: OpenCPU Demo App
+Version: 0.4
+Date: 2013-12-05
+Author: Steven Suting
+Maintainer: steven <steven.suting@gmail.com>
+Description: This package is a test attempt at using OpenCPU 
+License: Apache2
+LazyData: true
