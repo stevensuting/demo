@@ -4,6 +4,6 @@ printsummary <- function(mydata){
   options(width=180);
   
   #print
-  print(mydata)
+  View(mydata)
   
 }
