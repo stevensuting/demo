@@ -1,1 +1,1 @@
-agg<-function(x,y){aggregate(y, by=list(x), FUN=SUM);}
+ agg<-function(x,y){aggregate(y, by=list(x), FUN=sum);}
