@@ -51,4 +51,24 @@ $(document).ready(function(){
     
     uploadcsv(myfile, myheader);        
   });
+
+
+
+ function agg(mydata) {
+        //perform the request
+        var req = ocpu.call("agg", {
+            mydata: mydata
+        }, function (session) {
+            session.getConsole(function (output) {
+                $("#output2 code").text(output);
+            });
+        }).fail(function () {
+            alert("Server error: " + req.responseText);
+        });
+    }
+    
+       $("#submitbutton2").on("click", function () {  
+        printsummary(agg(mydata));
+    });
+
 });
