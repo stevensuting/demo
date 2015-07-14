@@ -5,7 +5,7 @@ $(document).ready(function(){
     $("#submitbutton").attr("disabled", "disabled");        
     
     //perform the request
-    var req = ocpu.call("readcsv", {
+    var req = ocpu.call("readcsv2", {
       file : file,
       header : header
     }, function(session){
@@ -23,7 +23,6 @@ $(document).ready(function(){
       $("#submitbutton").removeAttr("disabled")
     });        
   }    
-  
   
   function printsummary(mydata){
     //perform the request
@@ -52,8 +51,6 @@ $(document).ready(function(){
     uploadcsv(myfile, myheader);        
   });
 
-
-
  function agg(mydata) {
         //perform the request
         var req = ocpu.call("agg", {
@@ -67,7 +64,7 @@ $(document).ready(function(){
         });
     }
     
-       $("#submitbutton2").on("click", function () {  
+  $("#submitbutton2").on("click", function () {  
         printsummary(agg(mydata));
     });
 
