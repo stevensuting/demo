@@ -24,8 +24,8 @@ $(document).ready(function(){
     req.always(function(){
       $("#submitbutton").removeAttr("disabled")
     });        
-  }    
-  
+  };  
+ /* 
   function printsummary(mydata){
     //perform the request
     var req = ocpu.call("printsummary", {
@@ -80,3 +80,4 @@ $(document).ready(function(){
     });
 
 });
+*/
