@@ -42,7 +42,7 @@ $(document).ready(function(){
   $("#submitbutton").on("click", function(){
     
     //arguments
-    var myheader = $("#header").val() === "true";
+    var myheader = $("#header").val() == "true";
     var myfile = $("#csvfile")[0].files[0];
     
     if(!myfile){
@@ -68,7 +68,7 @@ $(document).ready(function(){
     
   $("#submitbutton2").on("click", function () {  
         
-        var myheader = $("#header").val() === "true";
+        var myheader = $("#header").val() == "true";
     var myfile = $("#csvfile")[0].files[0];
     
     if(!myfile){
