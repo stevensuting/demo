@@ -1,3 +1,5 @@
+/* global mydata */
+
 $(document).ready(function(){
   
   function uploadcsv(file, header){
@@ -50,14 +52,14 @@ $(document).ready(function(){
     
     uploadcsv(myfile, myheader);        
   });
-/*
+
  function agg(mydata) {
         //perform the request
         var req = ocpu.call("agg", {
             mydata: mydata
         }, function (session) {
             session.getConsole(function (output) {
-                $("#output code").text(output);
+                $("#output_agg code").text(output);
             });
         }).fail(function () {
             alert("Server error: " + req.responseText);
@@ -66,6 +68,15 @@ $(document).ready(function(){
     
   $("#submitbutton2").on("click", function () {  
         printsummary(agg(mydata));
+        var myheader = $("#header").val() == "true";
+    var myfile = $("#csvfile")[0].files[0];
+    
+    if(!myfile){
+      alert("No file selected.");
+      return;
+    }
+    
+    uploadcsv(myfile, myheader);
     });
-*/
+
 });
