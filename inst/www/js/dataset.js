@@ -60,7 +60,7 @@ $(document).ready(function(){
             mydata: mydata
         }, function (session) {
             session.getConsole(function (output){
-                $("#output code").text(output);
+                $("#output_agg code").text(output);
             });
         }).fail(function () {
             alert("Server error: " + req.responseText);
