@@ -42,7 +42,7 @@ $(document).ready(function(){
   $("#submitbutton").on("click", function(){
     
     //arguments
-    var myheader = $("#header").val() == "true";
+    var myheader = $("#header").val() === "true";
     var myfile = $("#csvfile")[0].files[0];
     
     if(!myfile){
@@ -55,10 +55,10 @@ $(document).ready(function(){
 
  function agg(mydata) {
         //perform the request
-        var req = ocpu.call("agg", {
+       var req = ocpu.call("agg", {
             mydata: mydata
         }, function (session) {
-            session.getConsole(function (output) {
+            session.getConsole(function (output){
                 $("#output_agg code").text(output);
             });
         }).fail(function () {
@@ -67,8 +67,8 @@ $(document).ready(function(){
     }
     
   $("#submitbutton2").on("click", function () {  
-        printsummary(agg(mydata));
-        var myheader = $("#header").val() == "true";
+        
+        var myheader = $("#header").val() === "true";
     var myfile = $("#csvfile")[0].files[0];
     
     if(!myfile){
