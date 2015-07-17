@@ -53,7 +53,7 @@ $(document).ready(function(){
     
     uploadcsv(myfile, myheader);        
   });
-  document.write("hi");
+  
 $("#submitbutton2").click(function(){
     document.write("hello");
 var req1 = ocpu.call("agg", {
