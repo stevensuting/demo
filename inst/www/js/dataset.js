@@ -25,7 +25,41 @@ $(document).ready(function(){
       $("#submitbutton").removeAttr("disabled");
   });
   }
+
+
+function agg(mydata){
     
+    var req = ocpu.call("agg", {
+      mydata : mydata
+    }, function(session){
+      session.getConsole(function(output){
+        $("#output").text(output);
+      });
+    }).fail(function(){
+      alert("Server error: " + req.responseText);
+    });        
+  }
+  
+  $("#submitbutton").on("click", function(){
+    
+    //arguments
+    var myheader = $("#header").val() == "true";
+    var myfile = $("#csvfile")[0].files[0];
+    
+    if(!myfile){
+      alert("No file selected.");
+      return;
+    }
+    
+    uploadcsv(myfile, myheader);        
+  });
+});
+
+            
+            
+     
+
+
  
 /* $("#submitbutton").click(function(){
     var req1 = ocpu.call("printsummary", {mydata:mydata}, function(session1){
@@ -39,7 +73,7 @@ $(document).ready(function(){
 });
 });*/
  
-  function printsummary(mydata){
+  /*function printsummary(mydata){
     //perform the request
     var req = ocpu.call("printsummary", {
       mydata : mydata
@@ -51,9 +85,7 @@ $(document).ready(function(){
           mydata : mydata
       }, function(session1){
           session.getConsole(function(output){
-              $("#output").text(Output)
-          
-      
+              $("#output").text(Output)      
       });
     }).fail(function(){
       alert("Server error: " + req.responseText);
@@ -74,7 +106,7 @@ $(document).ready(function(){
     uploadcsv(myfile, myheader);        
   });
   }
-  
+  */
  /* function agg(mydata) {
 
   var req1 = ocpu.call("agg", {
