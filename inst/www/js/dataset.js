@@ -113,7 +113,7 @@ $("#submitbutton2").on("click"(function(){
  
 */
 
-$("#submitbutton2").click(function(){
+/*$("#submitbutton2").click(function(){
     var req1 = ocpu.call("agg",{
         mydata:mydata},function(session1){
         session1.getConsole(function(output){
@@ -123,4 +123,23 @@ $("#submitbutton2").click(function(){
         
     });
 });
+*/
 
+function agg(mydata) {
+        //perform the request
+        var req1 = ocpu.call("agg", {
+            mydata: mydata
+        }, function (session1) {
+            session1.getConsole(function (output) {
+                $("#output").text(output);
+            });
+        }).fail(function () {
+            alert("Server error: " + req1.responseText);
+        });
+    }
+    
+  $("#submitbutton2").on("click", function () {  
+        printsummary(agg(mydata));
+    });
+
+});
