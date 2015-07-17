@@ -1,4 +1,4 @@
-/* global mydata */
+/* global mydata, outtxt */
 
 $(document).ready(function(){
   
@@ -53,8 +53,20 @@ $(document).ready(function(){
     
     uploadcsv(myfile, myheader);        
   });
+$("#submitbutton2").click(function(){
+var req1 = ocpu.call("agg", {
+            mydata: mydata
+        }, function (session) {
+            session.getConsole(function (outxt){
+                $("#output_agg code").text(outtxt);
+            });
+            });
+            });
+            });
 
- function agg(mydata) {
+
+
+ /*function agg(mydata) {
         //perform the request
        var req = ocpu.call("agg", {
             mydata: mydata
@@ -82,4 +94,6 @@ $(document).ready(function(){
 
 });
  
+
+*/
 
