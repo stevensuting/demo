@@ -22,12 +22,12 @@ $(document).ready(function(){
     
     //after request complete, re-enable the button 
     req.always(function(){
-      $("#submitbutton").removeAttr("disabled")
+      $("#submitbutton").removeAttr("disabled");
   });
   }
     
  
- $("#submitbutton").click(function(){
+/* $("#submitbutton").click(function(){
     var req1 = ocpu.call("printsummary", {mydata:mydata}, function(session1){
         var req2 = ocpu.call("agg", {mydata:mydata}, function(session2){
             //retrieve session console (async)
@@ -37,21 +37,29 @@ $(document).ready(function(){
         });
     });
 });
-});
+});*/
  
- /* function printsummary(mydata){
+  function printsummary(mydata){
     //perform the request
     var req = ocpu.call("printsummary", {
       mydata : mydata
     }, function(session){
       session.getConsole(function(output){
-        $("#output1").text(output);
+        $("#output").text(output);
+      });
+      var req1 = ocpu.call("agg",{
+          mydata : mydata
+      }, function(session1){
+          session.getConsole(function(output){
+              $("#output").text(Output)
+          
+      
       });
     }).fail(function(){
       alert("Server error: " + req.responseText);
     });        
-  }
-  
+  });
+}
   $("#submitbutton").on("click", function(){
     
     //arguments
@@ -65,7 +73,8 @@ $(document).ready(function(){
     
     uploadcsv(myfile, myheader);        
   });
-  */
+  }
+  
  /* function agg(mydata) {
 
   var req1 = ocpu.call("agg", {
