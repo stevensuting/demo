@@ -126,7 +126,7 @@ $("#submitbutton2").on("click"(function(){
 */
 
 function agg(mydata) {
-        //perform the request
+      document.write("helloo");
         var req1 = ocpu.call("agg", {
             mydata: mydata
         }, function (session1) {
