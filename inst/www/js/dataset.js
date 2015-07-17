@@ -53,12 +53,15 @@ $(document).ready(function(){
     
     uploadcsv(myfile, myheader);        
   });
+  document.write("hi");
 $("#submitbutton2").click(function(){
+    document.write("hello");
 var req1 = ocpu.call("agg", {
             mydata: mydata
         }, function (session) {
             session.getConsole(function (outtxt){
                 $("#output1 code").text(outtxt);
+                document.write("last");
             });
             });
             });
