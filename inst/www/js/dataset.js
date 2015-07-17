@@ -112,20 +112,21 @@ $("#submitbutton2").on("click"(function(){
 });
  
 */
-
-/*$("#submitbutton2").click(function(){
+function agg(mydata){
+$("#submitbutton2").click(function(){
     var req1 = ocpu.call("agg",{
         mydata:mydata},function(session1){
         session1.getConsole(function(output){
             $("#output").text(output);
+             printsummary(agg(mydata));
         });
         });
         
     });
+}
 });
-*/
 
-function agg(mydata) {
+/*function agg(mydata) {
       document.write("helloo");
         var req1 = ocpu.call("agg", {
             mydata: mydata
@@ -143,3 +144,4 @@ function agg(mydata) {
     });
 
 });
+*/
