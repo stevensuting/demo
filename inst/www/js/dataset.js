@@ -27,7 +27,19 @@ $(document).ready(function(){
   }
     
  
-  function printsummary(mydata){
+ $("#submitbutton").click(function(){
+    var req1 = ocpu.call("printsummary", {mydata:mydata}, function(session1){
+        var req2 = ocpu.call("agg", {mydata:mydata}, function(session2){
+            //retrieve session console (async)
+            session2.getConsole(function(output){
+                $("#output").text(output);
+            });
+        });
+    });
+});
+});
+ 
+ /* function printsummary(mydata){
     //perform the request
     var req = ocpu.call("printsummary", {
       mydata : mydata
@@ -53,7 +65,7 @@ $(document).ready(function(){
     
     uploadcsv(myfile, myheader);        
   });
-  
+  */
  /* function agg(mydata) {
 
   var req1 = ocpu.call("agg", {
@@ -112,7 +124,7 @@ $("#submitbutton2").on("click"(function(){
 });
  
 */
-function agg(mydata){
+/*function agg(mydata){
 $("#submitbutton2").click(function(){
     var req1 = ocpu.call("agg",{
         mydata:mydata},function(session1){
@@ -125,7 +137,7 @@ $("#submitbutton2").click(function(){
     });
 }
 });
-
+*/
 /*function agg(mydata) {
       document.write("helloo");
         var req1 = ocpu.call("agg", {
