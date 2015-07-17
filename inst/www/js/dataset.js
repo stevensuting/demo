@@ -54,31 +54,45 @@ $(document).ready(function(){
     uploadcsv(myfile, myheader);        
   });
   
-$("#submitbutton2").click(function(){
-   
-var req1 = ocpu.call("agg", {
+ /* function agg(mydata) {
+
+  var req1 = ocpu.call("agg", {
             mydata: mydata
-        }, function (session1) {
-            session1.getConsole(function (outtxt){
-                $("#output1").text(outtxt);
+        }, function(session1) {
+            session1.getConsole(function (output){
+                $("#output1").text(output);
                 document.write("last");
             });
             });
-            });
-            });
+            }
+            
+$("#submitbutton2").on("click"(function(){ 
+    var myheader = $("#header").val() == "true";
+
+    var myfile = $("#csvfile")[0].files[0];
+    
+    if(!myfile){
+      alert("No file selected.");
+      return;
+    }
+    
+    uploadcsv(myfile, myheader);
+    });
+});
+    */
 
 
 
- /*function agg(mydata) {
-        //perform the request
-       var req = ocpu.call("agg", {
+ function agg(mydata) {
+        
+       var req1 = ocpu.call("agg", {
             mydata: mydata
-        }, function (session) {
-            session.getConsole(function (output){
-                $("#output code").text(output);
+        }, function(session1) {
+            session1.getConsole(function (output){
+                $("#output1").text(output);
             });
         }).fail(function () {
-            alert("Server error: " + req.responseText);
+            alert("Server error: " + req1.responseText);
         });
     }
     
@@ -98,5 +112,4 @@ var req1 = ocpu.call("agg", {
 });
  
 
-*/
 
