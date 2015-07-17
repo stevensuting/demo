@@ -57,8 +57,8 @@ $("#submitbutton2").click(function(){
 var req1 = ocpu.call("agg", {
             mydata: mydata
         }, function (session) {
-            session.getConsole(function (outxt){
-                $("#output_agg code").text(outtxt);
+            session.getConsole(function (outtxt){
+                $("#output1 code").text(outtxt);
             });
             });
             });
