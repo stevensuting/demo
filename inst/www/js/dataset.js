@@ -33,7 +33,7 @@ $(document).ready(function(){
       mydata : mydata
     }, function(session){
       session.getConsole(function(output){
-        $("#output code").text(output);
+        $("#output").text(output);
       });
     }).fail(function(){
       alert("Server error: " + req.responseText);
@@ -55,12 +55,12 @@ $(document).ready(function(){
   });
   
 $("#submitbutton2").click(function(){
-    document.write("hello");
+   
 var req1 = ocpu.call("agg", {
             mydata: mydata
-        }, function (session) {
-            session.getConsole(function (outtxt){
-                $("#output1 code").text(outtxt);
+        }, function (session1) {
+            session1.getConsole(function (outtxt){
+                $("#output1").text(outtxt);
                 document.write("last");
             });
             });
