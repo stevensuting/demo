@@ -26,7 +26,7 @@ $(document).ready(function(){
   });
   }
 
-$("$submitbutton").click(function(){
+/*$("$submitbutton").click(function(){
     var req=ocpu.call("agg",{
         mydata : mydata},function(session){
         session.getConsole(function(output){
@@ -36,17 +36,17 @@ $("$submitbutton").click(function(){
     });
 });
 
-
-/*function agg(mydata){
+*/
+function agg(mydata){
     
     var req = ocpu.call("agg", {
       mydata : mydata
     }, function(session){
       session.getConsole(function(output){
-        $("#output").text(output);
+        $("#output code").text(output);
       });
     }).fail(function(){
-      alert("Server error: " + req.responseText);
+      alert("error " + req.responseText);
     });        
   }
   
@@ -64,7 +64,7 @@ $("$submitbutton").click(function(){
     uploadcsv(myfile, myheader);        
   });
 });
-*/
+
             
             
      
