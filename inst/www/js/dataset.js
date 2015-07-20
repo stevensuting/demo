@@ -12,6 +12,7 @@ $(document).ready(function(){
       header : header
     }, function(session){
       //on success call printsummary()
+      
       printsummary(session);
       agg(session);
     });
@@ -24,6 +25,14 @@ $(document).ready(function(){
     //after request complete, re-enable the button 
     req.always(function(){
       $("#submitbutton").removeAttr("disabled");
+  });
+  req1.fail(function(){
+      alert("Server error: " + req.responseText);
+    });
+    
+    //after request complete, re-enable the button 
+    req1.always(function(){
+      $("#submitbutton1").removeAttr("disabled");
   });
   }
 
@@ -39,11 +48,11 @@ $(document).ready(function(){
 */
 function printsummary(mydata){
     
-    var req = ocpu.call("agg", {
+    var req = ocpu.call("printsummary", {
       mydata : mydata
     },function(session){
       session.getConsole(function(output){
-        $("#output code").text(output);
+        $("#output").text(output);
       });
     }).fail(function(){
       alert("error " + req.responseText);
@@ -67,18 +76,18 @@ function printsummary(mydata){
 
 function agg(mydata){
     
-    var req = ocpu.call("agg", {
+    var req1 = ocpu.call("agg", {
       mydata : mydata
     },function(session){
       session.getConsole(function(output){
-        $("#output code").text(output);
+        $("#output1").text(output);
       });
     }).fail(function(){
-      alert("error " + req.responseText);
+      alert("error " + req1.responseText);
     });        
   }
   
-  $("#submitbutton").on("click", function(){
+  $("#submitbutton1").on("click", function(){
     
     
     var myheader = $("#header").val() == "true";
