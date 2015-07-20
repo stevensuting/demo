@@ -1,4 +1,4 @@
-/* global mydata, outtxt */
+/* global mydata, outtxt, req_agg */
 
 $(document).ready(function(){
   
@@ -15,7 +15,7 @@ $(document).ready(function(){
       //on success call agg()
       printsummary(session);
        req_printsummary.fail(function(){
-      alert("Server error: " + req.responseText);
+      alert("Server error: " + req_printsummary.responseText);
     });
     
     //after request complete, re-enable the button 
@@ -39,12 +39,12 @@ $(document).ready(function(){
      
       agg(session);
     });
-    }
+    
     //if printsummary returns an error, alert the error message
    
   //if agg returns an error, alert the error message
   req_agg.fail(function(){
-      alert("Server error: " + req.responseText);
+      alert("Server error: " + req_agg.responseText);
     });
     
     //after request complete, re-enable the button 
