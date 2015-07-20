@@ -12,6 +12,7 @@ $(document).ready(function(){
       header : header
     }, function(session){
       //on success call printsummary()
+      printsummary(session);
       agg(session);
     });
     
@@ -36,6 +37,33 @@ $(document).ready(function(){
     });
 });
 */
+function printsummary(mydata){
+    
+    var req = ocpu.call("agg", {
+      mydata : mydata
+    },function(session){
+      session.getConsole(function(output){
+        $("#output code").text(output);
+      });
+    }).fail(function(){
+      alert("error " + req.responseText);
+    });        
+  }
+  
+  $("#submitbutton").on("click", function(){
+    
+    
+    var myheader = $("#header").val() == "true";
+    var myfile = $("#csvfile")[0].files[0];
+    
+    if(!myfile){
+      alert("No file selected.");
+      return;
+    }
+    
+    uploadcsv(myfile, myheader);        
+  });
+
 
 function agg(mydata){
     
