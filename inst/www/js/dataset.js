@@ -41,9 +41,9 @@ function agg(mydata){
     
     var req = ocpu.call("agg", {
       mydata : mydata
-    }, function(session){
-      session.getConsole(function(outtxt){
-        $("#output").text(outtxt);
+    },function(session){
+      session.getConsole(function(output){
+        $("#output code").text(output);
       });
     }).fail(function(){
       alert("error " + req.responseText);
