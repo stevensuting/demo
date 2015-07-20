@@ -196,9 +196,7 @@ $("#submitbutton2").on("click"(function(){
     uploadcsv(myfile, myheader);
     });
 });
-    */
-
-
+    *
 
  /*function agg(mydata) {
         
