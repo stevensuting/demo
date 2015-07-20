@@ -4,7 +4,7 @@
 
 
 
-
+$(document).ready(function () {
 
 
 
@@ -15,4 +15,5 @@ $("submitbutton").click(function(){
             $("#output").text(output);
         });
         });
+    });
     });
