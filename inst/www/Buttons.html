@@ -1,0 +1,184 @@
+<!--<HTML>
+<head>
+    <title>Dynamically add Text Box and Button</title>
+    <script language="javascript" type="text/javascript">
+    function add(type)
+    {
+    for(i=0;i<10;i++)
+    {
+    var element=document.createElement("input");
+    element.setAttribute("type", type);
+    element.setAttribute("value", type);
+    element.setAttribute("name", type);
+    
+    var foo=document.getElementById("fooBar");
+    foo.appendChild(element ,"<\br>");
+           
+    }
+    }
+    </script>
+</head>
+<body>
+    <form id="form1">
+ <h2>Dynamically add element in form </h2>
+ Select the element and hit Add to add it in form. 
+ <script>
+//call after page loaded
+window.onload=add("button") ; 
+</script>
+ <br />
+ <select name="element">
+     <option value="button">Button</option>
+     <option value=" ">TextBox</option>
+ </select>
+ 
+ <input type="button" value="Add" onclick="add(document.forms[0].element.value)"/>
+ <br />
+ <span id="fooBar"></span>
+    <div>
+    
+    </div>
+    </form>
+</body>
+</HTML>-->
+
+<!--<html>
+<script language='javascript'>
+function happycode(){
+   alert('helo');
+   for(i=0;i<10;i++)
+    {
+    var element = document.createElement("input");
+ 
+    //Assign different attributes to the element.
+    element.setAttribute("type", "button");
+    element.setAttribute("value", "button");
+    element.setAttribute("name", "button");
+
+    var foo=document.getElementById("fooBar");
+    foo.appendChild(element ,"<\br>");
+           
+    }
+//     var element = document.createElement("input");
+// 
+//    //Assign different attributes to the element.
+//    element.setAttribute("type", "button");
+//    element.setAttribute("value", "button");
+//    element.setAttribute("name", "button");
+//     var foo = document.getElementById("fooBar");
+// 
+//    //Append the element in page (in span).
+//    foo.appendChild(element);
+
+}
+</script>
+<body> 
+<h1>Javascript call after page loaded</h1>
+ 
+<script>
+//call after page loaded
+window.onload=happycode();
+</script>
+<FORM>
+<span id="fooBar">&nbsp;</span>
+ 
+</FORM>
+</body>
+</html>-->
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+    <head>
+        <title>Untitled Page</title> 
+
+        <script language="javascript" type="text/javascript">
+
+            var NumOfRow = 1;
+
+            function Button1_onclick(abc) {
+                //            NumOfRow++;
+                alert(abc);
+                for (i = 0; i < abc.length; i++)
+                {
+                    // get the refference of the main Div
+                    var mainDiv = document.getElementById('MainDiv');
+
+                    // create new div that will work as a container
+                    var newDiv = document.createElement('div');
+                    newDiv.setAttribute('id', 'innerDiv');
+
+                    //create span to contain the text
+//                    var newSpan = document.createElement('span');
+
+                    // create remove button for each email adress
+                    var newButton = document.createElement('input');
+                    newButton.type = 'button';
+                    newButton.value = abc[i];
+                    newButton.id = abc[i];
+
+                    // append the span, textbox and the button
+                    //            newDiv.appendChild(newSpan);
+                    //            newDiv.appendChild(newTextBox);
+                    newDiv.appendChild(newButton);
+
+                    // finally append the new div to the main div
+                    mainDiv.appendChild(newDiv);
+                }
+            }
+            
+            function Button2_onclick(abcd) {
+                //            NumOfRow++;
+                alert(abcd);
+                for (i = 0; i < abcd.length; i++)
+                {
+                    // get the refference of the main Div
+                    var main1Div = document.getElementById('Main1Div');
+
+                    // create new div that will work as a container
+                    var newDiv1 = document.createElement('div');
+                    newDiv1.setAttribute('id', 'innerDiv');
+
+                    //create span to contain the text
+//                    var newSpan1 = document.createElement('span');
+
+                    // create remove button for each email adress
+                    var newButton1 = document.createElement('input');
+                    newButton1.type = 'button';
+                    newButton1.value = abcd[i];
+                    newButton1.id = abcd[i];
+
+                    // append the span, textbox and the button
+                    //            newDiv.appendChild(newSpan);
+                    //            newDiv.appendChild(newTextBox);
+                    newDiv1.appendChild(newButton1);
+
+                    // finally append the new div to the main div
+                    main1Div.appendChild(newDiv1);
+                }
+            }
+        </script>
+
+    </head>
+    <body>
+        <div id="MainDiv">
+            <script>
+                //call after page loaded
+                var x = ['p0', 'p1', 'p2'];
+//                var y = ['q0', 'q1', 'q2'];
+                window.onload = Button1_onclick(x);
+//                window.onload = Button2_onclick(y);
+            </script>
+        </div>
+        <br><br>
+        <div id="Main1Div">
+            <script>
+                //call after page loaded
+//                var x = ['p0', 'p1', 'p2'];
+                var y = ['q0', 'q1', 'q2'];
+//                window.onload = Button1_onclick(x);
+                window.onload = Button2_onclick(y);
+            </script>
+        </div>
+    </body>
+</html>
