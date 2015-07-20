@@ -12,26 +12,27 @@ $(document).ready(function(){
       header : header
     }, function(session){
       //on success call printsummary()
-      
+      //on success call agg()
       printsummary(session);
       agg(session);
     });
     
-    //if R returns an error, alert the error message
-    req.fail(function(){
+    //if printsummary returns an error, alert the error message
+    req_printsummary.fail(function(){
       alert("Server error: " + req.responseText);
     });
     
     //after request complete, re-enable the button 
-    req.always(function(){
+    req_printsummary.always(function(){
       $("#submitbutton").removeAttr("disabled");
   });
-  req1.fail(function(){
+  //if agg returns an error, alert the error message
+  req_agg.fail(function(){
       alert("Server error: " + req.responseText);
     });
     
     //after request complete, re-enable the button 
-    req1.always(function(){
+    req_agg.always(function(){
       $("#submitbutton1").removeAttr("disabled");
   });
   }
@@ -48,14 +49,14 @@ $(document).ready(function(){
 */
 function printsummary(mydata){
     
-    var req = ocpu.call("printsummary", {
+    var  req_printsummary = ocpu.call("printsummary", {
       mydata : mydata
     },function(session){
       session.getConsole(function(output){
         $("#output").text(output);
       });
     }).fail(function(){
-      alert("error " + req.responseText);
+      alert("error " +  req_printsummary.responseText);
     });        
   }
   
@@ -76,14 +77,14 @@ function printsummary(mydata){
 
 function agg(mydata){
     
-    var req1 = ocpu.call("agg", {
+    var  req_agg = ocpu.call("agg", {
       mydata : mydata
     },function(session){
       session.getConsole(function(output){
-        $("#output1").text(output);
+        $("#output_agg").text(output);
       });
     }).fail(function(){
-      alert("error " + req1.responseText);
+      alert("error " +  req_agg.responseText);
     });        
   }
   
