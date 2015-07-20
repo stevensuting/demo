@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
 $("submitbutton").click(function(){
-    var req = ocpu.call("mssql",
+    var req = ocpu.call("agg_1",
     function(session){
         session.getConsole(function(output){
             $("#output").text(output);
