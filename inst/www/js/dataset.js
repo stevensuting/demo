@@ -10,18 +10,17 @@ $(document).ready(function(){
     var req = ocpu.call("readcsv", {
       file : file,
       header : header
-    }, function(session){
+    }, 
+    function(session){
       //on success call printsummary()
-      //on success call agg()
+      
       printsummary(session);
       
-    });
-     var req_agg = ocpu.call("readcsv", {
-      file : file,
-      header : header
-    }, function(session){
-      //on success call printsummary()
-      //on success call agg()
+    };
+     
+     function(session){
+      
+     //on success call agg()
       
       agg(session);
     });
