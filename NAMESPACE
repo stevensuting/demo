@@ -1,7 +1,7 @@
 export(hello)
 export(printsummary)
 export(agg)
-export(mysql)
+export(mssql)
 export(readcsv)
 import(xtable)
 import(RJDBC)
