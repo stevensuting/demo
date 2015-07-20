@@ -1,12 +1,4 @@
-
-
-
-
-
-
 $(document).ready(function () {
-
-
 
 $("submitbutton").click(function(){
     var req = ocpu.call("mssql",
