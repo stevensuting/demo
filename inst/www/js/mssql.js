@@ -6,6 +6,13 @@ $("submitbutton").click(function(){
         session.getConsole(function(output){
             $("#output").text(output);
         });
+    }).fail(function () {
+            alert("error " + req_agg.responseText);
         });
-    });
-    });
+ 
+
+
+});
+});
+    
+    
