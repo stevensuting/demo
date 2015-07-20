@@ -12,7 +12,7 @@ $(document).ready(function(){
       header : header
     }, function(session){
       //on success call printsummary()
-      printsummary(session);
+      agg(session);
     });
     
     //if R returns an error, alert the error message
@@ -27,7 +27,7 @@ $(document).ready(function(){
   }
 
 /*$("$submitbutton").click(function(){
-    var req=ocpu.call("agg",{
+    var req = ocpu.call("agg",{
         mydata : mydata},function(session){
         session.getConsole(function(output){
             $("#output").text(output);
@@ -35,8 +35,8 @@ $(document).ready(function(){
         });
     });
 });
-
 */
+
 function agg(mydata){
     
     var req = ocpu.call("agg", {
@@ -65,7 +65,7 @@ function agg(mydata){
   });
 });
 
-            
+           
             
      
 
