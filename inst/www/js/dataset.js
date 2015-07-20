@@ -5,29 +5,16 @@ $(document).ready(function(){
   function uploadcsv(file, header){
     //disable the button during upload
     $("#submitbutton").attr("disabled", "disabled");        
-     $("#submitbutton1").attr("disabled", "disabled"); 
+    
     //perform the request
-    var req = ocpu.call("readcsv", {
+        var req_printsummary = ocpu.call("readcsv", {
       file : file,
       header : header
-    }, 
-    function(session){
+    }, function(session){
       //on success call printsummary()
-      
+      //on success call agg()
       printsummary(session);
-      
-    };
-     
-     function(session){
-      
-     //on success call agg()
-      
-      agg(session);
-    });
-    
-    
-    //if printsummary returns an error, alert the error message
-    req_printsummary.fail(function(){
+       req_printsummary.fail(function(){
       alert("Server error: " + req.responseText);
     });
     
@@ -35,6 +22,26 @@ $(document).ready(function(){
     req_printsummary.always(function(){
       $("#submitbutton").removeAttr("disabled");
   });
+      
+    });
+    }
+    function uploadcsv1(file, header){
+    //disable the button during upload
+    
+     $("#submitbutton1").attr("disabled", "disabled"); 
+    //perform the request
+        var req_agg = ocpu.call("readcsv", {
+      file : file,
+      header : header
+    }, function(session){
+      //on success call printsummary()
+      //on success call agg()
+     
+      agg(session);
+    });
+    }
+    //if printsummary returns an error, alert the error message
+   
   //if agg returns an error, alert the error message
   req_agg.fail(function(){
       alert("Server error: " + req.responseText);
@@ -108,7 +115,7 @@ function agg(mydata){
       return;
     }
     
-    uploadcsv(myfile, myheader);        
+    uploadcsv1(myfile, myheader);        
   });
 });
 
