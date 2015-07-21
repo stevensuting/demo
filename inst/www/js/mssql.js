@@ -12,10 +12,11 @@ $("submitbutton").click(function(){
 });
 */
 
- document.write("hello");
+ //document.write("hello");
+ $(document).ready(function () {
       $("#submitbutton").on("click", function(){
         //disable the button to prevent multiple clicks
-       // $("#submitbutton").attr("disabled", "disabled");
+      $("#submitbutton").attr("disabled", "disabled");
         
         //read the value for 'myname'
        // var myname = $("#namefield").val();
@@ -43,4 +44,4 @@ $("submitbutton").click(function(){
         });
       });
   });
-
+ });
