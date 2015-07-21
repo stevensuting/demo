@@ -15,20 +15,20 @@ $("submitbutton").click(function(){
  
       $("#submitbutton").on("click", function(){
         //disable the button to prevent multiple clicks
-        $("#submitbutton").attr("disabled", "disabled");
+       // $("#submitbutton").attr("disabled", "disabled");
         
         //read the value for 'myname'
        // var myname = $("#namefield").val();
         
         //perform the request
 
-      
+      document.write("hi");
 
-        var req = ocpu.call("sum", 
+        var req = ocpu.call("sum",{},
          // myname : myname
         function(session){
-            session.getConsole(function(output){
-          $("#output").text(output);
+            session.getConsole(function(outtxt){
+          $("#output").text(outtxt);
 
         });
         
