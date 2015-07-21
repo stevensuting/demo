@@ -21,7 +21,7 @@ $("submitbutton").click(function(){
        // var myname = $("#namefield").val();
         
         //perform the request
-        var req = ocpu.rpc("mssql", {
+        var req = ocpu.rpc("sum", {
           //myname : myname
         }, function(output){
           $("#output").text(output.message);

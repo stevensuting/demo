@@ -1,1 +1,1 @@
-agg<-function(mydata){aggregate(mydata[,2], by=list(mydata[,1]), FUN=sum);}
+sum <- function(){a <-2; b<-2; c<-a+b; a}
