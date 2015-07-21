@@ -1,6 +1,6 @@
 export(hello)
 export(printsummary)
 export(agg)
-export(mssql)
+export(sum)
 export(readcsv)
 import(xtable)

@@ -22,7 +22,7 @@ $("submitbutton").click(function(){
         
         //perform the request
         var req = ocpu.call("sum", {
-          //myname : myname
+          myname : myname
         }, function(output){
           $("#output").text(output.message);
         });
