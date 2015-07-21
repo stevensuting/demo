@@ -21,8 +21,8 @@ $("submitbutton").click(function(){
        // var myname = $("#namefield").val();
         
         //perform the request
-        var req = ocpu.call("sum", {
-          myname : myname
+        var req = ocpu.call("sum()", {
+         // myname : myname
         }, function(output){
           $("#output").text(output.message);
         });
