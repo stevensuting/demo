@@ -1,1 +1,1 @@
-test <- function(){a<-2;print(a)}
+test <- function(a,b){c<-a+b}

@@ -19,12 +19,14 @@ $("submitbutton").click(function(){
         
         //read the value for 'myname'
        // var myname = $("#namefield").val();
-        
+        var a =2 ;
+        var b =2 ;
         //perform the request
-        var req = ocpu.call("sum",
-         // myname : myname   {},
-        function(output){
-          $("#output").text(output.message);
+        var req = ocpu.call("sum",{
+          a :a,
+          b :b
+     },function(output){
+          $("#output").text(output);
         });
         
         //if R returns an error, alert the error message
