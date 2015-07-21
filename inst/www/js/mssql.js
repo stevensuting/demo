@@ -12,7 +12,7 @@ $("submitbutton").click(function(){
 });
 */
 
- 
+ document.write("hello");
       $("#submitbutton").on("click", function(){
         //disable the button to prevent multiple clicks
        // $("#submitbutton").attr("disabled", "disabled");
