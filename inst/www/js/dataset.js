@@ -12,7 +12,7 @@ $(document).ready(function () {
             header: header
         }, function (session) {
             //on success call printsummary()
-            //on success call agg()
+            
             printsummary(session);
             req_printsummary.fail(function () {
                 alert("Server error: " + req_printsummary.responseText);
@@ -34,7 +34,7 @@ $(document).ready(function () {
             file: file,
             header: header
         }, function (session) {
-            //on success call printsummary()
+            
             //on success call agg()
 
             agg(session);

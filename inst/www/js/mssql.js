@@ -12,7 +12,7 @@ $("submitbutton").click(function(){
 });
 */
 
-  $(document).ready(function(){
+ 
       $("#submitbutton").on("click", function(){
         //disable the button to prevent multiple clicks
         $("#submitbutton").attr("disabled", "disabled");
@@ -21,10 +21,11 @@ $("submitbutton").click(function(){
        // var myname = $("#namefield").val();
         
         //perform the request
-        var req = ocpu.call("sum", {
-          myname : myname
-        }, function(output){
-          $("#output").text(output.message);
+        var req = ocpu.call("sum", {},
+         
+         function(session){
+             session.getConsole(function(output){
+          $("#output").text(output);
         });
         
         //if R returns an error, alert the error message
@@ -34,7 +35,7 @@ $("submitbutton").click(function(){
         
         //after request complete, re-enable the button 
         req.always(function(){
-          $("#submitbutton").removeAttr("disabled")
+          $("#submitbutton").removeAttr("disabled");
         });
       });
-    });
+      });
