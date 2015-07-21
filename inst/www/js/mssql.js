@@ -24,9 +24,10 @@ $("submitbutton").click(function(){
 
       
 
-        var req = ocpu.call("sum", {
+        var req = ocpu.call("sum", 
          // myname : myname
-        }, function(output){
+        function(session){
+            session.getConsole(function(output){
           $("#output").text(output);
 
         });
@@ -41,5 +42,5 @@ $("submitbutton").click(function(){
           $("#submitbutton").removeAttr("disabled");
         });
       });
-      
+  });
 
