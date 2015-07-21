@@ -5,7 +5,7 @@ $(document).ready(function () {
         $("#submitbutton").attr("disabled", "disabled");
 
         //perform the request
-        var req = ocpu.call("sum", {},
+        var req = ocpu.call("mssql", {},
                 // myname : myname
                         function (session) {
                             session.getConsole(function (outtxt) {
