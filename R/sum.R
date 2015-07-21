@@ -1,1 +1,1 @@
-sum <- function(myname){a <-2; b<-2; c<-a+b; myname <-c;myname}
+sum <- function(){a <-2; b<-2; c<-a+b; c}
