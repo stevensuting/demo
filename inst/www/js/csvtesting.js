@@ -124,5 +124,5 @@ $(document).ready(function () {
 
   function call (data)
 {
-    document.write("hello the sum is" + data);
+    document.write("hello the data is" + data);
 }
