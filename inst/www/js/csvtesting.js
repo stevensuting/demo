@@ -108,7 +108,7 @@ session.getConsole(function (output) {
 }
 */
 
- function callprint (data)
+ function call (file)
 {
-    document.write("hello the data is" + data);
+    document.write("hello the data is" + file);
 }
