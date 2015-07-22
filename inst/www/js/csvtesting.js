@@ -74,11 +74,8 @@ session.getConsole(function (output) {
         }, function (session) {
             session.getConsole(function (output) {
                 $("#output").text(output);
-                 session.getObject(function(data){
-        //data is the object returned by the R function
-        //alert("hello" + data);
-        callprint (data);
-    });
+                 
+   
             });
         }).fail(function () {
             alert("error " + req_printsummary.responseText);
@@ -105,11 +102,11 @@ session.getConsole(function (output) {
 
 
 
-  function call (file)
+  /*function call (file)
 {
     document.write("hello the data is" + file);
 }
-
+*/
 
  function callprint (data)
 {
