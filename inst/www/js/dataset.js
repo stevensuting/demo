@@ -2,7 +2,7 @@
 
 $(document).ready(function () {
 
-    function uploadcsv(file, header) {
+    function uploadcsvprintsummary(file, header) {
         //disable the button during upload
         $("#submitbutton").attr("disabled", "disabled");
 
@@ -25,7 +25,7 @@ $(document).ready(function () {
 
         });
     }
-    function uploadcsv1(file, header) {
+    function uploadcsvagg(file, header) {
         //disable the button during upload
 
         $("#submitbutton1").attr("disabled", "disabled");
@@ -39,9 +39,6 @@ $(document).ready(function () {
 
             agg(session);
         
-
-        //if printsummary returns an error, alert the error message
-
         //if agg returns an error, alert the error message
         req_agg.fail(function () {
             alert("Server error: " + req_agg.responseText);
@@ -54,16 +51,7 @@ $(document).ready(function () {
     });
     }
 
-    /*$("$submitbutton").click(function(){
-     var req = ocpu.call("agg",{
-     mydata : mydata},function(session){
-     session.getConsole(function(output){
-     $("#output").text(output);
-     });
-     });
-     });
-     });
-     */
+  
     function printsummary(mydata) {
 
         var req_printsummary = ocpu.call("printsummary", {
@@ -88,7 +76,7 @@ $(document).ready(function () {
             return;
         }
 
-        uploadcsv(myfile, myheader);
+        uploadcsvprintsummary(myfile, myheader);
     });
 
 
@@ -116,7 +104,7 @@ $(document).ready(function () {
             return;
         }
 
-        uploadcsv1(myfile, myheader);
+        uploadcsvagg(myfile, myheader);
     });
 });
 
