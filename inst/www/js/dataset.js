@@ -38,7 +38,7 @@ $(document).ready(function () {
             //on success call agg()
 
             agg(session);
-        });
+        
 
         //if printsummary returns an error, alert the error message
 
@@ -51,6 +51,7 @@ $(document).ready(function () {
         req_agg.always(function () {
             $("#submitbutton1").removeAttr("disabled");
         });
+    });
     }
 
     /*$("$submitbutton").click(function(){
