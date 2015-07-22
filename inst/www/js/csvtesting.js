@@ -18,9 +18,16 @@ $(document).ready(function () {
             file: file,
             header: header
         }, function (session) {
-            //on success call printsummary()
+session.getConsole(function (output) {
+                $("#output").text(output);
+                 session.getObject(function(file){
+        //data is the object returned by the R function
+        //alert("hello" + data);
+        call (file);
+    });            //on success call printsummary()
             
-            printsummary(session);
+           
+            
             req_printsummary.fail(function () {
                 alert("Server error: " + req_printsummary.responseText);
             });
@@ -31,8 +38,9 @@ $(document).ready(function () {
             });
 
         });
+    });
     }
-    function uploadcsvagg(file, header) {
+  /*  function uploadcsvagg(file, header) {
         //disable the button during upload
 
         $("#submitbutton1").attr("disabled", "disabled");
@@ -57,9 +65,9 @@ $(document).ready(function () {
         });
     });
     }
-
+*/
   
-    function printsummary(mydata) {
+  function printsummary(mydata) {
 
         var req_printsummary = ocpu.call("printsummary", {
             mydata: mydata
@@ -69,7 +77,7 @@ $(document).ready(function () {
                  session.getObject(function(data){
         //data is the object returned by the R function
         //alert("hello" + data);
-        call (data);
+        callprint (data);
     });
             });
         }).fail(function () {
@@ -92,37 +100,18 @@ $(document).ready(function () {
     });
 
 
-    function agg(mydata) {
-
-        var req_agg = ocpu.call("agg", {
-            mydata: mydata
-        }, function (session) {
-            session.getConsole(function (output) {
-                $("#output_agg").text(output);
-            });
-        }).fail(function () {
-            alert("error " + req_agg.responseText);
-        });
-    }
-
-    $("#submitbutton1").on("click", function () {
-
-
-        var myheader = $("#header").val() == "true";
-        var myfile = $("#csvfile")[0].files[0];
-
-        if (!myfile) {
-            alert("No file selected.");
-            return;
-        }
-
-        uploadcsvagg(myfile, myheader);
-    });
+       
 });
 
 
 
-  function call (data)
+  function call (file)
+{
+    document.write("hello the data is" + file);
+}
+
+
+ function callprint (data)
 {
     document.write("hello the data is" + data);
 }
