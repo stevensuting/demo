@@ -20,6 +20,7 @@ $(document).ready(function () {
                                 $("#output").text(outtxt);
                                 session.getObject(function(data){
         //data is the object returned by the R function
+        //alert("hello" + data);
         call (data);
     });
                                 
@@ -40,5 +41,5 @@ $(document).ready(function () {
 });
 function call (data)
 {
-    document.write(data);
+    document.write("hello the sum is"+data);
 }
