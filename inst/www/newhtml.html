@@ -1,16 +1,31 @@
+
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
+  <head>
+    <title>No Argument</title>
+    
+    <!-- Include order: first jquery, then opencpu.js, and then your code -->
+    <script src="opencpu/jquery-1.10.2.min.js"></script>
+    <script src="opencpu/opencpu-0.4.js"></script>
+    <script src="js/testjava.js"></script>
+    <link href="css/main.css" rel="stylesheet">
+    
+    <style>
+    p {
+      max-width: 601px;
+    }
+    #output{
+      min-height: 200px;
+      border: solid gray 1px;
+    }
+    </style>
+    
+  </head>  
+  <body>
+    <button id="submitbutton" type="button">Generate</button>
+    <hr>
+    <b>testing</b>
+    <pre id="output"><code></code></pre>
+    <br/>
+</body>
 </html>
