@@ -1,4 +1,5 @@
 //document.write("hello");
+var data;
 $(document).ready(function () {
     $("#submitbutton").on("click", function () {
         //disable the button to prevent multiple clicks
@@ -16,10 +17,10 @@ $(document).ready(function () {
                                 $("#output").text(outtxt);
                          session.getObject(function(data){
         //data is the object returned by the R function
-        alert("hello" + data);
+         
            
 
-                            });
+     });
 
                             //if R returns an error, alert the error message
                             req.fail(function () {
