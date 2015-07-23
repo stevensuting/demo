@@ -5,7 +5,7 @@ var app = angular.module('Demo', ['ui.bootstrap', 'ui.directives']);
 app.controller("AppController", function ($scope, $http) {
     $scope.loadUsersrefresh = function ()
     {
-alert("hiiiiiiiiiiiiiiiii");
+//alert("hiiiiiiiiiiiiiiiii");
 //   
 //        
 //             
@@ -13,7 +13,7 @@ alert("hiiiiiiiiiiiiiiiii");
 
 
 //        document.write(dim_data);
-alert(dim_data);
+//alert(dim_data);
 
 //var text = '[' +
 //'{"firstName":"John","lastName":"Doe" },' +
@@ -21,12 +21,12 @@ alert(dim_data);
 //'{"firstName":"Peter","lastName":"Jones" }]';
             var output;
             obj = JSON.parse(dim_data);
-            alert(obj);
+//            alert(obj);
 $scope.UsersData = obj;
-alert($scope.UsersData);
+//alert($scope.UsersData);
             for (var i in obj) {
                 output = obj.char;
-                alert(output);
+//                alert(output);
 //                $scope.UsersData = output;
 //                alert($scope.UsersData);
 //                document.write("<div>");

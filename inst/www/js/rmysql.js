@@ -31,7 +31,7 @@ $(document).ready(function () {
         //data is the object returned by the R function
          
             dim_data= data;
-alert(dim_data);
+//alert(dim_data);
      });
 
                             //if R returns an error, alert the error message
