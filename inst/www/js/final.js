@@ -70,5 +70,6 @@ alert($scope.UsersData);
 });
 
 
-var hello= rmysql.data;
-document.write("hello"+data);
+var data= rmysql.dim_data;
+
+document.write("hello"+dim_data);
