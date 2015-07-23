@@ -15,11 +15,9 @@ character <- subset(preData.df,Variable_Type == "character");
 char <- row.names(character);
 
 #save into JSON
-intJSON <- toJSON(int);
+#intJSON <- toJSON(int);
 charJSON <- toJSON(char);
 
-char;
+#char;
 #return(list(intJSON,charJSON))
-
-
 }
