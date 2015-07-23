@@ -1,6 +1,6 @@
 //document.write("hello");
 var data;
- var dim_data
+ var dim_data;
 $(document).ready(function () {
     $("#submitbutton").on("click", function () {
         //disable the button to prevent multiple clicks
