@@ -4,12 +4,20 @@ $(document).ready(function () {
         //disable the button to prevent multiple clicks
         $("#submitbutton").attr("disabled", "disabled");
 
+
+
+
+
         //perform the request
         var req = ocpu.call("rmysql", {},
                 // myname : myname
                         function (session) {
                             session.getConsole(function (outtxt) {
                                 $("#output").text(outtxt);
+                         session.getObject(function(data){
+        //data is the object returned by the R function
+        alert("hello" + data);
+           
 
                             });
 
