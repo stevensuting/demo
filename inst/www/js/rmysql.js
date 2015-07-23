@@ -1,6 +1,17 @@
 //document.write("hello");
 var data;
- var dim_data;
+ var dim_data
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+function hello(){
 $(document).ready(function () {
     $("#submitbutton").on("click", function () {
         //disable the button to prevent multiple clicks
@@ -36,3 +47,4 @@ alert(dim_data);
             });
 });
 });
+ }
