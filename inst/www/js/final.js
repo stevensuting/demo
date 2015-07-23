@@ -46,4 +46,4 @@ alert($scope.UsersData);
 
 
 var hello= rmysql.data;
-document.write(data);
+document.write("hello"+data);
