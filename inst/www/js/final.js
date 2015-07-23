@@ -12,8 +12,8 @@ alert("hiiiiiiiiiiiiiiiii");
 //  f     $.getJSON('./json/data.json', function (data) {
 
 
-        
-alert(dim_data);
+        document.write(dim_data);
+//alert(dim_data);
 
 var text = '{"employees":[' +
 '{"firstName":"John","lastName":"Doe" },' +
