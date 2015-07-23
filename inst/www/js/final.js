@@ -25,7 +25,7 @@ alert(dim_data);
 $scope.UsersData = obj;
 alert($scope.UsersData);
             for (var i in obj) {
-                output = obj.employees[i].firstName + " " + obj.employees[i].lastName + "--" +obj.employees[i].joined.month;
+                output = obj.char;
                 alert(output);
 //                $scope.UsersData = output;
 //                alert($scope.UsersData);
