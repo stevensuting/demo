@@ -12,7 +12,7 @@ alert("hiiiiiiiiiiiiiiiii");
 //  f     $.getJSON('./json/data.json', function (data) {
 
 
-        document.write(dim_data);
+//        document.write(dim_data);
 //alert(dim_data);
 
 var text = '{"employees":[' +
