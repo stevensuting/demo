@@ -13,17 +13,18 @@ alert("hiiiiiiiiiiiiiiiii");
 
 
 //        document.write(dim_data);
-//alert(dim_data);
+alert(dim_data);
 
-var text = '{"employees":[' +
+var text = '[' +
 '{"firstName":"John","lastName":"Doe" },' +
 '{"firstName":"Anna","lastName":"Smith" },' +
-'{"firstName":"Peter","lastName":"Jones" }]}';
+'{"firstName":"Peter","lastName":"Jones" }]';
             var output;
             obj = JSON.parse(text);
-$scope.UsersData = obj.employees;
+            alert(obj);
+$scope.UsersData = obj;
 alert($scope.UsersData);
-            for (var i in obj.employees) {
+            for (var i in obj) {
                 output = obj.employees[i].firstName + " " + obj.employees[i].lastName + "--" +obj.employees[i].joined.month;
                 alert(output);
 //                $scope.UsersData = output;
