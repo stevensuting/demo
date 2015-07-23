@@ -11,7 +11,7 @@ var data;
  
  
  
-function hello(){
+
 $(document).ready(function () {
     $("#submitbutton").on("click", function () {
         //disable the button to prevent multiple clicks
@@ -47,4 +47,4 @@ alert(dim_data);
             });
 });
 });
- }
+ 
