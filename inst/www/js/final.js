@@ -15,12 +15,12 @@ alert("hiiiiiiiiiiiiiiiii");
 //        document.write(dim_data);
 alert(dim_data);
 
-var text = '[' +
-'{"firstName":"John","lastName":"Doe" },' +
-'{"firstName":"Anna","lastName":"Smith" },' +
-'{"firstName":"Peter","lastName":"Jones" }]';
+//var text = '[' +
+//'{"firstName":"John","lastName":"Doe" },' +
+//'{"firstName":"Anna","lastName":"Smith" },' +
+//'{"firstName":"Peter","lastName":"Jones" }]';
             var output;
-            obj = JSON.parse(text);
+            obj = JSON.parse(dim_data);
             alert(obj);
 $scope.UsersData = obj;
 alert($scope.UsersData);
