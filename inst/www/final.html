@@ -1,16 +1,79 @@
-<html>
-<head>
-	
-<script type="text/javascript" src="final.js"></script>
-<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-</head>
-<body>
-	<script>
-	window.onload = function()
-	{
-		finale();
-	};
-	</script>
-        <div id="placeholder"></div>
-</body>
+<html ng-app="Demo">
+
+    <head>
+
+        <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+        <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" media="screen" href="http://tarruda.github.com/bootstrap-datetimepicker/assets/css/bootstrap-datetimepicker.min.css">
+
+        <!-- Used for table,list,menu etc -->
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="http://angular-ui.github.com/ng-grid/css/ng-grid.css" />
+        <!--<link rel="stylesheet" type="text/css" href="./css/style.css" />-->
+        <link href="//fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet" type="text/css">
+        <!--    these two commented because of alert appearing twice. 
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.js"></script> 
+                <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.5.0.js"></script>-->
+        <script type="text/javascript" src="http://angular-ui.github.com/ng-grid/lib/ng-grid.debug.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+        <!-- these two commented because of alert appearing twice. 
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
+                <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>-->
+
+
+        <!-- using boot strap -->
+        <!--<script src="angular-pageslide-directive.js"></script>-->
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+        <script src="http://malsup.github.com/jquery.form.js"></script>
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel='stylesheet' type='text/css'>
+        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+        <!--<link rel="stylesheet" href="./css/global.css" media="screen"/>-->
+
+        <!-- date picker -->
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.js"></script>
+        <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.7.0.js"></script>
+        <!--<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">-->
+        <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css">-->
+        <!--<script src="//code.jquery.com/ui/1.10.2/jquery-ui.js"></script>-->
+        <!--<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.js"></script>-->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui/0.4.0/angular-ui.min.js"></script>
+        <script type="text/javascript" src="js/final.js"></script>
+    </head>
+    <body>
+        <!--	<script>
+        //	window.onload = function()
+        //	{
+        //            alert("hiiiiiiii");
+        //		finale();
+        //	};
+                </script>
+                <script>  $(document).ready(function () {
+                    alert("ffff");
+        finale();
+                    });
+                    </script>-->
+        <div id="placeholder" ng-controller="AppController" ng-init="loadUsersrefresh()">
+
+            <!--<input type="button" id="111" value="click" ng-click="loadUsersrefresh()"/>-->
+            <br><br>
+
+            <div class="btn-group" data-ng-repeat="client in UsersData">
+                <button type="button" class="btn btn-danger">{{client.firstName}}</button>
+                <button type="button" class="btn btn-danger dropdown-toggle">
+                    <span class="caret" style="height: 12px"></span>
+                    <!--<span class="sr-only">Split button!</span>-->
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </body>
 </html>
