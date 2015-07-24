@@ -1,13 +1,25 @@
 //document.write("hello");
-var app = angular.module('Demo', ['ui.bootstrap', 'ui.directives']);
-
-app.controller("AppController", function ($scope, $http) {
 var data;
  var dim_data
  
-$scope.loaddatarefresh = function () {
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+$(document).ready(function () {
+    $("#submitbutton").on("click", function () {
         //disable the button to prevent multiple clicks
-//        $("#submitbutton").attr("disabled", "disabled");
+        $("#submitbutton").attr("disabled", "disabled");
+
+
+
+
 
         //perform the request
         var req = ocpu.call("rmysql", {},
@@ -33,6 +45,6 @@ alert(dim_data);
                             });
                         });
             });
-};
+});
 });
  
