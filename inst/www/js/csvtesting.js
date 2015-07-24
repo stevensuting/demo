@@ -21,11 +21,9 @@ $(document).ready(function () {
 session.getConsole(function (output) {
                 $("#output").text(output);
                  session.getObject(function(file){
-        //data is the object returned by the R function
-        //alert("hello" + data);
+        
         call (file);
-    });            //on success call printsummary()
-            
+    });           
            
             
             req_printsummary.fail(function () {
@@ -40,32 +38,7 @@ session.getConsole(function (output) {
         });
     });
     }
-  /*  function uploadcsvagg(file, header) {
-        //disable the button during upload
-
-        $("#submitbutton1").attr("disabled", "disabled");
-        //perform the request
-        var req_agg = ocpu.call("readcsv", {
-            file: file,
-            header: header
-        }, function (session) {
-            
-            //on success call agg()
-
-            agg(session);
-        
-        //if agg returns an error, alert the error message
-        req_agg.fail(function () {
-            alert("Server error: " + req_agg.responseText);
-        });
-
-        //after request complete, re-enable the button 
-        req_agg.always(function () {
-            $("#submitbutton1").removeAttr("disabled");
-        });
-    });
-    }
-*/
+ 
   
   function printsummary(mydata) {
 
