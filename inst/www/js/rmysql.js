@@ -1,25 +1,13 @@
 //document.write("hello");
+var app = angular.module('Demo', ['ui.bootstrap', 'ui.directives']);
+
+app.controller("AppController", function ($scope, $http) {
 var data;
  var dim_data
  
- 
- 
- 
- 
- 
- 
- 
- 
- 
-
-$(document).ready(function () {
-    $("#submitbutton").on("click", function () {
+$scope.loaddatarefresh = function () {
         //disable the button to prevent multiple clicks
-        $("#submitbutton").attr("disabled", "disabled");
-
-
-
-
+//        $("#submitbutton").attr("disabled", "disabled");
 
         //perform the request
         var req = ocpu.call("rmysql", {},
@@ -31,7 +19,7 @@ $(document).ready(function () {
         //data is the object returned by the R function
          
             dim_data= data;
-//alert(dim_data);
+alert(dim_data);
      });
 
                             //if R returns an error, alert the error message
@@ -45,6 +33,6 @@ $(document).ready(function () {
                             });
                         });
             });
-});
+};
 });
  
