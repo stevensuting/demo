@@ -17,7 +17,7 @@ $(document).ready(function () {
         var req = ocpu.call("sum", {},
                 // myname : myname
                         function (session) {
-                            // to prinnt the data in r console at where the the id has been assinged
+        // to prinnt the data in r console at where the the id has been assinged
                             session.getConsole(function (outtxt) {
                                 $("#output").text(outtxt);
                                 session.getObject(function(data){

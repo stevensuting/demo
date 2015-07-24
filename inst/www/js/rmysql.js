@@ -18,6 +18,7 @@ var data;
          // copy the object data to dim_data
             dim_data= data;
 
+alert(dim_data);
      });
 
                             //if R returns an error, alert the error message
