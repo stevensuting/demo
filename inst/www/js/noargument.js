@@ -8,6 +8,7 @@ $(document).ready(function () {
         var req = ocpu.call("sum", {},
                 // myname : myname
                         function (session) {
+                            // to print in r console
                             session.getConsole(function (outtxt) {
                                 $("#output").text(outtxt);
 

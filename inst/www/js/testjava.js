@@ -8,6 +8,7 @@
 /* global data */
 
 $(document).ready(function () {
+    // on click of the button call this function
     $("#submitbutton").on("click", function () {
         //disable the button to prevent multiple clicks
         $("#submitbutton").attr("disabled", "disabled");
@@ -16,11 +17,12 @@ $(document).ready(function () {
         var req = ocpu.call("sum", {},
                 // myname : myname
                         function (session) {
+                            // to prinnt the data in r console at where the the id has been assinged
                             session.getConsole(function (outtxt) {
                                 $("#output").text(outtxt);
                                 session.getObject(function(data){
         //data is the object returned by the R function
-        //alert("hello" + data);
+       // pass the data object to call function & invoke function call
         call (data);
     });
                                 
@@ -39,7 +41,9 @@ $(document).ready(function () {
                         });
             });
 });
+// defintion of function call
 function call (data)
 {
+    // to print what the object data returned by r function 
     document.write("hello the sum is" + data);
 }

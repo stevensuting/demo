@@ -1,4 +1,3 @@
-/* global mydata, outtxt, req_agg */
 
 $(document).ready(function () {
 
