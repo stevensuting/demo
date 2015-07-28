@@ -20,6 +20,7 @@ var data;
 
 alert(dim_data);
      });
+     });
 
                             //if R returns an error, alert the error message
                             req.fail(function () {
@@ -33,5 +34,5 @@ alert(dim_data);
                         });
             });
 });
-});
+
  
