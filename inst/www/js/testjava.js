@@ -14,7 +14,7 @@ $(document).ready(function () {
         $("#submitbutton").attr("disabled", "disabled");
 
         //perform the request
-        var req = ocpu.call("sum", {},
+        var req = ocpu.call("rmysql", {},
                 // myname : myname
                         function (session) {
         // to prinnt the data in r console at where the the id has been assinged
