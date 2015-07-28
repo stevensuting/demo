@@ -15,21 +15,31 @@
 <style>
    div.right{
    position: absolute;
-    right: 240px;
+    right: 700px;
     top  : 120px;
 }
   div.left{
+   
    left: 0px;
+  
+}
+button{
+background-color:#0099FF
+
+}
+b,h3{
+color:#0099FF
 }
 </style>
 <body>
-
-Data > New Data Source<br><br><br>
+ 
+<b>Data > New Data Source</b><br><br><br>
+<h3>Connect</h3>
 <div ng-app="tofile" class="left">
     <b>To a File<br></b>
   <select multiple="multiple" size="3" 
     ng-model="model.file" 
-    ng-options="">
+    ng-options="" style="width:170px;">
   <option value="0">Excel</option>
   <option value="1">Text File</option>
   <option value="2">Acess</option>
@@ -58,7 +68,7 @@ Username:<br>
     <input type="text" ng-model="user.username"><br>
 Password:<br>
     <input type="text" ng-model="user.password"><br>
-    <button ng-click="">NEXT</button>
+    <button ng-click="" >NEXT</button>
   </form>
   
 </div>
