@@ -9,9 +9,8 @@ and open the template in the editor.
 */
 
 class right{
-    
-    position: absolute;
-    right: 0px;
-    width: 300px;
-    
+   text-align: right;
+}
+class left{
+   text-align: left;
 }

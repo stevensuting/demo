@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-   <link rel="stylesheet" type="text/css" href="datasource1.css" />
-<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+         <link rel="stylesheet" type="text/css" href="datasource1.css" />
+        <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 <script>
     
     
@@ -15,7 +15,7 @@
 <body>
 
 Data > New Data Source<br><br><br>
-<div ng-app="tofile">
+<div ng-app="tofile" class="left">
     <b>To a File<br></b>
   <select multiple="multiple" size="3" 
     ng-model="model.file" 
@@ -26,8 +26,8 @@ Data > New Data Source<br><br><br>
 </select>
 <br>
 <br>
-<div ng-app="toserver">
-    <b>To Server<br></b>
+<div ng-app="toserver" class="left">
+      <b>To Server<br></b>
 <select multiple="multiple" size="4" 
     ng-model="model.server" 
     ng-options="">
