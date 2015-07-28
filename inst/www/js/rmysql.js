@@ -1,6 +1,6 @@
 // globally declare the variables 
 var data;
- var dim_data
+ var dim_data;
  $(document).ready(function () {
      // on click call this function
     $("#submitbutton").on("click", function () {
