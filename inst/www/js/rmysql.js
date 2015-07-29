@@ -17,22 +17,13 @@ var data;
         //data is the object returned by the R function
          // copy the object data to dim_data
          document.write("hello"+data);
+         alert(fj);
          
            // dim_data= data;
 
 //alert(dim_data);
      });
-      session.getObject(function(fj){
-        //data is the object returned by the R function
-         // copy the object data to dim_data
-         document.write("hello"+fj);
-         
-           // dim_data= data;
-
-//alert(dim_data);
-     });
-     
-     
+      
      
      });
 
