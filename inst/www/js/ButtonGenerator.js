@@ -22,10 +22,10 @@ alert($scope.UsersData);
             }
     };
     
-//    $scope.Clicked = function ()
-//    {
-//        buttonname = event.target.name;
-//        alert(buttonname);
-//    };
+    $scope.Clicked = function ()
+    {
+        buttonname = event.target.name;
+        alert(buttonname);
+    };
     
 });
