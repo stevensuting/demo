@@ -15,8 +15,9 @@ var req = ocpu.call("rmysql_doublelist",{},
         //data is the object returned by the R function
          // copy the object data to dim_data
          
-//          dim_data= data;
-$scope.UsersData = JSON.parse(data);
+          dim_data= data;
+          alert(dim_data);
+$scope.UsersData = JSON.parse(dim_data);
 alert("first "+$scope.UsersData);
      });
 //     $scope.UsersData = JSON.parse(dim_data);
