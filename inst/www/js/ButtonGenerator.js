@@ -10,10 +10,12 @@ app.controller("AppController", function ($scope, $http) {
         alert("cLLING");
             var output;
             obj = JSON.parse(dim_data);
+            alert(dim_data);
+            alert(obj);
             
 
 $scope.UsersData = obj;
-
+alert($scope.UsersData);
             for (var i in obj) {
                 output = obj.int;
                 alert(obj.int);

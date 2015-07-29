@@ -16,6 +16,7 @@ var data;
                          session.getObject(function(data){
         //data is the object returned by the R function
          // copy the object data to dim_data
+         alert(data);
             dim_data= data;
 
 alert(dim_data);
