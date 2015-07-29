@@ -82,6 +82,11 @@
             <select name="buttons" multiple>
             <option ng-selected="client.selected" ng-repeat="client in UsersData" value="{{client.char}}">{{client.char}}</option>
         </select>
+            <br><br><br>
+            <select name="buttons11" multiple>
+            <option type="button" class="btn btn-danger" ng-click="Clicked()" ng-repeat="client in UsersData" value="{{client.char}}">{{client.char}}</option>
+        </select>
+            
             
         </div>
 
