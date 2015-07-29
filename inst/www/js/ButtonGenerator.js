@@ -5,7 +5,7 @@ var app = angular.module('Demo', ['ui.bootstrap', 'ui.directives']);
 app.controller("AppController", function ($scope, $http) {
     $scope.loadUsersrefresh = function ()
     {
-var req = ocpu.call("rmysql_temp",{},
+var req = ocpu.call("rmysql_doublelist",{},
                 // myname : myname
                         function (session) {
                             //to print in r console whatever returned by r 
