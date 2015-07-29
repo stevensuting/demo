@@ -78,7 +78,11 @@
                     <li><a href="#">Separated link</a></li>
                 </ul>
             </div>
-
+            
+            <select name="buttons" multiple>
+            <option ng-selected="client.selected" ng-repeat="client in UsersData" value="{{client.char}}">{{client.char}}</option>
+        </select>
+            
         </div>
 
     </body>
