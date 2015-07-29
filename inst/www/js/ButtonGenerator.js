@@ -15,17 +15,13 @@ var req = ocpu.call("rmysql_temp",{},
         //data is the object returned by the R function
          // copy the object data to dim_data
          
-         
-         
           dim_data= data;
 
 alert(dim_data);
      });
-      
      
      });
-
-                            //if R returns an error, alert the error message
+                         //if R returns an error, alert the error message
                             req.fail(function () {
                                 alert("Server error: " + req.responseText);
                             });
@@ -37,7 +33,7 @@ alert(dim_data);
                         });
             var output;
             obj = JSON.parse(dim_data);
-            alert(dim_data);
+//            alert(dim_data);
 
 $scope.UsersData = obj;
 //alert($scope.UsersData);
