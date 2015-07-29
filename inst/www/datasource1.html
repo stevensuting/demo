@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-         <link rel="stylesheet" type="text/css" href="datasource1.css" />
+         <link rel="stylesheet" type="text/css" href="css/datasource1.css" />
         <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 <script>
     
@@ -12,27 +12,9 @@
        document.getElementById("validate").style.visibility = "visible";
     }
 </script>
-<style>
-   div.right{
-   position: absolute;
-    right: 700px;
-    top  : 190px;
-}
-.bg{background-color:#F2F2F2
-}
-  div.left{
-   
-   left: 0px;
-  
-}
-button{
-background-color:#31869B
 
-}
-b,h3{
-color:#31869B
-}
-</style>
+ 
+
 <body>
  
 
@@ -44,7 +26,7 @@ color:#31869B
     <b>To a File<br></b>
   <select multiple="multiple" size="3" 
     ng-model="model.file" 
-    ng-options="" style="width:165px;">
+    ng-options="" style="width:166px;">
   <option value="0">Excel</option>
   <option value="1">Text File</option>
   <option value="2">Acess</option>
@@ -55,7 +37,7 @@ color:#31869B
       <b>To Server<br></b>
 <select multiple="multiple" size="4" 
     ng-model="model.server" 
-    ng-options="">
+    ng-options="" style="width:166px;">
   <option value="0">MySQL Database</option>
   <option value="1" onclick="call()" >Microsoft SQL Database</option>
   <option value="2">PostgreSQL</option>
@@ -65,15 +47,15 @@ color:#31869B
 
     <div id="validate" style="visibility: hidden" class="right" >
   <form>
-   Server:
-    <input type="text" ng-model="user.firstName"><br>
-     Sign-in Details<br> <input type="radio" ng-model="user.signdetails" value="windows" />Use Windows Authentication(Preferred)<br>
-    <input type="radio" ng-model="user.signdetails" value="user" />Use Specific Username And password <br />
-Username:<br>
-    <input type="text" ng-model="user.username"><br>
-Password:<br>
+   Server:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    <input type="text" ng-model="user.firstName"><br><br>
+     Sign-in Details<br><br> <input type="radio" ng-model="user.signdetails" value="windows" />Use Windows Authentication(Preferred)<br><br>
+    <input type="radio" ng-model="user.signdetails" value="user" />Use Specific Username And password <br /><br>
+Username:&nbsp&nbsp
+    <input type="text" ng-model="user.username"><br><br>
+Password:&nbsp&nbsp&nbsp
     <input type="text" ng-model="user.password"><br>
-    <button type="button" ng-click="" >NEXT</button>
+  <pre>                            <button type="button" ng-click="" >NEXT</button></pre>
   </form>
   
 </div>
