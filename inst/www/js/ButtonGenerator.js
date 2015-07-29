@@ -15,7 +15,7 @@ app.controller("AppController", function ($scope, $http) {
             
 
 $scope.UsersData = obj;
-alert($scope.UsersData);
+//alert($scope.UsersData);
             for (var i in obj) {
                 output = obj.char;
 //                alert(obj.int);
