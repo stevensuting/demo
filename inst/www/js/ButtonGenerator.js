@@ -23,9 +23,9 @@ alert("first "+$scope.UsersData);
      });
 
                             //if R returns an error, alert the error message
-                            req.fail(function () {
-                                alert("Server error: " + req.responseText);
-                            });
+//                            req.fail(function () {
+//                                alert("Server error: " + req.responseText);
+//                            });
 //$scope.UsersData = JSON.parse(dim_data);
                         });
 //            var output;
