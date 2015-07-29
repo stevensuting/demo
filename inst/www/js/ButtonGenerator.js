@@ -17,23 +17,21 @@ var req = ocpu.call("rmysql_temp",{},
          
           dim_data= data;
 
-alert(dim_data);
+alert("first "+dim_data);
      });
+      
      
      });
-                         //if R returns an error, alert the error message
+
+                            //if R returns an error, alert the error message
                             req.fail(function () {
                                 alert("Server error: " + req.responseText);
                             });
 
-                            //after request complete, re-enable the button 
-                            req.always(function () {
-                                $("#submitbutton").removeAttr("disabled");
-                            });
                         });
             var output;
             obj = JSON.parse(dim_data);
-//            alert(dim_data);
+            alert("second "+dim_data);
 
 $scope.UsersData = obj;
 //alert($scope.UsersData);
