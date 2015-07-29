@@ -20,6 +20,6 @@ char.ds <- data.frame(char);
 intJSON <- toJSON(int.ds);
 charJSON <- toJSON(char.ds);
 
-return(charJSON);
+#return(charJSON);
 #return(list(intJSON,charJSON))
 }
