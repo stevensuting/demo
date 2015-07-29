@@ -14,27 +14,26 @@ var req = ocpu.call("rmysql_temp",{},
                          session.getObject(function(data){
         //data is the object returned by the R function
          // copy the object data to dim_data
-        $scope.UsersDataJSON.parse(data);
+         
 //          dim_data= data;
-
-//alert("first "+dim_data);
+$scope.UsersData = JSON.parse(data);
+alert("first "+$scope.UsersData);
      });
-      
-     
+//     $scope.UsersData = JSON.parse(dim_data);
      });
 
                             //if R returns an error, alert the error message
                             req.fail(function () {
                                 alert("Server error: " + req.responseText);
                             });
-
+//$scope.UsersData = JSON.parse(dim_data);
                         });
 //            var output;
 //            obj = JSON.parse(dim_data);
-//            alert("second "+dim_data);
-//
-//$scope.UsersData = obj;
-////alert($scope.UsersData);
+//            alert("second"+dim_data);
+
+//$scope.UsersData = JSON.parse(dim_data);
+//alert($scope.UsersData);
 //            for (var i in obj) {
 //                output = obj.char;
 ////                alert(obj.int);
