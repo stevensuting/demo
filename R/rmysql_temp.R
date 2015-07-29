@@ -1,36 +1,20 @@
-rmysql<-function(){
+rmysql_temp<-function(){
 mydb = dbConnect(MySQL(), user='appuser', password='appuser123', dbname='mstore', host='192.168.2.45');
 rs = dbSendQuery(mydb, "select * from product");
-data = fetch(rs, n=-1);
+data = fetch(rs, n=5);
+
 #get datatypes of columns
 preData<-sapply(data,typeof);
 preData.df=data.frame(preData);
 names(preData.df)[1] <-paste("Variable_Type");
 
-<<<<<<< HEAD
-#seperate different datatypes
-integer <- subset(preData.df,Variable_Type == "integer");
-int <- row.names(integer);
-int.ds <- data.frame(int);
-=======
->>>>>>> a3b80b8328130e5819e57ee58dd17bb9e0c2fac5
 
 character <- subset(preData.df,Variable_Type == "character");
 char <- row.names(character);
 char.ds <- data.frame(char);
 
 #save into JSON
-<<<<<<< HEAD
-intJSON <- toJSON(int.ds);
 charJSON <- toJSON(char.ds);
-
-#return(charJSON);
-#return(list(intJSON,charJSON))
-=======
-
-charJSON <- toJSON(char.ds);
-
 return(charJSON);
 
->>>>>>> a3b80b8328130e5819e57ee58dd17bb9e0c2fac5
 }

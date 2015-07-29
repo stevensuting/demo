@@ -6,10 +6,10 @@
 
 
 /* global data */
-function hello(){
+
 $(document).ready(function () {
     // on click of the button call this function
-   // $("#submitbutton").on("click", function () {
+  $("#submitbutton").on("click", function () {
         //disable the button to prevent multiple clicks
    //     $("#submitbutton").attr("disabled", "disabled");
 
@@ -39,12 +39,11 @@ $(document).ready(function () {
                                 $("#submitbutton").removeAttr("disabled");
                             });
                         });
-         //   };
+         });
 });
 // defintion of function call
 function call (data)
 {
     // to print what the object data returned by r function 
     document.write("hello the sum is" + data);
-}
 }

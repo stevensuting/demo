@@ -7,7 +7,7 @@ var data;
         //disable the button to prevent multiple clicks
         $("#submitbutton").attr("disabled", "disabled");
                 //perform the request
-        var req = ocpu.call("rmysql",{},
+        var req = ocpu.call("rmysql_temp",{},
                 // myname : myname
                         function (session) {
                             //to print in r console whatever returned by r 
@@ -16,11 +16,15 @@ var data;
                          session.getObject(function(data){
         //data is the object returned by the R function
          // copy the object data to dim_data
-         alert(data);
-            dim_data= data;
+         
+         
+         
+          dim_data= data;
 
 alert(dim_data);
      });
+      
+     
      });
 
                             //if R returns an error, alert the error message
@@ -35,5 +39,6 @@ alert(dim_data);
                         });
             });
 });
+
 
  
