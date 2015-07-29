@@ -17,7 +17,7 @@
                     var myname = $("#namefield").val();
 
                     //perform the request
-                    var req = ocpu.rpc("hello", {
+                    var req = ocpu.call("hello", {
                         myname: myname
                     }, function (output) {
                         $("#output").text(output.message);
