@@ -8,18 +8,18 @@ preData.df=data.frame(preData);
 names(preData.df)[1] <-paste("Variable_Type");
 
 #seperate different datatypes
-#integer <- subset(preData.df,Variable_Type == "integer");
-#int <- row.names(integer);
-#int.ds <- data.frame(int);
+integer <- subset(preData.df,Variable_Type == "integer");
+int <- row.names(integer);
+int.ds <- data.frame(int);
 
 character <- subset(preData.df,Variable_Type == "character");
 char <- row.names(character);
 char.ds <- data.frame(char);
 
 #save into JSON
-#intJSON <- toJSON(int.ds);
+intJSON <- toJSON(int.ds);
 charJSON <- toJSON(char.ds);
 
-return(charJSON);
+#return(charJSON);
 #return(list(intJSON,charJSON))
 }
