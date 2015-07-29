@@ -16,10 +16,12 @@ var req = ocpu.call("rmysql_doublelist",{},
          // copy the object data to dim_data
          
           dim_data= data;
-          alert(dim_data.Variable_Type);
-          alert(dim_data._row);
-$scope.UsersData = JSON.parse(dim_data);
-alert("first "+$scope.UsersData.Variable_Type);
+          
+          obj=JSON.parse(dim_data);
+          alert(obj.Variable_Type);
+          alert(obj._row);
+$scope.UsersData = obj;
+alert("first "+$scope.UsersData);
      });
 //     $scope.UsersData = JSON.parse(dim_data);
      });
