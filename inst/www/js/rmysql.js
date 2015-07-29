@@ -19,9 +19,9 @@ var data;
          
          
          
-          dim_data= data;
+//          dim_data= data;
 
-alert(dim_data);
+//alert(dim_data);
      });
       
      
