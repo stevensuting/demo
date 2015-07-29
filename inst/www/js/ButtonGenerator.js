@@ -22,7 +22,7 @@ var req = ocpu.call("rmysql_doublelist",{},
 //          alert(obj._row);
 $scope.UsersData = obj;
 for (var i in obj) {
-                output = obj.Variable_Type;
+                output = obj[i].Variable_Type;
                 alert(obj.Variable_Type);
                 alert(output);
             }
