@@ -9,11 +9,13 @@ app.controller("AppController", function ($scope, $http) {
     {
             var output;
             obj = JSON.parse(dim_data);
+            
 
 $scope.UsersData = obj;
 
             for (var i in obj) {
                 output = obj.char;
+                alert(obj.char);
             }
     };
     
