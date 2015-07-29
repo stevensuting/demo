@@ -13,15 +13,15 @@ var data;
                             //to print in r console whatever returned by r 
                             session.getConsole(function (outtxt) {
                                 $("#output").text(outtxt);
-                         session.getObject(function(data,fj){
+                         session.getObject(function(data){
         //data is the object returned by the R function
          // copy the object data to dim_data
-         document.write("hello"+data);
-         alert(fj);
          
-           // dim_data= data;
+         
+         
+          dim_data= data;
 
-//alert(dim_data);
+alert(dim_data);
      });
       
      
