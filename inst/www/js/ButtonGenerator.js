@@ -18,7 +18,7 @@ var req = ocpu.call("rmysql_doublelist",{},
           dim_data= data;
           alert(dim_data.Variable_Type);
           alert(dim_data._row);
-$scope.UsersData = JSON.parse(dim_data.Variable_Type);
+$scope.UsersData = JSON.parse(dim_data);
 alert("first "+$scope.UsersData);
      });
 //     $scope.UsersData = JSON.parse(dim_data);
