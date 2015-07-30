@@ -1,5 +1,3 @@
-var app = angular.module('Demo', ['ui.bootstrap', 'ui.directives']);
-
 var buttonname = null;
 var buttonname1 = null;
 
