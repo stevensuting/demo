@@ -1,11 +1,6 @@
 <html ng-app="Demo">
-
     <head>
-
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <script type="text/javascript" src="//code.jquery.com/jquery-2.0.0.min.js"></script>
-	<script	type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.min.js"></script>
-	<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" media="screen" href="http://tarruda.github.com/bootstrap-datetimepicker/assets/css/bootstrap-datetimepicker.min.css">
 
         <!-- Used for table,list,menu etc -->
@@ -35,30 +30,22 @@
         <!-- date picker -->
         <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.js"></script>
         <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.7.0.js"></script>
-       <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui/0.4.0/angular-ui.min.js"></script>
-       
-       <script src="http://code.highcharts.com/highcharts.js"></script>
-	<script src="http://code.highcharts.com/modules/exporting.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui/0.4.0/angular-ui.min.js"></script>
+
+        <script src="http://code.highcharts.com/highcharts.js"></script>
+        <script src="http://code.highcharts.com/modules/exporting.js"></script>
         <script src="opencpu/jquery-1.10.2.min.js"></script>
-    <script src="opencpu/opencpu-0.4.js"></script>
-    
+        <script src="opencpu/opencpu-0.4.js"></script>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <script type="text/javascript" src="//code.jquery.com/jquery-2.0.0.min.js"></script>
+        <script	type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.min.js"></script>
         <script type="text/javascript" src="js/ButtonGenerator.js"></script>
         <script type="text/javascript" src="js/rmysql.js"></script>
-         <script type="text/javascript" src="js/Chart.js"></script>
+        <!--<script type="text/javascript" src="js/Chart.js"></script>-->
     </head>
     <body>
-        <!--	<script>
-        //	window.onload = function()
-        //	{
-        //            alert("hiiiiiiii");
-        //		finale();
-        //	};
-                </script>
-                <script>  $(document).ready(function () {
-                    alert("ffff");
-        finale();
-                    });
-                    </script>-->
+        
         <button id="submitbutton" type="button">Generate</button>
 
         <div id="placeholder" ng-controller="AppController" ng-init="loadUsersrefresh()">
@@ -80,9 +67,9 @@
                     <li><a href="#">Separated link</a></li>
                 </ul>
             </div>
-    
+
         </div>
-<div id="container" style="height: 600px;width: 1000px; float: left; margin-top: 20px;margin-left: 50px"></div>
-        
+        <div id="container" style="height: 600px;width: 1000px; float: left; margin-top: 20px;margin-left: 50px"></div>
+
     </body>
 </html>
