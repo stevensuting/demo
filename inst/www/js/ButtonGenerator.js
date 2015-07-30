@@ -26,10 +26,10 @@ var req = ocpu.call("rmysql_doublelist",{},
 for (var i in obj) {
    // if(obj.Variable_Type="cha
   
-                output = obj[i].Variable_Type;
-//                alert(obj.Variable_Type);
-                alert(output);
-                if(output==="character")
+//                output = obj[i].Variable_Type;
+////                alert(obj.Variable_Type);
+//                alert(output);
+                if(obj[i].Variable_Type==="character")
                 {
                     alert("1  "+obj[i]._row);
                   char111[i] = obj[i]._row; 
