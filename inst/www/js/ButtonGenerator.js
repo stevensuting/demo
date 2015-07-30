@@ -29,13 +29,13 @@ for (var i in obj) {
 //                output = obj[i].Variable_Type;
 ////                alert(obj.Variable_Type);
 //                alert(output);
-                if(obj[i].Variable_Type!=="integer")
+                if(obj[i].Variable_Type!=="character")
                 {
-               //     if(obj[i]!==",")
+                   if(obj[i]!==","){
                     alert("1  "+obj[i]._row);
                   char111[i] = obj[i]._row; 
                   alert(char111);
-                }
+                }}
                 else{
                     alert("0  "+obj[i]._row);
                 }
