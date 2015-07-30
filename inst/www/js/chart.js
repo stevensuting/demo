@@ -1,6 +1,6 @@
 var buttonname = null;
 var buttonname1 = null;
-//var app = angular.module('Demo', ['ui.bootstrap', 'ui.directives']);
+
 function checkBtn(event) {
     /*alert(event.target.name);*/
     buttonname = event.target.name;
