@@ -9,7 +9,8 @@ rs = dbSendQuery(mydb, paste0( "select Distinct( " ,dim, ") from product" , sep=
 dataset <- fetch(rs, n=-1);
 
 names(dataset)[1] <-paste("Dimension");
+datasetChar <- as.character(dataset);
 
-DimJSON<-toJSON(dataset)
-return(DimJSON);
+#DimJSON<-toJSON(dataset)
+return(datasetChar);
 }
