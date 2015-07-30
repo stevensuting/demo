@@ -51,7 +51,7 @@ app.controller("AppController", function ($scope, $http) {
     $scope.Clicked = function ()
     {
         buttonname = event.target.name;
-//        alert(buttonname);
+        alert(buttonname);
         var dim1 = buttonname;
         alert(dim1);
         var req = ocpu.call("getDim", {
@@ -67,7 +67,7 @@ app.controller("AppController", function ($scope, $http) {
                     obj1 = JSON.parse(dimen_data);
 //          alert(obj.Variable_Type);
 //          alert(obj._row);
-                    alert("OBJ " + obj1);
+                    alert("OBJdim " + obj1);
 
                     for (var j in obj1) {
                         output = obj1[j].Dimension;
