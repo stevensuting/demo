@@ -42,6 +42,7 @@ app.controller("AppController", function ($scope, $http) {
         buttonname = event.target.name;
         alert(buttonname);
         var dim = buttonname;
+        alert(dim);
         var req = ocpu.call("getDim", {
             dim: dim
         }, function (session) {
@@ -49,8 +50,9 @@ app.controller("AppController", function ($scope, $http) {
                 $("#output1").text(outtxt);
                 session.getObject(function (dimen)
                 {
+                    alert(dimen);
                     dimen_data = dimen;
-
+                    alert(dimen_data);
                     obj1 = JSON.parse(dimen_data);
 //          alert(obj.Variable_Type);
 //          alert(obj._row);
