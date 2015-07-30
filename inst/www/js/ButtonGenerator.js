@@ -99,6 +99,7 @@ app.controller("AppController", function ($scope, $http) {
                 $("#output1").text(outtxt);
                 session.getObject(function (dimeno)
                 {
+                    document.write(dimeno);
 //                    alert(dimen);
                     dimen_data1 = dimeno;
 //                    alert(dimen_data);
