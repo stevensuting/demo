@@ -67,6 +67,21 @@
                     <li><a href="#">Separated link</a></li>
                 </ul>
             </div>
+            
+            <div class="btn-group" data-ng-repeat="client1 in UserMeasure">
+                <button type="button" class="btn btn-danger" ng-click="Clicked1()" name="{{client1}}">{{client1}}</button>
+                <button type="button" class="btn btn-danger dropdown-toggle">
+                    <span class="caret" style="height: 12px"></span>
+                    <!--<span class="sr-only">Split button!</span>-->
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </div>
 
         </div>
 
