@@ -83,6 +83,40 @@ app.controller("AppController", function ($scope, $http) {
 //writing the Chart data code
 
     };
+    
+  $scope.Clicked1 = function ()
+    {
+        buttonname1 = event.target.name;
+//        alert(buttonname);
+        var dime = buttonname1;
+        
+        var req = ocpu.call("getMeasure", {
+           dimension: dime,
+           measure: buttonnam1
+            
+        }, function (session) {
+            session.getConsole(function (outtxt) {
+                $("#output1").text(outtxt);
+                session.getObject(function (dimeno)
+                {
+//                    alert(dimen);
+                    dimen_data = dimeno;
+//                    alert(dimen_data);
+                    obj2 = JSON.parse(dimen_data1);
+//          alert(obj.Variable_Type);
+//          alert(obj._row);
+                    alert("OBJ " + obj2);
 
+                    for (var k in obj2) {
+                        output1 = obj1[k].Dimension;
+
+                        alert("output " + output1);
+                    }
+
+                });
+            });
+
+        });
+        };
 });
 
