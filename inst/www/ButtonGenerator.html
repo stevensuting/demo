@@ -48,8 +48,8 @@
             <input type="button" id="111" value="click" ng-click="loadUsersrefresh()"/>
             <br><br>
 
-            <div class="btn-group" data-ng-repeat="client in UsersData">
-                <button type="button" class="btn btn-danger" ng-click="Clicked()" name="{{client}}">{{client}}</button>
+            <div class="btn-group" data-ng-repeat="client in UsersData" id="dimension">
+                <button type="button" class="btn btn-danger" ng-click="Clicked()" id="{{client}}" name="{{client}}">{{client}}</button>
                 <button type="button" class="btn btn-danger dropdown-toggle">
                     <span class="caret" style="height: 12px"></span>
                     <!--<span class="sr-only">Split button!</span>-->
@@ -70,8 +70,8 @@
                                     <br>
 
             
-            <div class="btn-group" data-ng-repeat="client1 in UsersMeasure" id="mesaure">
-                <button type="button" class="btn btn-danger" ng-click="Clicked1()" name="{{client1}}">{{client1}}</button>
+            <div class="btn-group" data-ng-repeat="client1 in UsersMeasure" id="measure">
+                <button type="button" class="btn btn-danger" ng-click="Clicked1()" id="{{client1}}" name="{{client1}}">{{client1}}</button>
                 <button type="button" class="btn btn-danger dropdown-toggle">
                     <span class="caret" style="height: 12px"></span>
                     <!--<span class="sr-only">Split button!</span>-->

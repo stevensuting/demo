@@ -52,10 +52,10 @@ app.controller("AppController", function ($scope, $http) {
     {
         buttonname = event.target.name;
 //        alert(buttonname);
-        var dim = buttonname;
-        alert(dim);
+        var dim1 = buttonname;
+        alert(dim1);
         var req = ocpu.call("getDim", {
-            dim: dim
+            dim: dim1
         }, function (session) {
             session.getConsole(function (outtxt) {
                 $("#output1").text(outtxt);
