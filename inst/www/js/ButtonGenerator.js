@@ -31,17 +31,19 @@ for (var i in obj) {
 //                alert(output);
                 if(obj[i].Variable_Type ==="character")
                 {
-                   if(obj[i]!==","){
+                   
                     alert("1  "+obj[i]._row);
                   char111[i] = obj[i]._row; 
-                  alert(char111.join(''));
+//                  alert(char111.join(''));
                             
                   
-                }}
+                }
                 else{
                     alert("0  "+obj[i]._row);
                 }
             }
+            char111.join('');
+            alert("value== "+ char111);
             $scope.UsersData = char111;
 alert("first "+$scope.UsersData);
      });
