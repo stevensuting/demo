@@ -21,10 +21,11 @@ app.controller("AppController", function ($scope, $http) {
                                     dim_data = data;
                                     obj = JSON.parse(dim_data);
                                     for (var i in obj) {
-                                        if (obj[i].Variable_Type === "character")
-                                        {
+                                        if (obj[i].Variable_Type !== "character")
+                                        { 
                                             alert("1  " + obj[i]._row);
                                             char111[i] = obj[i]._row;
+                                            
                                         }
                                         else {
                                             alert("0  " + obj[i]._row);
