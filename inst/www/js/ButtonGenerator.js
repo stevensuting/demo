@@ -31,8 +31,8 @@ app.controller("AppController", function ($scope, $http) {
                                             char222[i] = obj[i]._row;
                                         }
                                     }
-                                    $scope.UsersData = char111;
-                                    $scope.UsersMeasure = char222;
+                                    $scope.UsersData = char111.join('');
+                                    $scope.UsersMeasure = char222.join('');
                                     alert("first " + $scope.UsersData);
                                     alert("second " + $scope.UsersMeasure);
                                 });
