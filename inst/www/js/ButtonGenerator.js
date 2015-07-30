@@ -92,7 +92,7 @@ app.controller("AppController", function ($scope, $http) {
         
         var req = ocpu.call("getMeasure", {
            dimension: dime,
-           measure: buttonnam1
+           measure: buttonname1
             
         }, function (session) {
             session.getConsole(function (outtxt) {
@@ -100,7 +100,7 @@ app.controller("AppController", function ($scope, $http) {
                 session.getObject(function (dimeno)
                 {
 //                    alert(dimen);
-                    dimen_data = dimeno;
+                    dimen_data1 = dimeno;
 //                    alert(dimen_data);
                     obj2 = JSON.parse(dimen_data1);
 //          alert(obj.Variable_Type);
@@ -108,7 +108,7 @@ app.controller("AppController", function ($scope, $http) {
                     alert("OBJ " + obj2);
 
                     for (var k in obj2) {
-                        output1 = obj1[k].Dimension;
+                        output1 = obj2[k].Dimension;
 
                         alert("output " + output1);
                     }
