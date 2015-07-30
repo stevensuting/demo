@@ -42,7 +42,7 @@ app.controller("AppController", function ($scope, $http) {
         buttonname = event.target.name;
         alert(buttonname);
         var dim = buttonname;
-        var req = ocpu.call("getaggrdata", {
+        var req = ocpu.call("getDim", {
             dim: dim
         }, function (session) {
             session.getConsole(function (outtxt) {
@@ -57,7 +57,7 @@ app.controller("AppController", function ($scope, $http) {
                     alert(obj1);
 
                     for (var j in obj1) {
-                        output = obj1[j].dim;
+                        output = obj1[j].Dimension;
 //                alert(obj._row);
                         alert(output);
                     }
