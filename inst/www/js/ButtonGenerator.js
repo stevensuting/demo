@@ -31,6 +31,7 @@ for (var i in obj) {
                 if(output==="character")
                 {
                     alert("1");
+                   $scope.UsersData = obj[i]._row; 
                 }
                 else{
                     alert("0");
