@@ -61,9 +61,9 @@ app.controller("AppController", function ($scope, $http) {
                 $("#output1").text(outtxt);
                 session.getObject(function (dimen)
                 {
-//                    alert(dimen);
+                    alert(dimen);
                     dimen_data = dimen;
-//                    alert(dimen_data);
+                    alert("dimen_data  "+dimen_data);
                     obj1 = JSON.parse(dimen_data);
 //          alert(obj.Variable_Type);
 //          alert(obj._row);
@@ -86,7 +86,7 @@ app.controller("AppController", function ($scope, $http) {
   $scope.Clicked1 = function ()
     {
         buttonname1 = event.target.name;
-        alert(buttonname1);
+        alert(buttonname1+"  "+buttonname);
 //        var dime = buttonname1;
         
         var req = ocpu.call("getMeasure", {
