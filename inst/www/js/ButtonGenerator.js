@@ -1,7 +1,7 @@
 /* global data */
 var buttonname;
 var dimen;
-var char;
+var char111 = [];
 var app = angular.module('Demo', ['ui.bootstrap', 'ui.directives']);
 
 app.controller("AppController", function ($scope, $http) {
@@ -31,15 +31,15 @@ for (var i in obj) {
                 alert(output);
                 if(output==="character")
                 {
-                    alert("1");
-                  char[i] = obj[i]._row; 
-                  alert(char);
+                    alert("1  "+obj[i]._row);
+                  char111[i] = obj[i]._row; 
+                  alert(char111);
                 }
                 else{
-                    alert("0");
+                    alert("0  "+obj[i]._row);
                 }
             }
-            $scope.UsersData = char;
+            $scope.UsersData = char111;
 alert("first "+$scope.UsersData);
      });
 //     $scope.UsersData = JSON.parse(dim_data);
