@@ -12,7 +12,10 @@ dataset <- fetch(rs, n=-1);
 aggdata <- aggregate(dataset[,2]~dimension,data=dataset,FUN=sum);
 names(aggdata)[1] <-paste("Dimension");
 names(aggdata)[2] <-paste("Measure");
+aggMeasure <- data.frame(aggdata$Measure);
+names(aggMeasure)[1] <-paste("Measure");
 
-aggJSON<-toJSON(aggdata)
+
+aggJSON<-toJSON(aggMeasure)
 return(aggJSON);
 }
