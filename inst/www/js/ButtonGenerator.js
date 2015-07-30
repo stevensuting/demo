@@ -2,6 +2,7 @@
 var buttonname;
 var dimen;
 var char111 = [];
+var char222 = [];
 var app = angular.module('Demo', ['ui.bootstrap', 'ui.directives']);
 
 app.controller("AppController", function ($scope, $http) {
@@ -27,10 +28,13 @@ app.controller("AppController", function ($scope, $http) {
                                         }
                                         else {
                                             alert("0  " + obj[i]._row);
+                                            char222[i] = obj[i]._row;
                                         }
                                     }
                                     $scope.UsersData = char111;
+                                    $scope.UsersMeasure = char222;
                                     alert("first " + $scope.UsersData);
+                                    alert("second " + $scope.UsersMeasure);
                                 });
                             });
                         });
