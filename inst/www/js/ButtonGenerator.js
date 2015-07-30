@@ -53,6 +53,15 @@ alert("first "+$scope.UsersData);
     {
         buttonname = event.target.name;
         alert(buttonname);
+        var dim = buttonname;
+        var req = ocpu.rpc("getaggrdata", {
+                        dim: dim
+                    }, function (output) {
+                        $("#output").text(output.message);
+                    });
+        
+        
+        
     };
     
 });
