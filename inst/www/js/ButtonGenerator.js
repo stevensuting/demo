@@ -25,16 +25,17 @@ app.controller("AppController", function ($scope, $http) {
                                         {
                                             alert("1  " + obj[i]._row);
                                             char111[i] = obj[i]._row;
+                                            
+                                            char111 = char111.filter(function(n){ return n != undefined });
 
-                                            if (char111[i] == deleteValue) {
-                                                char111.splice(i, char111.length-1);
-                                                i--;
-                                            }
+                                            
 
                                         }
                                         else {
                                             alert("0  " + obj[i]._row);
                                             char222[i] = obj[i]._row;
+                                            
+                                            char222 = char222.filter(function(n){ return n != undefined });
                                         }
                                     }
                                     $scope.UsersData = char111;
