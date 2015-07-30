@@ -33,17 +33,16 @@
         <!-- date picker -->
         <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.js"></script>
         <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.7.0.js"></script>
-        <!--<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">-->
-        <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css">-->
-        <!--<script src="//code.jquery.com/ui/1.10.2/jquery-ui.js"></script>-->
-        <!--<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.js"></script>-->
-        <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui/0.4.0/angular-ui.min.js"></script>
-        
+       <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui/0.4.0/angular-ui.min.js"></script>
+       
+       <script src="http://code.highcharts.com/highcharts.js"></script>
+	<script src="http://code.highcharts.com/modules/exporting.js"></script>
         <script src="opencpu/jquery-1.10.2.min.js"></script>
     <script src="opencpu/opencpu-0.4.js"></script>
     
         <script type="text/javascript" src="js/ButtonGenerator.js"></script>
         <script type="text/javascript" src="js/rmysql.js"></script>
+         <script type="text/javascript" src="js/Chart.js"></script>
     </head>
     <body>
         <!--	<script>
@@ -79,16 +78,10 @@
                     <li><a href="#">Separated link</a></li>
                 </ul>
             </div>
-            <p id="output1"></p>
-<!--            <select name="buttons" multiple>
-            <option ng-selected="client.selected" ng-repeat="client in UsersData" value="{{client.char}}">{{client.char}}</option>
-        </select>
-            <br><br><br>
-            <select name="buttons11" multiple>
-            <option type="button" class="btn btn-danger" ng-click="Clicked()" ng-repeat="client in UsersData" value="{{client.char}}"></option>
-        </select>
-            -->
+    
+            <div id="container" style="height: 600px;width: 1000px; float: left; margin-top: 20px;margin-left: 50px"></div>
         </div>
 
+        
     </body>
 </html>

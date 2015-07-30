@@ -69,7 +69,7 @@ app.controller("AppController", function ($scope, $http) {
 
         });
 
-
+//writing the Chart data code
 
     };
 
