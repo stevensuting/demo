@@ -27,7 +27,7 @@ app.controller("AppController", function ($scope, $http) {
                                             char111[i] = obj[i]._row;
 
                                             if (char111[i] == deleteValue) {
-                                                char111.splice(i, 1);
+                                                char111.splice(i, char111.length-1);
                                                 i--;
                                             }
 
