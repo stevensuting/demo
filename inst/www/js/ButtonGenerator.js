@@ -22,10 +22,15 @@ app.controller("AppController", function ($scope, $http) {
                                     obj = JSON.parse(dim_data);
                                     for (var i in obj) {
                                         if (obj[i].Variable_Type !== "character")
-                                        { 
+                                        {
                                             alert("1  " + obj[i]._row);
                                             char111[i] = obj[i]._row;
-                                            
+
+                                            if (char111[i] == deleteValue) {
+                                                char111.splice(i, 1);
+                                                i--;
+                                            }
+
                                         }
                                         else {
                                             alert("0  " + obj[i]._row);
