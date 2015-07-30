@@ -23,8 +23,8 @@ var req = ocpu.call("rmysql_doublelist",{},
 //          alert(obj._row);
 $scope.UsersData = obj;
 for (var i in obj) {
-                output = obj[i].Variable_Type;
-                alert(obj.Variable_Type);
+                output = obj[i]._row;
+//                alert(obj._row);
                 alert(output);
             }
 alert("first "+$scope.UsersData);
@@ -62,7 +62,18 @@ alert("first "+$scope.UsersData);
                             $("#output1").text(outtxt);
                             session.getObject(function(dimen)
                             {
-                                document.write(dimen);
+                                dimen_data= dimen;
+          
+          obj1=JSON.parse(dimen_data);
+//          alert(obj.Variable_Type);
+//          alert(obj._row);
+
+for (var j in obj1) {
+                output = obj1[j]._row;
+//                alert(obj._row);
+                alert(output);
+            }
+
                             });
                         });
                        
