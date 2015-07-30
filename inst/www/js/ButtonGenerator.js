@@ -25,7 +25,7 @@ $scope.UsersData = obj;
 for (var i in obj) {
    // if(obj.Variable_Type="cha
   
-                output = obj[i].Variable_type;
+                output = obj[i].Variable_Type;
 //                alert(obj._row);
                 alert(output);
             }
