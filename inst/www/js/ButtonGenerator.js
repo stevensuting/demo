@@ -34,8 +34,8 @@ for (var i in obj) {
                    if(obj[i]!==","){
                     alert("1  "+obj[i]._row);
                   char111[i] = obj[i]._row; 
-                  alert(char111.join(' '));
-                  
+                  alert(char111.join(''));
+                            
                   
                 }}
                 else{
