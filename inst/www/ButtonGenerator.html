@@ -1,4 +1,4 @@
-<html ng-app="Demo">
+<html ng-app="Demo" ng-controller="AppController">
     <head>
         <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" media="screen" href="http://tarruda.github.com/bootstrap-datetimepicker/assets/css/bootstrap-datetimepicker.min.css">
@@ -48,7 +48,7 @@
 
         <button id="submitbutton" type="button">Generate</button>
 
-        <div id="placeholder" ng-controller="AppController" ng-init="loadUsersrefresh()">
+        <div id="placeholder"  ng-init="loadUsersrefresh()">
 
             <input type="button" id="111" value="click" ng-click="loadUsersrefresh()"/>
             <br><br>
