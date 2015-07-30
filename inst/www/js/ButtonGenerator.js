@@ -42,7 +42,7 @@ for (var i in obj) {
                     alert("0  "+obj[i]._row);
                 }
             }
-            char111.join('');
+            char111=rtrim(char111,',');
             alert("value== "+ char111);
             $scope.UsersData = char111;
 alert("first "+$scope.UsersData);
