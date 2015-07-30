@@ -7,7 +7,7 @@ var data;
         //disable the button to prevent multiple clicks
         $("#submitbutton").attr("disabled", "disabled");
                 //perform the request
-        var req = ocpu.call("rmysql_doublelist",{},
+        var req = ocpu.call("rmysql",{},
                 // myname : myname
                         function (session) {
                             //to print in r console whatever returned by r 
