@@ -1,5 +1,6 @@
 /* global data */
 var buttonname;
+var dimen;
 var app = angular.module('Demo', ['ui.bootstrap', 'ui.directives']);
 
 app.controller("AppController", function ($scope, $http) {
@@ -54,10 +55,17 @@ alert("first "+$scope.UsersData);
         buttonname = event.target.name;
         alert(buttonname);
         var dim = buttonname;
-        var req = ocpu.rpc("getaggrdata", {
+        var req = ocpu.call("getaggrdata", {
                         dim: dim
-                    }, function (output) {
-                        $("#output").text(output.message);
+                    }, function (session) {
+                        session.getConsole(function(outtxt){
+                            $("#output1").text(outtxt);
+                            session.getObject(function(dimen)
+                            {
+                                document.write(dimen);
+                            });
+                        });
+                       
                     });
         
         
@@ -65,3 +73,4 @@ alert("first "+$scope.UsersData);
     };
     
 });
+
