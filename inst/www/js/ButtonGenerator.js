@@ -69,9 +69,8 @@ app.controller("AppController", function ($scope, $http) {
 //          alert(obj._row);
                     alert("OBJdim " + obj1);
 
-                    for (var j in obj1) {
-                        output = obj1[j].Dimension;
-
+                    for (var i in obj1) {
+                        output = obj1[i].Dimension;
                         alert("output " + output);
                     }
 
@@ -87,11 +86,11 @@ app.controller("AppController", function ($scope, $http) {
   $scope.Clicked1 = function ()
     {
         buttonname1 = event.target.name;
-//        alert(buttonname);
-        var dime = buttonname1;
+        alert(buttonname1);
+//        var dime = buttonname1;
         
         var req = ocpu.call("getMeasure", {
-           dimension: dime,
+           dimension: dim1,
            measure: buttonname1
             
         }, function (session) {
@@ -108,9 +107,8 @@ app.controller("AppController", function ($scope, $http) {
 //          alert(obj._row);
                     alert("OBJ " + obj2);
 
-                    for (var k in obj2) {
-                        output1 = obj2[k].Dimension;
-
+                    for (var i in obj2) {
+                        output1 = obj2[i].Dimension;
                         alert("output " + output1);
                     }
 

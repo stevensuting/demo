@@ -65,10 +65,6 @@
             
             <br>
             <br>
-                        <br>
-
-                                    <br>
-
             
             <div class="btn-group" data-ng-repeat="client1 in UsersMeasure" id="measure">
                 <button type="button" class="btn btn-danger" ng-click="Clicked1()" id="{{client1}}" name="{{client1}}">{{client1}}</button>
@@ -84,34 +80,7 @@
                     <li><a href="#">Separated link</a></li>
                 </ul>
             </div>
-
         </div>
-
-        <div style="float: left; margin-top: 50px">
-            <button id="add" class="autocompare" name="add" value="add" onClick="checkBtn(event)">Add Y1</button><br>
-            <button id="add1" class="autocompare" name="add1" value="add1" onClick="checkBtn(event)">Add Y2</button><br>
-            <button id="add2" class="autocompare" name="add2" value="add2" onClick="checkBtn(event)">Add Y3</button><br><br>
-            <button id="sub" class="autocompare" name="sub" value="sub" onClick="checkBtn(event)">Add X1</button><br>
-            <button id="sub1" class="autocompare" name="sub1" value="sub1" onClick="checkBtn(event)">Add X2</button><br>
-            <button id="sub2" class="autocompare" name="sub2" value="sub2" onClick="checkBtn(event)">Add X2</button><br>
-        </div>
-
-        <div style="float: right">
-            <button id="swap" class="autocompare">Swap</button>
-
-            <select id="chartType">
-                <option value="line">line</option>
-                <option value="area">area</option>
-                <option value="spline">spline</option>
-                <option value="areaspline">areaspline</option>
-                <option value="scatter">scatter</option>
-                <option value="column">column</option>
-                <option value="pie">pie</option>
-            </select>
-        </div>
-
-        <div id="container" style="height: 600px;width: 1000px; float: left; margin-top: 20px;margin-left: 50px"></div>
-
 
     </body>
 </html>
