@@ -42,9 +42,11 @@ for (var i in obj) {
                     alert("0  "+obj[i]._row);
                 }
             }
-            char11=rtrim(char111,',');
-            alert("value== "+ char11);
-            $scope.UsersData = char11;
+//            char11=trim(char111,',');
+            char111=trim(char111,',');
+//            alert("value== "+ char11);
+            alert("value== "+ char111);
+            $scope.UsersData = char111;
 alert("first "+$scope.UsersData);
      });
 //     $scope.UsersData = JSON.parse(dim_data);
