@@ -40,7 +40,7 @@ app.controller("AppController", function ($scope, $http) {
     $scope.Clicked = function ()
     {
         buttonname = event.target.name;
-        alert(buttonname);
+//        alert(buttonname);
         var dim = buttonname;
         alert(dim);
         var req = ocpu.call("getDim", {
@@ -50,18 +50,18 @@ app.controller("AppController", function ($scope, $http) {
                 $("#output1").text(outtxt);
                 session.getObject(function (dimen)
                 {
-                    alert(dimen);
+//                    alert(dimen);
                     dimen_data = dimen;
-                    alert(dimen_data);
+//                    alert(dimen_data);
                     obj1 = JSON.parse(dimen_data);
 //          alert(obj.Variable_Type);
 //          alert(obj._row);
-                    alert(obj1);
+                    alert("OBJ "+obj1);
 
                     for (var j in obj1) {
                         output = obj1[j].Dimension;
-//                alert(obj._row);
-                        alert(output);
+
+                        alert("output "+output);
                     }
 
                 });
