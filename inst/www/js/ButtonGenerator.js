@@ -101,9 +101,9 @@ app.controller("AppController", function ($scope, $http) {
                 session.getObject(function (dimeno)
                 {
 //                    document.write(dimeno);
-//                    alert(dimen);
+                    alert(dimen);
                     dimen_data1 = dimeno;
-//                    alert(dimen_data);
+                    alert(dimen_data1);
                     obj2 = JSON.parse(dimen_data1);
 //          alert(obj.Variable_Type);
 //          alert(obj._row);
