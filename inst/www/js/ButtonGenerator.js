@@ -63,7 +63,7 @@ app.controller("AppController", function ($scope, $http) {
                 $("#output").text(outtxt);
                 session.getObject(function (dimen)
                 {
-                    alert(dimen);
+//                    alert(dimen);
                     dimen_data = dimen;
                     alert("dimen_data  "+dimen_data);
                     obj1 = JSON.parse(dimen_data);
@@ -82,30 +82,25 @@ app.controller("AppController", function ($scope, $http) {
         });
 
 //writing the Chart data code
- visitorData(obj1);
+ $('#container').highcharts({
+        xAxis: {
+            categories: obj1
+        },
+        yAxis: {
+            title: {
+                text: 'Temperature'
+            },
+            lineWidth: 2,
+            lineColor: '#F33',
+            id: 'temperature-axis'
+        },
+        series: [{
+                name: 'Temperature',
+                data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6],
+                color: '#F33'
+            }]
+    });
     };
-    
-    function visitorData (obj1) {
-        alert("called "+obj1 );
-   $('#container').highcharts({
-    chart: {
-        type: 'column'
-    },
-    title: {
-        text: 'Average Visitors'
-    },
-    xAxis: {
-        categories: obj1
-    },
-    yAxis: {
-        title: {
-            text: 'Number of visitors'
-        }
-    },
-    series:  [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
-  });
-  alert("over");
-}
 
   $scope.Clicked1 = function ()
     {
