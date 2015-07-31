@@ -30,14 +30,14 @@ app.controller("AppController", function ($scope, $http) {
                                             alert("1  " + obj[i]._row);
                                             char111[i] = obj[i]._row;
                                             
-                                            char111 = char111.filter(function(n){ return n !== undefined });
+//                                            char111 = char111.filter(function(n){ return n !== undefined });
 
                                         }
                                         else {
                                             alert("0  " + obj[i]._row);
                                             char222[i] = obj[i]._row;
                                             
-                                            char222 = char222.filter(function(n){ return n !== undefined });
+//                                            char222 = char222.filter(function(n){ return n !== undefined });
                                         }
                                     }
                                     $scope.UsersData = char111;
