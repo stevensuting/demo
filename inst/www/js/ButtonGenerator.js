@@ -108,8 +108,8 @@ app.controller("AppController", function ($scope, $http) {
         alert(buttonname1+"  "+buttonname);
 //        var dime = buttonname1;
         
-         var req1= ocpu.call("getDimension", {
-            dimension: dim1
+         var req= ocpu.call("getDimension", {
+            dimension: buttonname
         }, function (session) {
             session.getConsole(function (outtxt) {
                 $("#output").text(outtxt);
