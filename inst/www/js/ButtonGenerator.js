@@ -84,7 +84,7 @@ app.controller("AppController", function ($scope, $http) {
 //writing the Chart data code
  $('#container').highcharts({
         xAxis: {
-            categories: obj1
+            categories: obj1.Dimension
         },
         yAxis: {
             title: {
