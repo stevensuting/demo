@@ -60,7 +60,7 @@ app.controller("AppController", function ($scope, $http) {
             dim: dim1
         }, function (session) {
             session.getConsole(function (outtxt) {
-                $("#output1").text(outtxt);
+                $("#output").text(outtxt);
                 session.getObject(function (dimen)
                 {
                     alert(dimen);
@@ -97,7 +97,7 @@ app.controller("AppController", function ($scope, $http) {
             
         }, function (session) {
             session.getConsole(function (outtxt) {
-                $("#output1").text(outtxt);
+                $("#output").text(outtxt);
                 session.getObject(function (dimeno)
                 {
 //                    document.write(dimeno);
