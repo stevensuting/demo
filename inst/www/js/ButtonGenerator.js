@@ -106,8 +106,7 @@ app.controller("AppController", function ($scope, $http) {
     {
         buttonname1 = event.target.name;
         alert(buttonname1+"  "+buttonname);
-//        var dime = buttonname1;
-        
+
          var req= ocpu.call("getMeasure", {
             dimension: buttonname,
             measure:buttonname1
