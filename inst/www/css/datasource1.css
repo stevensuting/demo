@@ -1,4 +1,15 @@
-  div.right{
+
+
+
+
+
+
+
+
+
+
+
+div.right{
    position: absolute;
     right: 700px;
     top  : 190px;
@@ -10,7 +21,7 @@
    left: 0px;
   
 }
-button{
+next{
 background-color:#31869B
 }
 b,h3{
