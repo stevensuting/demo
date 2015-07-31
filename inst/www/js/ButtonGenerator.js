@@ -82,7 +82,23 @@ app.controller("AppController", function ($scope, $http) {
         });
 
 //writing the Chart data code
+$.each(Dimension, function (i, point) {
+    point.y = point.Dimension;
+});
 
+
+var chart = new Highcharts.Chart({
+
+    chart: {
+        renderTo: 'container'
+        
+    },
+
+    series: [{
+        data: dimen_data.Dimension
+    }]
+
+});
     };
     
   $scope.Clicked1 = function ()
@@ -118,6 +134,7 @@ app.controller("AppController", function ($scope, $http) {
             });
 
         });
+        
         };
 });
 
