@@ -86,6 +86,7 @@ app.controller("AppController", function ($scope, $http) {
     };
     
     function visitorData (data) {
+        alert("called");
    $('#container').highcharts({
     chart: {
         type: 'column'
@@ -103,6 +104,7 @@ app.controller("AppController", function ($scope, $http) {
     },
     series: data
   });
+  alert("over");
 }
 
   $scope.Clicked1 = function ()
