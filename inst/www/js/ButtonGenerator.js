@@ -86,7 +86,7 @@ app.controller("AppController", function ($scope, $http) {
     };
     
     function visitorData (data) {
-        alert("called");
+        alert("called "+data );
    $('#container').highcharts({
     chart: {
         type: 'column'
@@ -95,14 +95,14 @@ app.controller("AppController", function ($scope, $http) {
         text: 'Average Visitors'
     },
     xAxis: {
-        categories: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+        categories: data
     },
     yAxis: {
         title: {
             text: 'Number of visitors'
         }
     },
-    series: data
+    series:  [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
   });
   alert("over");
 }
