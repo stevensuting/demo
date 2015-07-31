@@ -230,10 +230,10 @@ $(function () {
     $('#sub1').click(function () {
         alert(dimen_data);
         alert("b data  "+b);
-        Highcharts.charts[0].xAxis[0].update({categories: b}, true);
+        Highcharts.charts[0].xAxis[0].update({categories: dimen_data}, true);
     });
 
-    var c = ['1-Jan-2014', '1-Feb-2014', '1-Mar-2014', '1-Apr-2014', '1-May-2014', '1-Jun-2014', '1-Jul-2014', '1-Aug-2014', '1-Sep-2014', '1-Oct-2014', '1-Nov-2014', '1-Dec-2014'];
+    var c = ["1-Jan-2014", "1-Feb-2014", "1-Mar-2014", "1-Apr-2014'", "1-May-2014", "1-Jun-2014", "1-Jul-2014", "1-Aug-2014", "1-Sep-2014", "1-Oct-2014", "1-Nov-2014", "1-Dec-2014"];
     $('#sub2').click(function () {
         Highcharts.charts[0].xAxis[0].update({categories: c}, true);
     });
