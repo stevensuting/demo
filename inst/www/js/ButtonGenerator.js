@@ -108,17 +108,18 @@ app.controller("AppController", function ($scope, $http) {
         alert(buttonname1+"  "+buttonname);
 //        var dime = buttonname1;
         
-         var req= ocpu.call("getDimension", {
-            dimension: buttonname
+         var req= ocpu.call("getMeasure", {
+            dimension: buttonname,
+            measure:buttonname1
         }, function (session) {
             session.getConsole(function (outtxt) {
                 $("#output").text(outtxt);
                 session.getObject(function (dimen1)
                 {
                     alert(dimen1);
-                    dimen_data1 = dimen;
+                    dimen_data1 = dimen1;
                     alert("dimen_data  "+dimen_data1);
-                    obj1 = JSON.parse(dimen_data);
+                    obj12 = JSON.parse(dimen_data1);
 ////          alert(obj.Variable_Type);
 ////          alert(obj._row);
 //                    alert("OBJdim " + obj1);
