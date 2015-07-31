@@ -84,7 +84,7 @@ app.controller("AppController", function ($scope, $http) {
 //writing the Chart data code
  $('#container').highcharts({
         xAxis: {
-            categories: obj1.Dimension
+            categories: obj1
         },
         yAxis: {
             title: {
@@ -96,7 +96,7 @@ app.controller("AppController", function ($scope, $http) {
         },
         series: [{
                 name: 'Temperature',
-                data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6],
+                data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6, 23.3, 18.3, 13.9, 9.6],
                 color: '#F33'
             }]
     });
