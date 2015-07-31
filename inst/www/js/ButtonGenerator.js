@@ -82,23 +82,9 @@ app.controller("AppController", function ($scope, $http) {
         });
 
 //writing the Chart data code
-$.each(Dimension, function (i, point) {
-    point.y = point.Dimension;
-});
-
-
-var chart = new Highcharts.Chart({
-
-    chart: {
-        renderTo: 'container'
-        
-    },
-
-    series: [{
-        data: dimen_data.Dimension
-    }]
-
-});
+var chart = $('#container').highcharts();
+var series = obj1.map(function(e){ return (e.Dimension); });
+Highcharts.chart[0].series[0].setData(series, true);
     };
     
   $scope.Clicked1 = function ()
@@ -243,7 +229,7 @@ $(function () {
     });
 
 //var b=['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-    var b = obj1.Dimension;
+    var b = obj1;
     $('#sub1').click(function () {
         alert(obj1);
         alert("b data  "+b);
