@@ -71,10 +71,10 @@ app.controller("AppController", function ($scope, $http) {
 ////          alert(obj._row);
 //                    alert("OBJdim " + obj1);
 //
-                    for (var i in obj1) {
-                        output = obj1[i].Dimension;
-                        alert("output " + output);
-                    }
+//                    for (var i in obj1) {
+//                        output = obj1[i].Dimension;
+//                        alert("output " + output);
+//                    }
 
                 });
             });
@@ -82,11 +82,29 @@ app.controller("AppController", function ($scope, $http) {
         });
 
 //writing the Chart data code
-var chart = $('#container').highcharts();
-var series = obj1.map(function(e){ return (e.Dimension); });
-Highcharts.chart[0].series[0].setData(series, true);
+ visitorData(obj1);
     };
     
+    function visitorData (data) {
+   $('#container').highcharts({
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Average Visitors'
+    },
+    xAxis: {
+        categories: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+    },
+    yAxis: {
+        title: {
+            text: 'Number of visitors'
+        }
+    },
+    series: data
+  });
+}
+
   $scope.Clicked1 = function ()
     {
         buttonname1 = event.target.name;
