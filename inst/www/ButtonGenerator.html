@@ -51,9 +51,9 @@
 
             <div id="blueDivUsers" style=""><!-- height: 425px;width: 1310px; -->
                 <table id="UsersTable" class="table table-condensed" style="margin-top: -20px;margin-left: 0px;height: 395px;">
-                    <tbody style="">
+                    <tbody style="border-bottom: none; border: none">
                         <tr data-ng-repeat="client in UsersData" style="cursor:pointer;" >
-                            <td style="width: 80px;text-align: center">
+                            <td>
                                 <button type="button" class="btn btn-danger" ng-click="Clicked()" id="{{client}}" name="{{client}}">{{client}}</button>
                                 <button type="button" class="btn btn-danger dropdown-toggle">
                                     <span class="caret" style="height: 12px"></span>
