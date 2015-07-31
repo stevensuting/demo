@@ -108,28 +108,25 @@ app.controller("AppController", function ($scope, $http) {
         alert(buttonname1+"  "+buttonname);
 //        var dime = buttonname1;
         
-        var req1 = ocpu.call("getMeasure", {
-         Dimension: buttonname,
-           Measure: buttonname1
-            
+         var req1= ocpu.call("getDimension", {
+            dimension: dim1
         }, function (session) {
             session.getConsole(function (outtxt) {
                 $("#output").text(outtxt);
-                session.getObject(function (dimeno)
+                session.getObject(function (dimen1)
                 {
-//                    document.write(dimeno);
-                    alert(dimeno);
-                    dimen_data1 = dimeno;
-                    alert(dimen_data1);
-                    obj2 = JSON.parse(dimen_data1);
-//          alert(obj.Variable_Type);
-//          alert(obj._row);
-                    alert("OBJ " + obj2);
-
-                    for (var i in obj2) {
-                        output1 = obj2[i].Dimension;
-                        alert("output " + output1);
-                    }
+                    alert(dimen1);
+                    dimen_data1 = dimen;
+                    alert("dimen_data  "+dimen_data1);
+                    obj1 = JSON.parse(dimen_data);
+////          alert(obj.Variable_Type);
+////          alert(obj._row);
+//                    alert("OBJdim " + obj1);
+//
+//                    for (var i in obj1) {
+//                        output = obj1[i].Dimension;
+//                        alert("output " + output);
+//                    }
 
                 });
             });
