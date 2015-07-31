@@ -1,5 +1,5 @@
 
-getDim<-function(dim){
+getDimension<-function(dimension){
 mydb <- dbConnect(MySQL(), user='appuser', password='appuser123', dbname='mstore', host='192.168.2.45');
 
 #Option to aggregate in mysql
@@ -8,9 +8,8 @@ mydb <- dbConnect(MySQL(), user='appuser', password='appuser123', dbname='mstore
 rs = dbSendQuery(mydb, paste0( "select Distinct( " ,dim, ") from product" , sep=""));
 dataset <- fetch(rs, n=-1);
 
-names(dataset)[1] <-paste("Dimension");
-datasetChar <- as.character(dataset);
 
-#DimJSON<-toJSON(dataset)
-return(datasetChar);
+DimJSON<-toJSON(dataset)
+return(dataset);
+
 }

@@ -17,8 +17,9 @@ names(aggdata)[2] <-paste("Measure");
 
 aggMeasure <- data.frame(aggdata$Measure);
 names(aggMeasure)[1] <-paste("Measure");
-aggMeasureChar <- as.character(aggMeasure);
 
-#aggJSON<-toJSON(aggMeasure)
-return(aggMeasureChar);
+#aggMeasureChar <- as.character(aggMeasure);
+
+aggJSON<-toJSON(aggMeasure)
+return(aggMeasure);
 }
