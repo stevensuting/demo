@@ -2,7 +2,6 @@
 var buttonname;
 var buttonname1;
 var dimen_data;
-var dimen_data1;
 var char111 = [];
 var char222 = [];
 var obj;
@@ -66,9 +65,7 @@ app.controller("AppController", function ($scope, $http) {
                 {
                     alert(dimen);
                     dimen_data = dimen;
-                    dimen_data1=c.dimen_data;
                     alert("dimen_data  "+dimen_data);
-                     alert("dimen_data111  "+dimen_data1);
 //                    obj1 = JSON.parse(dimen_data);
 ////          alert(obj.Variable_Type);
 ////          alert(obj._row);
@@ -233,7 +230,7 @@ $(function () {
     $('#sub1').click(function () {
         alert(dimen_data);
         alert("b data  "+b);
-        Highcharts.charts[0].xAxis[0].update({categories: dimen_data1}, true);
+        Highcharts.charts[0].xAxis[0].update({categories: dimen_data.c}, true);
     });
 
     var c = ["1-Jan-2014", "1-Feb-2014", "1-Mar-2014", "1-Apr-2014'", "1-May-2014", "1-Jun-2014", "1-Jul-2014", "1-Aug-2014", "1-Sep-2014", "1-Oct-2014", "1-Nov-2014", "1-Dec-2014"];
