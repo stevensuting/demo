@@ -1,16 +1,13 @@
 <html ng-app="Demo" ng-controller="AppController">
     <head>
-        <title>
-            
-        </title>
-        <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet" />
-        <link rel="stylesheet" type="text/css" media="screen" href="http://tarruda.github.com/bootstrap-datetimepicker/assets/css/bootstrap-datetimepicker.min.css" />
+        <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" media="screen" href="http://tarruda.github.com/bootstrap-datetimepicker/assets/css/bootstrap-datetimepicker.min.css">
 
         <!-- Used for table,list,menu etc -->
-        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="http://angular-ui.github.com/ng-grid/css/ng-grid.css" />
         <!--<link rel="stylesheet" type="text/css" href="./css/style.css" />-->
-        <link href="//fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet" type="text/css" />
+        <link href="//fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet" type="text/css">
         <!--    these two commented because of alert appearing twice. 
         <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.js"></script> 
                 <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.5.0.js"></script>-->
@@ -25,7 +22,7 @@
         <!--<script src="angular-pageslide-directive.js"></script>-->
         <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
         <script src="http://malsup.github.com/jquery.form.js"></script>
-        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel='stylesheet' type='text/css'>
         <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
         <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
         <!--<link rel="stylesheet" href="./css/global.css" media="screen"/>-->
@@ -46,34 +43,33 @@
 
         <button id="submitbutton" type="button">Generate</button>
 
-        <div id="placeholder" ng-init="loadUsersrefresh()">
+        <div id="placeholder" >
             <!--ng-init="loadUsersrefresh()"-->
             <input type="button" id="111" value="click" ng-click="loadUsersrefresh()"/>
             <br><br>
-            <div class="btn-group" data-ng-repeat="client in UsersData" id="dimension">
+            <!--<div class="btn-group" data-ng-repeat="client in UsersData" id="dimension">-->
 
-            <!--<div id="blueDivUsers" style=""> height: 425px;width: 1310px; -->
-<!--                <table id="UsersTable" class="table table-condensed" style="margin-top: -20px;margin-left: 0px;height: 395px;">
-                    <tbody style="">
+            <div id="blueDivUsers" style=""><!-- height: 425px;width: 1310px; -->
+                <table id="UsersTable" class="table table-condensed" style="margin-top: -20px;margin-left: 0px;height: 395px;">
+                    <tbody style="border-bottom: none; border: none">
                         <tr data-ng-repeat="client in UsersData" style="cursor:pointer;" >
-                            <td>-->
+                            <td>
                                 <button type="button" class="btn btn-danger" ng-click="Clicked()" id="{{client}}" name="{{client}}">{{client}}</button>
                                 <button type="button" class="btn btn-danger dropdown-toggle">
                                     <span class="caret" style="height: 12px"></span>
                                     <!--<span class="sr-only">Split button!</span>-->
                                 </button>
-<!--                                <ul class="dropdown-menu" role="menu">
+                                <ul class="dropdown-menu" role="menu">
                                     <li><a href="#">Action</a></li>
                                     <li><a href="#">Another action</a></li>
                                     <li><a href="#">Something else here</a></li>
                                     <li class="divider"></li>
                                     <li><a href="#">Separated link</a></li>
-                                </ul>-->
-<!--                            </td>
+                                </ul></td>
 
                         </tr>
                     </tbody>
-                </table>-->
+                </table>
             </div>
 
             <br>
@@ -83,30 +79,29 @@
 
             <div id="blueDivPJP" style=""><!-- height: 425px;width: 1310px; -->
                 <!-- <table class="table table-condensed uk-overflow-container" ng-table="tableParams" id="PJPTable" style="height:200px;margin-left: 0px;table-layout:fixed;margin-top: -20px;" > -->
-<!--                <table id="PJPTable" class="table table-condensed" style="margin-top: -20px;margin-left: 0px;height: 395px;" >
+                <table id="PJPTable" class="table table-condensed" style="margin-top: -20px;margin-left: 0px;height: 395px;" >
                     <tbody style="">
                         <tr data-ng-repeat="client1 in UsersMeasure">
-                            <td>-->
-<!--                                <button type="button" class="btn btn-danger" ng-click="Clicked1()" id="{{client1}}" name="{{client1}}">{{client1}}</button>
+                            <td>
+                                <button type="button" class="btn btn-danger" ng-click="Clicked1()" id="{{client1}}" name="{{client1}}">{{client1}}</button>
                                 <button type="button" class="btn btn-danger dropdown-toggle">
                                     <span class="caret" style="height: 12px"></span>
-                                    <span class="sr-only">Split button!</span>
-                                </button>-->
-<!--                                <ul class="dropdown-menu" role="menu">
+                                    <!--<span class="sr-only">Split button!</span>-->
+                                </button>
+                                <ul class="dropdown-menu" role="menu">
                                     <li><a href="#">Action</a></li>
                                     <li><a href="#">Another action</a></li>
                                     <li><a href="#">Something else here</a></li>
                                     <li class="divider"></li>
                                     <li><a href="#">Separated link</a></li>
-                                </ul>-->
-<!--                            </td> 
+                                </ul></td> 
 
                         </tr>
                     </tbody>
-                </table>-->
+                </table>
             </div>
-<div class="btn-group" data-ng-repeat="client1 in UsersMeasure" id="measure">
-            <button type="button" class="btn btn-danger" ng-click="Clicked1()" id="{{client1}}" name="{{client1}}">{{client1}}</button>
+
+<!--            <button type="button" class="btn btn-danger" ng-click="Clicked1()" id="{{client1}}" name="{{client1}}">{{client1}}</button>
             <button type="button" class="btn btn-danger dropdown-toggle">
                 <span class="caret" style="height: 12px"></span>
                 <span class="sr-only">Split button!</span>
@@ -117,8 +112,8 @@
                 <li><a href="#">Something else here</a></li>
                 <li class="divider"></li>
                 <li><a href="#">Separated link</a></li>
-            </ul>
-            </div>
+            </ul>-->
+            <!--</div>-->
         </div>
 
     </body>
