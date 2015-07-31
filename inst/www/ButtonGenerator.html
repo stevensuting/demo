@@ -50,13 +50,13 @@
             <!--ng-init="loadUsersrefresh()"-->
             <input type="button" id="111" value="click" ng-click="loadUsersrefresh()"/>
             <br><br>
-            <!--<div class="btn-group" data-ng-repeat="client in UsersData" id="dimension">-->
+            <div class="btn-group" data-ng-repeat="client in UsersData" id="dimension">
 
-            <div id="blueDivUsers" style=""><!-- height: 425px;width: 1310px; -->
-                <table id="UsersTable" class="table table-condensed" style="margin-top: -20px;margin-left: 0px;height: 395px;">
+            <!--<div id="blueDivUsers" style=""> height: 425px;width: 1310px; -->
+<!--                <table id="UsersTable" class="table table-condensed" style="margin-top: -20px;margin-left: 0px;height: 395px;">
                     <tbody style="">
                         <tr data-ng-repeat="client in UsersData" style="cursor:pointer;" >
-                            <td>
+                            <td>-->
                                 <button type="button" class="btn btn-danger" ng-click="Clicked()" id="{{client}}" name="{{client}}">{{client}}</button>
                                 <button type="button" class="btn btn-danger dropdown-toggle">
                                     <span class="caret" style="height: 12px"></span>
@@ -69,11 +69,11 @@
                                     <li class="divider"></li>
                                     <li><a href="#">Separated link</a></li>
                                 </ul>-->
-                            </td>
+<!--                            </td>
 
                         </tr>
                     </tbody>
-                </table>
+                </table>-->
             </div>
 
             <br>
@@ -83,15 +83,15 @@
 
             <div id="blueDivPJP" style=""><!-- height: 425px;width: 1310px; -->
                 <!-- <table class="table table-condensed uk-overflow-container" ng-table="tableParams" id="PJPTable" style="height:200px;margin-left: 0px;table-layout:fixed;margin-top: -20px;" > -->
-                <table id="PJPTable" class="table table-condensed" style="margin-top: -20px;margin-left: 0px;height: 395px;" >
+<!--                <table id="PJPTable" class="table table-condensed" style="margin-top: -20px;margin-left: 0px;height: 395px;" >
                     <tbody style="">
                         <tr data-ng-repeat="client1 in UsersMeasure">
-                            <td>
-                                <button type="button" class="btn btn-danger" ng-click="Clicked1()" id="{{client1}}" name="{{client1}}">{{client1}}</button>
+                            <td>-->
+<!--                                <button type="button" class="btn btn-danger" ng-click="Clicked1()" id="{{client1}}" name="{{client1}}">{{client1}}</button>
                                 <button type="button" class="btn btn-danger dropdown-toggle">
                                     <span class="caret" style="height: 12px"></span>
-                                    <!--<span class="sr-only">Split button!</span>-->
-                                </button>
+                                    <span class="sr-only">Split button!</span>
+                                </button>-->
 <!--                                <ul class="dropdown-menu" role="menu">
                                     <li><a href="#">Action</a></li>
                                     <li><a href="#">Another action</a></li>
@@ -99,14 +99,14 @@
                                     <li class="divider"></li>
                                     <li><a href="#">Separated link</a></li>
                                 </ul>-->
-                            </td> 
+<!--                            </td> 
 
                         </tr>
                     </tbody>
-                </table>
+                </table>-->
             </div>
-
-<!--            <button type="button" class="btn btn-danger" ng-click="Clicked1()" id="{{client1}}" name="{{client1}}">{{client1}}</button>
+<div class="btn-group" data-ng-repeat="client1 in UsersMeasure" id="measure">
+            <button type="button" class="btn btn-danger" ng-click="Clicked1()" id="{{client1}}" name="{{client1}}">{{client1}}</button>
             <button type="button" class="btn btn-danger dropdown-toggle">
                 <span class="caret" style="height: 12px"></span>
                 <span class="sr-only">Split button!</span>
@@ -117,8 +117,8 @@
                 <li><a href="#">Something else here</a></li>
                 <li class="divider"></li>
                 <li><a href="#">Separated link</a></li>
-            </ul>-->
-            <!--</div>-->
+            </ul>
+            </div>
         </div>
 
     </body>
