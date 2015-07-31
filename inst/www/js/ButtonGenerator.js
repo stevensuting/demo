@@ -92,7 +92,7 @@ app.controller("AppController", function ($scope, $http) {
 //        var dime = buttonname1;
         
         var req1 = ocpu.call("getMeasure", {
-           dimension: buttonname,
+         dimension: buttonname,
            measure: buttonname1
             
         }, function (session) {
