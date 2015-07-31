@@ -99,7 +99,7 @@
 <br>
 <div ng-app="toserver" class="left">
       <b>&nbsp&nbspTo Server<br></b>
-<select multiple="multiple" size="4" 
+<select multiple="multiple" size="5" 
     ng-model="model.server" 
     ng-options="" style="width:183px;">
   <option value="0">MySQL Database</option>
@@ -113,13 +113,14 @@
   <form>
    Server:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
     <input type="text" ng-model="user.firstName"><br><br>
-     Sign-in Details<br><br> <input type="radio" ng-model="user.signdetails" value="windows" />Use Windows Authentication(Preferred)<br><br>
-    <input type="radio" ng-model="user.signdetails" value="user" />Use Specific Username And password <br /><br>
+     Sign-in Details<br><br> 
+     <pre>          <input type="radio" ng-model="user.signdetails" value="windows" />Use Windows Authentication(Preferred)<br><br></pre>
+     <pre>          <input type="radio" ng-model="user.signdetails" value="user" />Use Specific Username And password <br /><br></pre>>
 Username:&nbsp&nbsp
     <input type="text" ng-model="user.username"><br><br>
 Password:&nbsp&nbsp&nbsp
     <input type="text" ng-model="user.password"><br>
- &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <button type="button" ng-click="" >NEXT</button></form>
+ &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <button type="button" ng-click="" >NEXT</button></form>
   
 </div>
 </body>
