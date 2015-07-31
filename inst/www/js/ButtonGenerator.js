@@ -57,7 +57,7 @@ app.controller("AppController", function ($scope, $http) {
         var dim1 = buttonname;
         alert(dim1);
         var req2= ocpu.call("getDimension", {
-            dim: dim1
+            dimension: dim1
         }, function (session) {
             session.getConsole(function (outtxt) {
                 $("#output").text(outtxt);
