@@ -56,7 +56,7 @@ app.controller("AppController", function ($scope, $http) {
         alert(buttonname);
         var dim1 = buttonname;
         alert(dim1);
-        var req = ocpu.call("getDim", {
+        var req2= ocpu.call("getDim", {
             dim: dim1
         }, function (session) {
             session.getConsole(function (outtxt) {
