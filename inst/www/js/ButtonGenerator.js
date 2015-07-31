@@ -97,7 +97,7 @@ app.controller("AppController", function ($scope, $http) {
             
         }, function (session) {
             session.getConsole(function (outtxt) {
-                $("#output").text(outtxt);
+                $("#output1").text(outtxt);
                 session.getObject(function (dimeno)
                 {
 //                    document.write(dimeno);
