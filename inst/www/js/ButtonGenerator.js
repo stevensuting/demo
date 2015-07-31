@@ -89,7 +89,7 @@ app.controller("AppController", function ($scope, $http) {
         alert(buttonname1+"  "+buttonname);
 //        var dime = buttonname1;
         
-        var req = ocpu.call("getMeasure", {
+        var req1 = ocpu.call("getMeasure", {
            dimension: dim1,
            measure: buttonname1
             
