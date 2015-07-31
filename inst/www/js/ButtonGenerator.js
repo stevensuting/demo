@@ -120,14 +120,6 @@ app.controller("AppController", function ($scope, $http) {
                     dimen_data1 = dimen1;
                     alert("dimen_data  "+dimen_data1);
                     obj12 = JSON.parse(dimen_data1);
-////          alert(obj.Variable_Type);
-////          alert(obj._row);
-//                    alert("OBJdim " + obj1);
-//
-//                    for (var i in obj1) {
-//                        output = obj1[i].Dimension;
-//                        alert("output " + output);
-//                    }
 
                 });
             });
