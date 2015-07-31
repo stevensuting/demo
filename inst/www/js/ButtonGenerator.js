@@ -1,7 +1,7 @@
 /* global data */
 var buttonname;
 var buttonname1;
-var dimen;
+var dimen_data;
 var char111 = [];
 var char222 = [];
 var obj;
@@ -66,15 +66,15 @@ app.controller("AppController", function ($scope, $http) {
                     alert(dimen);
                     dimen_data = dimen;
                     alert("dimen_data  "+dimen_data);
-                    obj1 = JSON.parse(dimen_data);
-//          alert(obj.Variable_Type);
-//          alert(obj._row);
-                    alert("OBJdim " + obj1);
-
-                    for (var i in obj1) {
-                        output = obj1[i].Dimension;
-                        alert("output " + output);
-                    }
+//                    obj1 = JSON.parse(dimen_data);
+////          alert(obj.Variable_Type);
+////          alert(obj._row);
+//                    alert("OBJdim " + obj1);
+//
+//                    for (var i in obj1) {
+//                        output = obj1[i].Dimension;
+//                        alert("output " + output);
+//                    }
 
                 });
             });
