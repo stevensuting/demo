@@ -109,12 +109,12 @@ app.controller("AppController", function ($scope, $http) {
 //        var dime = buttonname1;
         
         var req1 = ocpu.call("getMeasure", {
-         dimension: buttonname,
-           measure: buttonname1
+         Dimension: buttonname,
+           Measure: buttonname1
             
         }, function (session) {
             session.getConsole(function (outtxt) {
-                $("#output1").text(outtxt);
+                $("#output").text(outtxt);
                 session.getObject(function (dimeno)
                 {
 //                    document.write(dimeno);
