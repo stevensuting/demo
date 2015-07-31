@@ -243,7 +243,7 @@ $(function () {
     });
 
 //var b=['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-    var b = dimen_data;
+    var b = obj1.Dimension;
     $('#sub1').click(function () {
         alert(obj1);
         alert("b data  "+b);
