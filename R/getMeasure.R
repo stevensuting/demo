@@ -4,13 +4,13 @@ mydb <- dbConnect(MySQL(), user='appuser', password='appuser123', dbname='mstore
 #Option to aggregate in mysql
 #rs = dbSendQuery(mydb, paste0( "select " ,dim, ", sum(" ,measures, ") from product group by ",dim," " , sep=""));
 
-rs = dbSendQuery(mydb, paste0( "select " ,dimension, "," ,measures, " from product " , sep=""));
+rs = dbSendQuery(mydb, paste0( "select " ,dimension, "," ,measure, " from product " , sep=""));
 
 dataset <- fetch(rs, n=-1);
 
 #aggregate in R
 # dataset[,2] is measure and dataset[,1] is Dimension
-aggdata <- aggregate(dataset[,2]~dimension,data=dataset,FUN=sum);
+aggdata <- aggregate(dataset[,2]~dataset[,1],data=dataset,FUN=sum);
 
 names(aggdata)[1] <-paste("Dimension");
 names(aggdata)[2] <-paste("Measure");
