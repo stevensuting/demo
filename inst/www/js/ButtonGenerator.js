@@ -228,6 +228,7 @@ $(function () {
 //var b=['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     var b = dimen_data;
     $('#sub1').click(function () {
+        alert(dimen_data);
         alert("b data  "+b);
         Highcharts.charts[0].xAxis[0].update({categories: b}, true);
     });
@@ -253,8 +254,3 @@ $(function () {
     });
 
 });
-
-
-
-
-
