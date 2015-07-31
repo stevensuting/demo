@@ -21,12 +21,12 @@ app.controller("AppController", function ($scope, $http) {
                                     dim_data = data;
                                     obj = JSON.parse(dim_data);
                                     for (var i in obj) {
-                                        if (obj[i].Variable_Type !== "character")
+                                        if (obj[i].Variable_Type !== "Integer")
                                         {
                                          //   alert("1  " + obj[i]._row);
                                             char111[i] = obj[i]._row;
                                             
-                                            char111 = char111.filter(function(n){ return n != undefined });
+                                            char111 = char111.filter(function(n){ return n !== undefined });
 
                                             
 
@@ -35,7 +35,7 @@ app.controller("AppController", function ($scope, $http) {
                                            // alert("0  " + obj[i]._row);
                                             char222[i] = obj[i]._row;
                                             
-                                            char222 = char222.filter(function(n){ return n != undefined });
+                                            char222 = char222.filter(function(n){ return n !== undefined });
                                         }
                                     }
                                     $scope.UsersData = char111;
