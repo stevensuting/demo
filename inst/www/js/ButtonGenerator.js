@@ -1,8 +1,12 @@
 /* global data */
 var buttonname;
+var buttonname1;
 var dimen;
 var char111 = [];
 var char222 = [];
+var obj;
+var obj1;
+var obj2;
 var app = angular.module('Demo', ['ui.bootstrap', 'ui.directives']);
 
 app.controller("AppController", function ($scope, $http) {
@@ -27,8 +31,6 @@ app.controller("AppController", function ($scope, $http) {
                                             char111[i] = obj[i]._row;
                                             
                                             char111 = char111.filter(function(n){ return n !== undefined });
-
-                                            
 
                                         }
                                         else {
@@ -98,7 +100,7 @@ app.controller("AppController", function ($scope, $http) {
                 $("#output1").text(outtxt);
                 session.getObject(function (dimeno)
                 {
-                    document.write(dimeno);
+//                    document.write(dimeno);
 //                    alert(dimen);
                     dimen_data1 = dimeno;
 //                    alert(dimen_data);
