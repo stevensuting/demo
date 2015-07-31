@@ -7,9 +7,9 @@ mydb <- dbConnect(MySQL(), user='appuser', password='appuser123', dbname='mstore
 
 rs = dbSendQuery(mydb, paste0( "select Distinct( " ,dim, ") from product" , sep=""));
 dataset <- fetch(rs, n=-1);
-
+names(dataset)[1] <-paste("Dimension");
 
 DimJSON<-toJSON(dataset)
-return(dataset);
+return(DimJSON);
 
 }
