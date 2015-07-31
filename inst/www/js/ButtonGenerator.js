@@ -66,15 +66,15 @@ app.controller("AppController", function ($scope, $http) {
                     alert(dimen);
                     dimen_data = dimen;
                     alert("dimen_data  "+dimen_data);
-//                    obj1 = JSON.parse(dimen_data);
+                    obj1 = JSON.parse(dimen_data);
 ////          alert(obj.Variable_Type);
 ////          alert(obj._row);
 //                    alert("OBJdim " + obj1);
 //
-//                    for (var i in obj1) {
-//                        output = obj1[i].Dimension;
-//                        alert("output " + output);
-//                    }
+                    for (var i in obj1) {
+                        output = obj1[i].Dimension;
+                        alert("output " + output);
+                    }
 
                 });
             });
@@ -245,9 +245,9 @@ $(function () {
 //var b=['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     var b = dimen_data;
     $('#sub1').click(function () {
-        alert(dimen_data.Dimension);
+        alert(obj1);
         alert("b data  "+b);
-        Highcharts.charts[0].xAxis[0].update({categories: dimen_data.Dimension}, true);
+        Highcharts.charts[0].xAxis[0].update({categories: obj1.Dimension}, true);
     });
 
     var c = ["1-Jan-2014", "1-Feb-2014", "1-Mar-2014", "1-Apr-2014'", "1-May-2014", "1-Jun-2014", "1-Jul-2014", "1-Aug-2014", "1-Sep-2014", "1-Oct-2014", "1-Nov-2014", "1-Dec-2014"];
