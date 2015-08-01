@@ -102,19 +102,19 @@ app.controller("AppController", function ($scope, $http) {
 //                }]
 //        });
 
-//var data = [{
-//    "name": "Tokyo",
-//    "data": 3.0
-//}, {
-//    "name": "NewYork",
-//    "data": 2.0
-//}, {
-//    "name": "Berlin",
-//    "data": 3.5
-//}, {
-//    "name": "London",
-//    "data": 1.5
-//}];
+var data = [{
+    "name": "Tokyo",
+    "data": 3.0
+}, {
+    "name": "NewYork",
+    "data": 2.0
+}, {
+    "name": "Berlin",
+    "data": 3.5
+}, {
+    "name": "London",
+    "data": 1.5
+}];
 
 // Highcharts requires the y option to be set
 $.each(data, function (i, point) {
