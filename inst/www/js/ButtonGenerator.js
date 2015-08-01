@@ -116,20 +116,20 @@ var data = [{
 }];
 
 // Highcharts requires the y option to be set
-$.each(data, function (i, point) {
-    point.y = point.data;
+$.each(obj1, function (i, point) {
+    point.y = point.obj1;
 });
 
 
 var chart = new Highcharts.Chart({
 
     chart: {
-        renderTo: 'container',
-        type: 'pie'
+        renderTo: 'container'
+//        type: 'pie'
     },
 
     series: [{
-        data: data
+        data: obj1
     }]
 
 });
