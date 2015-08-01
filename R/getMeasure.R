@@ -1,6 +1,6 @@
 getMeasure<-function(dimension,measure){
 mydb <- dbConnect(MySQL(), user='appuser', password='appuser123', dbname='mstore', host='192.168.2.45');
-
+a<-"a";
 #Option to aggregate in mysql
 #rs = dbSendQuery(mydb, paste0( "select " ,dim, ", sum(" ,measures, ") from product group by ",dim," " , sep=""));
 
@@ -21,5 +21,5 @@ names(aggMeasure)[1] <-paste("Measure");
 #aggMeasureChar <- as.character(aggMeasure);
 
 aggJSON<-toJSON(aggMeasure)
-return(rs);
+return(a);
 }
