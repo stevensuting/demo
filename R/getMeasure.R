@@ -5,8 +5,7 @@ mydb <- dbConnect(MySQL(), user='appuser', password='appuser123', dbname='mstore
 #rs = dbSendQuery(mydb, paste0( "select " ,dim, ", sum(" ,measures, ") from product group by ",dim," " , sep=""));
 
 #rs = dbSendQuery(mydb, paste0( "select " ,dimension, "," ,measure, " from product " , sep=""));
-rs = dbSendQuery(mydb, paste0( "select Distinct( " ,dimension, ") from product" , sep=""));
-
+rs=1;
 #dataset <- fetch(rs, n=-1);
 
 #aggregate in R
