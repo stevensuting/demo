@@ -21,5 +21,5 @@ dataset <- fetch(rs1, n=-1);
 #aggMeasureChar <- as.character(aggMeasure);
 
 #aggJSON<-toJSON(aggMeasure)
-return(rs1);
+return(dataset);
 }
