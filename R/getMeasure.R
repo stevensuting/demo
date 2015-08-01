@@ -10,7 +10,7 @@ dataset <- fetch(rs1, n=-1);
 
 #aggregate in R
 # dataset[,2] is measure and dataset[,1] is Dimension
-#aggdata <- aggregate(dataset[,2]~ dataset[,1],data=dataset,FUN=sum);
+aggdata <- aggregate(dataset[,2]~ dataset[,1],data=dataset,FUN=sum);
 
 #names(aggdata)[1] <-paste("Dimension");
 #names(aggdata)[2] <-paste("Measure");
@@ -19,5 +19,5 @@ dataset <- fetch(rs1, n=-1);
 #names(aggMeasure)[1] <-paste("Measure");
 
 #aggJSON<-toJSON(aggMeasure)
-return(dataset);
+return(aggdata);
 }
