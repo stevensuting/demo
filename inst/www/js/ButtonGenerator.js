@@ -7,6 +7,7 @@ var char222 = [];
 var obj;
 var obj1;
 var obj2;
+var data;
 var app = angular.module('Demo', ['ui.bootstrap', 'ui.directives']);
 
 app.controller("AppController", function ($scope, $http) {
@@ -66,7 +67,7 @@ app.controller("AppController", function ($scope, $http) {
 //                    alert(dimen);
                     dimen_data = dimen;
                     alert("dimen_data  " + dimen_data);
-                    obj1 = JSON.parse(dimen_data);
+                    data = JSON.parse(dimen_data);
 ////          alert(obj.Variable_Type);
 ////          alert(obj._row);
 //                    alert("OBJdim " + obj1);
@@ -101,23 +102,23 @@ app.controller("AppController", function ($scope, $http) {
 //                }]
 //        });
 
-var data = [{
-    "name": "Tokyo",
-    "data": 3.0
-}, {
-    "name": "NewYork",
-    "data": 2.0
-}, {
-    "name": "Berlin",
-    "data": 3.5
-}, {
-    "name": "London",
-    "data": 1.5
-}];
+//var data = [{
+//    "name": "Tokyo",
+//    "data": 3.0
+//}, {
+//    "name": "NewYork",
+//    "data": 2.0
+//}, {
+//    "name": "Berlin",
+//    "data": 3.5
+//}, {
+//    "name": "London",
+//    "data": 1.5
+//}];
 
 // Highcharts requires the y option to be set
-$.each(obj1, function (i, point) {
-    point.y = point.obj1;
+$.each(data, function (i, point) {
+    point.y = point.data;
 });
 
 
@@ -129,7 +130,7 @@ var chart = new Highcharts.Chart({
     },
 
     series: [{
-        data: obj1
+        data: data
     }]
 
 });
