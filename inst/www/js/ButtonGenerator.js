@@ -82,24 +82,57 @@ app.controller("AppController", function ($scope, $http) {
         });
 
 //writing the Chart data code
-        $('#container').highcharts({
-            xAxis: {
-                categories: obj1
-            },
-            yAxis: {
-                title: {
-                    text: 'Temperature'
-                },
-                lineWidth: 2,
-                lineColor: '#F33',
-                id: 'temperature-axis'
-            },
-            series: [{
-                    name: 'Temperature',
-                    data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6, 23.3, 18.3, 13.9, 9.6],
-                    color: '#F33'
-                }]
-        });
+//        $('#container').highcharts({
+//            xAxis: {
+//                categories: obj1
+//            },
+//            yAxis: {
+//                title: {
+//                    text: 'Temperature'
+//                },
+//                lineWidth: 2,
+//                lineColor: '#F33',
+//                id: 'temperature-axis'
+//            },
+//            series: [{
+//                    name: 'Temperature',
+//                    data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6, 23.3, 18.3, 13.9, 9.6],
+//                    color: '#F33'
+//                }]
+//        });
+
+var data = [{
+    "name": "Tokyo",
+    "data": 3.0
+}, {
+    "name": "NewYork",
+    "data": 2.0
+}, {
+    "name": "Berlin",
+    "data": 3.5
+}, {
+    "name": "London",
+    "data": 1.5
+}];
+
+// Highcharts requires the y option to be set
+$.each(data, function (i, point) {
+    point.y = point.data;
+});
+
+
+var chart = new Highcharts.Chart({
+
+    chart: {
+        renderTo: 'container',
+        type: 'pie'
+    },
+
+    series: [{
+        data: data
+    }]
+
+});
     };
 
     $scope.Clicked1 = function ()
