@@ -119,7 +119,7 @@ app.controller("AppController", function ($scope, $http) {
                 {
                     alert(dimen1);
                     dimen_data1 = dimen1;
-                    alert("dimen_data  " + dimen_data1);
+                    alert("dimen_data measure  " + dimen_data1);
                     obj12 = JSON.parse(dimen_data1);
 
                 });
