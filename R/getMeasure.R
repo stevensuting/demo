@@ -6,7 +6,7 @@ mydb <- dbConnect(MySQL(), user='appuser', password='appuser123', dbname='mstore
 
 rs = dbSendQuery(mydb, paste0( "select " ,dimension, "," ,measure, " from product " , sep=""));
 
-dataset <- fetch(rs, n=-1);
+#dataset <- fetch(rs, n=-1);
 
 #aggregate in R
 # dataset[,2] is measure and dataset[,1] is Dimension
