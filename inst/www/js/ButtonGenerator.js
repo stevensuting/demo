@@ -130,8 +130,8 @@ app.controller("AppController", function ($scope, $http) {
         var dim3 = buttonname1;
         alert(dim2 + "  " + dim3);
         var req = ocpu.call("getMeasure", {
-            dimension: "prod_id",
-            measure: "status"
+            dimension: dim2,
+            measure: dim3
         }, function (session) {
             session.getConsole(function (outtxt) {
                 $("#output").text(outtxt);
