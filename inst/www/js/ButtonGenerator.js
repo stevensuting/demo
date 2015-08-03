@@ -102,38 +102,27 @@ app.controller("AppController", function ($scope, $http) {
 //                }]
 //        });
 
-var data = [{
-    
-    "data": 3.0
-}, {
-    
-    "data": 2.0
-}, {
-    
-    "data": 3.5
-}, {
-   
-    "data": 1.5
-}];
+        var data = [{"data": 3.0}, {"data": 2.0}, {"data": 3.5}, {"data": 1.5}];
 
 // Highcharts requires the y option to be set
-$.each(data, function (i, point) {
-    point.y = point.data;
-});
+        $.each(data, function (i, point) {
+            point.y = point.data;
+        });
 
 
-var chart = new Highcharts.Chart({
-
-    chart: {
-        renderTo: 'container'
+        var chart = new Highcharts.Chart({
+            chart: {
+                renderTo: 'container'
 //        type: 'pie'
-    },
+            },
+            xAxis: {
+                categories: ['Jan', 'Feb', 'Mar','Apr']
+            },
+            series: [{
+                    data: data
+                }]
 
-    Category: [{
-        data: data
-    }]
-
-});
+        });
     };
 
     $scope.Clicked1 = function ()
@@ -142,7 +131,7 @@ var chart = new Highcharts.Chart({
         alert(buttonname1 + "  " + buttonname);
         var dim2 = buttonname;
         var dim3 = buttonname1;
-        alert(dim2+"  "+dim3);
+        alert(dim2 + "  " + dim3);
         var req = ocpu.call("getMeasure", {
             dimension: "prod_id",
             measure: "status"
