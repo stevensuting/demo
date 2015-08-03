@@ -119,8 +119,8 @@ app.controller("AppController", function ($scope, $http) {
 //            alert("obj value "+obj1[i].Dimension);
             series.push({"data": obj1[i].Dimension});
         }
-        alert("series value "+data);
-        Highcharts.charts[0].xAxis[0].update({categories: data}, true);
+        alert("series value "+series.data);
+        Highcharts.charts[0].xAxis[0].update({categories: series.data}, true);
 
     };
 
