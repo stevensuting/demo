@@ -67,7 +67,7 @@ app.controller("AppController", function ($scope, $http) {
 //                    alert(dimen);
                     dimen_data = dimen;
                     alert("dimen_data  " + dimen_data);
-                    data = JSON.parse(dimen_data);
+                    obj1 = JSON.parse(dimen_data);
 ////          alert(obj.Variable_Type);
 ////          alert(obj._row);
 //                    alert("OBJdim " + obj1);
@@ -116,10 +116,10 @@ app.controller("AppController", function ($scope, $http) {
 //        type: 'pie'
             },
             xAxis: {
-                categories: data
+                categories: obj1.dimension
             },
             series: [{
-                    data: ['Jan', 'Feb', 'Mar','Apr']
+                    data: data
                 }]
 
         });
