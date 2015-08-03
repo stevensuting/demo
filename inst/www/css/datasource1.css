@@ -1,13 +1,24 @@
-  div.right{
+
+
+
+
+
+
+
+
+
+
+
+div.right{
    position: absolute;
     right: 700px;
-    top  : 190px;
+    top  : 170px;
 }
 .bg{background-color:#F2F2F2
 }
   div.left{
    
-   left: 0px;
+   left: 20px;
   
 }
 button{

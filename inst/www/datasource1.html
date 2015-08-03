@@ -1,7 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
-         <link rel="stylesheet" type="text/css" href="css/datasource1.css" />
-        <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html ng-app="Demo" ng-controller="AppController">
+    <head>
+       
+ <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" media="screen" href="http://tarruda.github.com/bootstrap-datetimepicker/assets/css/bootstrap-datetimepicker.min.css">
+        <!-- Used for table,list,menu etc -->
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="http://angular-ui.github.com/ng-grid/css/ng-grid.css" />
+        <!--<link rel="stylesheet" type="text/css" href="./css/style.css" />-->
+        <link href="//fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet" type="text/css">
+        <!--    these two commented because of alert appearing twice. 
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.js"></script> 
+                <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.5.0.js"></script>-->
+        <script type="text/javascript" src="http://angular-ui.github.com/ng-grid/lib/ng-grid.debug.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+        <!-- these two commented because of alert appearing twice. 
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
+                <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>-->
+
+
+        <!-- using boot strap -->
+        <!--<script src="angular-pageslide-directive.js"></script>-->
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+        <script src="http://malsup.github.com/jquery.form.js"></script>
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel='stylesheet' type='text/css'>
+        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+        <!--<link rel="stylesheet" href="./css/global.css" media="screen"/>-->
+
+        <!-- date picker -->
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.js"></script>
+        <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.7.0.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui/0.4.0/angular-ui.min.js"></script>
+
+        <script src="opencpu/jquery-1.10.2.min.js"></script>
+        <script src="opencpu/opencpu-0.4.js"></script>
+
+        <script type="text/javascript" src="js/ButtonGenerator.js"></script>
+        <script type="text/javascript" src="js/rmysql.js"></script>
+        <!--<script type="text/javascript" src="js/Chart.js"></script>-->
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <script type="text/javascript" src="//code.jquery.com/jquery-2.0.0.min.js"></script>
+        <script	type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.min.js"></script>
+        <script src="http://code.jquery.com/jquery-1.9.1.js" type="text/javascript"></script>
+        <script src="http://code.highcharts.com/highcharts.js"></script>
+        <script src="http://code.highcharts.com/modules/exporting.js"></script>
+        <script type="text/javascript" src="js/Chart.js"></script>
+<link rel="stylesheet" type="text/css" href="css/datasource1.css" />
+       </head>
+    <body>
+        
 <script>
     
     
@@ -15,18 +79,18 @@
 
  
 
-<body>
+
  
 
 <div class="bg">
 <img src="https://mehemmedisrayilzade.files.wordpress.com/2014/07/olimpia-300x200.jpg" alt="image" width="90" height="70"></div>
-<b>Data > New Data Source</b><br><br><br>
-<h3>Connect</h3>
+<b>&nbsp&nbspData > New Data Source</b><br><br><br>
+<h3>&nbsp&nbspConnect</h3>
 <div ng-app="tofile" class="left">
-    <b>To a File<br></b>
+    <b>&nbsp&nbspTo a File<br></b>
   <select multiple="multiple" size="3" 
     ng-model="model.file" 
-    ng-options="" style="width:166px;">
+    ng-options="" style="width:183px;">
   <option value="0">Excel</option>
   <option value="1">Text File</option>
   <option value="2">Acess</option>
@@ -34,10 +98,10 @@
 <br>
 <br>
 <div ng-app="toserver" class="left">
-      <b>To Server<br></b>
-<select multiple="multiple" size="4" 
+      <b>&nbsp&nbspTo Server<br></b>
+<select multiple="multiple" size="5" 
     ng-model="model.server" 
-    ng-options="" style="width:166px;">
+    ng-options="" style="width:183px;">
   <option value="0">MySQL Database</option>
   <option value="1" onclick="call()" >Microsoft SQL Database</option>
   <option value="2">PostgreSQL</option>
@@ -47,17 +111,16 @@
 
     <div id="validate" style="visibility: hidden" class="right" >
   <form>
-   Server:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+   Server:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
     <input type="text" ng-model="user.firstName"><br><br>
-     Sign-in Details<br><br> <input type="radio" ng-model="user.signdetails" value="windows" />Use Windows Authentication(Preferred)<br><br>
-    <input type="radio" ng-model="user.signdetails" value="user" />Use Specific Username And password <br /><br>
+     Sign-in Details<br><br> 
+        &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp   <input type="radio" ng-model="user.signdetails" value="windows" />Use Windows Authentication(Preferred)<br><br>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp    <input type="radio" ng-model="user.signdetails" value="user" />Use Specific Username And password <br /><br>
 Username:&nbsp&nbsp
     <input type="text" ng-model="user.username"><br><br>
 Password:&nbsp&nbsp&nbsp
     <input type="text" ng-model="user.password"><br>
-  <pre>                            <button type="button" ng-click="" >NEXT</button></pre>
-  </form>
-  
-</div>
+ &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <button type="button" class="btn btn-primary" ng-model="singleModel">NEXT</button></form>
+  </div>
 </body>
 </html>
