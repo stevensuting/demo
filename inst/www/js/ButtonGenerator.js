@@ -7,6 +7,7 @@ var char222 = [];
 var obj;
 var obj1;
 var obj2;
+var data;
 var app = angular.module('Demo', ['ui.bootstrap', 'ui.directives']);
 
 app.controller("AppController", function ($scope, $http) {
@@ -29,21 +30,21 @@ app.controller("AppController", function ($scope, $http) {
                                         {
                                             alert("1  " + obj[i]._row);
                                             char111[i] = obj[i]._row;
-                                            
+
 //                                            char111 = char111.filter(function(n){ return n !== undefined });
 
                                         }
                                         else {
                                             alert("0  " + obj[i]._row);
                                             char222[i] = obj[i]._row;
-                                            
+
 //                                            char222 = char222.filter(function(n){ return n !== undefined });
                                         }
                                     }
                                     $scope.UsersData = char111;
                                     $scope.UsersMeasure = char222;
-                                  //  alert("first " + $scope.UsersData);
-                                   // alert("second " + $scope.UsersMeasure);
+                                    //  alert("first " + $scope.UsersData);
+                                    // alert("second " + $scope.UsersMeasure);
                                 });
                             });
                         });
@@ -56,7 +57,7 @@ app.controller("AppController", function ($scope, $http) {
         alert(buttonname);
         var dim1 = buttonname;
         alert(dim1);
-        var req2= ocpu.call("getDimension", {
+        var req2 = ocpu.call("getDimension", {
             dimension: dim1
         }, function (session) {
             session.getConsole(function (outtxt) {
@@ -65,8 +66,8 @@ app.controller("AppController", function ($scope, $http) {
                 {
 //                    alert(dimen);
                     dimen_data = dimen;
-                    alert("dimen_data  "+dimen_data);
-                    obj1 = JSON.parse(dimen_data);
+                    alert("dimen_data  " + dimen_data);
+                    data = JSON.parse(dimen_data);
 ////          alert(obj.Variable_Type);
 ////          alert(obj._row);
 //                    alert("OBJdim " + obj1);
@@ -82,35 +83,69 @@ app.controller("AppController", function ($scope, $http) {
         });
 
 //writing the Chart data code
- $('#container').highcharts({
-        xAxis: {
-            categories: obj1
-        },
-        yAxis: {
-            title: {
-                text: 'Temperature'
-            },
-            lineWidth: 2,
-            lineColor: '#F33',
-            id: 'temperature-axis'
-        },
-        series: [{
-                name: 'Temperature',
-                data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6, 23.3, 18.3, 13.9, 9.6],
-                color: '#F33'
-            }]
-    });
+//        $('#container').highcharts({
+//            xAxis: {
+//                categories: obj1
+//            },
+//            yAxis: {
+//                title: {
+//                    text: 'Temperature'
+//                },
+//                lineWidth: 2,
+//                lineColor: '#F33',
+//                id: 'temperature-axis'
+//            },
+//            series: [{
+//                    name: 'Temperature',
+//                    data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6, 23.3, 18.3, 13.9, 9.6],
+//                    color: '#F33'
+//                }]
+//        });
+
+var data = [{
+    
+    "data": 3.0
+}, {
+    
+    "data": 2.0
+}, {
+    
+    "data": 3.5
+}, {
+   
+    "data": 1.5
+}];
+
+// Highcharts requires the y option to be set
+$.each(data, function (i, point) {
+    point.y = point.data;
+});
+
+
+var chart = new Highcharts.Chart({
+
+    chart: {
+        renderTo: 'container'
+//        type: 'pie'
+    },
+
+    series: [{
+        data: data
+    }]
+
+});
     };
 
-  $scope.Clicked1 = function ()
+    $scope.Clicked1 = function ()
     {
         buttonname1 = event.target.name;
-        alert(buttonname1+"  "+buttonname);
-//        var dime = buttonname1;
-        
-         var req= ocpu.call("getMeasure", {
-            dimension: buttonname,
-            measure:buttonname1
+        alert(buttonname1 + "  " + buttonname);
+        var dim2 = buttonname;
+        var dim3 = buttonname1;
+        alert(dim2+"  "+dim3);
+        var req = ocpu.call("getMeasure", {
+            dimension: "prod_id",
+            measure: "status"
         }, function (session) {
             session.getConsole(function (outtxt) {
                 $("#output").text(outtxt);
@@ -118,15 +153,15 @@ app.controller("AppController", function ($scope, $http) {
                 {
                     alert(dimen1);
                     dimen_data1 = dimen1;
-                    alert("dimen_data  "+dimen_data1);
+                    alert("dimen_data measure  " + dimen_data1);
                     obj12 = JSON.parse(dimen_data1);
 
                 });
             });
 
         });
-        
-        };
+
+    };
 });
 
 var buttonname333 = null;
@@ -237,7 +272,7 @@ $(function () {
     var b = obj1;
     $('#sub1').click(function () {
         alert(obj1);
-        alert("b data  "+b);
+        alert("b data  " + b);
         Highcharts.charts[0].xAxis[0].update({categories: obj1.Dimension}, true);
     });
 
