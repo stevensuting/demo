@@ -6,11 +6,11 @@ mydb_MSSQL = dbConnect(SQLServer(),"192.168.2.113/MicrosoftBIRetailDemo;user=app
 #Option to aggregate in mysql
 #rs = dbSendQuery(mydb, paste0( "select *from product"));
 
-rs = dbSendQuery(mydb, paste0( "select Distinct( " ,dimension, ") from FactOnlineSales" , sep=""));
+rs = dbSendQuery(mydb_MSSQL, paste0( "select Distinct( " ,dimension, ") from FactOnlineSales" , sep=""));
 dataset <- fetch(rs, n=10000);
 dimensionExt <- dataset[,1]
 names(dataset)[1] <-paste("Dimension");
-
+ 
 
 DimJSON<-toJSON(dataset)
 return(dimensionExt);
