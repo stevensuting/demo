@@ -117,10 +117,10 @@ app.controller("AppController", function ($scope, $http) {
                 renderTo: 'container'
 //        type: 'pie'
             },
-//            xAxis: {
-//                categories: dimen_data
-//            },
-            series: dimen_data
+            xAxis: {
+                categories: data
+            },
+            series: data
 //            series: [{
 //                    data: data
 //                }]
