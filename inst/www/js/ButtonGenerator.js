@@ -91,27 +91,13 @@ app.controller("AppController", function ($scope, $http) {
         });
 
 //writing the Chart data code
-        $('#container').highcharts({
-        xAxis: {
-            categories: ['Jan', 'Feb', 'Mar']
-        },
-        yAxis: {
-            title: {
-                text: 'Temperature'
-            },
-            lineWidth: 2,
-            lineColor: '#F33',
-            id: 'temperature-axis'
-        },
-        series: [{
-                name: 'Temperature',
-                data: [7.0, 6.9, 9.5],
-                color: '#F33'
-            }]
-    });
-    
-    
-    
+    // the button handler
+    var chart = $('#container').highcharts();
+    /*X-axis values change*/
+//    var a = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'];
+    $('#sub').click(function () {
+        Highcharts.charts[0].xAxis[0].update({categories: dimen_data}, true);
+});
     
     };
 
