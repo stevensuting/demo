@@ -7,6 +7,7 @@ var char222 = [];
 var temp = [];
 var len1 = char111.length;
 var len2 = char222.length;
+var q,y;
 var obj;
 var obj1;
 var obj2;
@@ -34,7 +35,7 @@ app.controller("AppController", function ($scope, $http) {
                                             alert("1  " + obj[i]._row);
                                             char111[i] = obj[i]._row;
 
-                                            for (var q in char111)
+                                            for (q=0;q<len1;q++)
                                                     q && temp.push(q); // copy each non-empty value to the 'temp' array
 
                                             char111 = temp;
@@ -48,7 +49,8 @@ app.controller("AppController", function ($scope, $http) {
                                             alert("0  " + obj[i]._row);
                                             char222[i] = obj[i]._row;
                                             
-                                           for (var y in char222)
+                                           
+                                               for (y=0;y<len2;y++)
                                                     y && temp.push(y); // copy each non-empty value to the 'temp' array
 
                                             char222 = temp;
