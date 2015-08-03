@@ -116,11 +116,11 @@ app.controller("AppController", function ($scope, $http) {
         var series = [];
               
         for (var i = 0; i < obj1.length; i++) {
-            alert("obj value "+obj1[i].Dimension);
+//            alert("obj value "+obj1[i].Dimension);
             series.push({"data": obj1[i].Dimension});
         }
-        alert("series value "+series);
-        Highcharts.charts[0].xAxis[0].update({categories: series}, true);
+        alert("series value "+data);
+        Highcharts.charts[0].xAxis[0].update({categories: data}, true);
 
     };
 
