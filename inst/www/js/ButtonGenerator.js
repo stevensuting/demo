@@ -19,6 +19,53 @@ app.controller("AppController", function ($scope, $http) {
                             //to print in r console whatever returned by r 
                             session.getConsole(function (outtxt) {
                                 $("#output").text(outtxt);
+<<<<<<< HEAD
+                         session.getObject(function(data){
+        //data is the object returned by the R function
+         // copy the object data to dim_data
+         
+          dim_data= data;
+          
+          obj=JSON.parse(dim_data);
+//          alert(obj.Variable_Type);
+//          alert(obj._row);
+//$scope.UsersData = obj;
+for (var i in obj) {
+   // if(obj.Variable_Type="cha
+  
+//                output = obj[i].Variable_Type;
+////                alert(obj.Variable_Type);
+//                alert(output);
+
+               
+                if(obj[i].Variable_Type ==="character")
+
+                {
+                   //if(obj[i]!==","){
+                    alert("1  "+obj[i]._row);
+                  char111[i] = obj[i]._row; 
+                  
+                }
+                 
+                            
+                  
+                
+                else{
+                    alert("0  "+obj[i]._row);
+                }
+                         }
+            $scope.UsersData = char111;
+alert("first "+$scope.UsersData);
+     });
+//     $scope.UsersData = JSON.parse(dim_data);
+     });
+
+                            //if R returns an error, alert the error message
+//                            req.fail(function () {
+//                                alert("Server error: " + req.responseText);
+//                            });
+//$scope.UsersData = JSON.parse(dim_data);
+=======
                                 session.getObject(function (data) {
                                     //data is the object returned by the R function
                                     // copy the object data to dim_data
@@ -47,6 +94,7 @@ app.controller("AppController", function ($scope, $http) {
                                     // alert("second " + $scope.UsersMeasure);
                                 });
                             });
+>>>>>>> e036b9400afd850b2fdb28294af02f81fec1fd11
                         });
 
             };
