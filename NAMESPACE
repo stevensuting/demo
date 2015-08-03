@@ -12,5 +12,5 @@ export(rmysql_temp)
 export(rmysql_doublelist)
 import(RMySQL)
 import(jsonlite)
-import(ddply)
+import(plyr)
 
