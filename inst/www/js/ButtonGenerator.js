@@ -105,9 +105,9 @@ app.controller("AppController", function ($scope, $http) {
         var data = [{"data": 3.0}, {"data": 2.0}, {"data": 3.5}, {"data": 1.5}];
 
 // Highcharts requires the y option to be set
-        $.each(data, function (i, point) {
-            point.y = point.data;
-        });
+//        $.each(data, function (i, point) {
+//            point.y = point.data;
+//        });
 
 
         var chart = new Highcharts.Chart({
@@ -115,9 +115,9 @@ app.controller("AppController", function ($scope, $http) {
                 renderTo: 'container'
 //        type: 'pie'
             },
-            xAxis: {
-                categories: obj1.Dimension
-            },
+//            xAxis: {
+//                categories: Dimension
+//            },
             series: [{
                     data: data
                 }]
