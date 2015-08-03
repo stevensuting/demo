@@ -106,7 +106,7 @@ app.controller("AppController", function ($scope, $http) {
 
 // Highcharts requires the y option to be set
         $.each(obj1, function (i, point) {
-            point.y = point.Dimension;
+            point.y = point.obj1;
         });
 
 
