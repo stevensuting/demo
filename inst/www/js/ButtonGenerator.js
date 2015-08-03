@@ -43,8 +43,12 @@ app.controller("AppController", function ($scope, $http) {
                                             //char222 = char222.filter(function(n){ return n !== undefined });
                                         }
                                     }
+                                    for (var j=0;j<2;j++)
+                                    {
                                     char111 = char111.filter(function(n){ return n !== undefined });
                                      char222 = char222.filter(function(n){ return n !== undefined });
+                                     j++;
+                                 }
                                     $scope.UsersData = char111;
                                     $scope.UsersMeasure = char222;
                                     //  alert("first " + $scope.UsersData);
