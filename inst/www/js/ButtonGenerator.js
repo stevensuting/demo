@@ -43,7 +43,7 @@ app.controller("AppController", function ($scope, $http) {
                                             //char222 = char222.filter(function(n){ return n !== undefined });
                                         }
                                     }
-<<<<<<< HEAD
+
 
                                     for (var j = 0; j < 2; j++)
                                     {
@@ -60,12 +60,12 @@ app.controller("AppController", function ($scope, $http) {
                                     
                                     char111 = char111.filter;
                                      char222 = char222.filter;
-=======
+
                                   
                                     
                                     //char111 = char111.filter;
                                      //char222 = char222.filter
->>>>>>> 126c7378fe71c76c84be3aa148973e2a51f2a033
+
                                      
                                
                                     $scope.UsersData = char111;
