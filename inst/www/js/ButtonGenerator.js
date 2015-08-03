@@ -110,19 +110,38 @@ app.controller("AppController", function ($scope, $http) {
         });
 
 //writing the Chart data code
-        // the button handler
-        var chart = $('#container').highcharts();
-        /*X-axis values change*/
-        var series = [];
-              
-        for (var i = 0; i < obj1.length; i++) {
-            alert("obj value "+obj1[i].Dimension);
-            series.push({"data": obj1[i].Dimension});
-            Highcharts.charts[0].xAxis[0].update({categories: obj1[i].Dimension}, true);
+        var chart; // global
+var options = {
+    chart: {
+        renderTo: 'container',
+        defaultSeriesType: 'bar'
+    },
+    title:{
+        text: 'No. Schools for different levels'
+    },
+    xAxis:{
+        title:'Education Level',
+        categories:[]
+    },
+    yAxis:{
+        title:{
+            text:'No. Of Schools'
         }
-//        alert("series value "+series.data);
-//        Highcharts.charts[0].xAxis[0].update({categories: series.data}, true);
+    },
+    series:[{
+        name: "No. Schools",
+        data: []
+    }]
+};
 
+    yData = options.series[0].data; //Array to store data for y column
+    xData = options.xAxis.categories; //Array to store data for x column
+
+    xDataObj = dimen_data[0];
+
+    for(var key in xDataObj){
+        xData.push(xDataObj[key]);
+    }
     };
 
     $scope.Clicked1 = function ()
