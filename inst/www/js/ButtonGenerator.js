@@ -116,10 +116,10 @@ app.controller("AppController", function ($scope, $http) {
 //        type: 'pie'
             },
             xAxis: {
-                categories: ['Jan', 'Feb', 'Mar','Apr']
+                categories: data
             },
             series: [{
-                    data: data
+                    data: ['Jan', 'Feb', 'Mar','Apr']
                 }]
 
         });
