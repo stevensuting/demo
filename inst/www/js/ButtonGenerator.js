@@ -129,7 +129,7 @@ var chart = new Highcharts.Chart({
 //        type: 'pie'
     },
 
-    series: [{
+    Category: [{
         data: data
     }]
 
