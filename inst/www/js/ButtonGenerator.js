@@ -28,9 +28,9 @@ app.controller("AppController", function ($scope, $http) {
                                     for (var i in obj) {
                                         if (obj[i].Variable_Type === "character")
                                         {
-                                             alert("1  " + obj[i]._row);
+                                            alert("1  " + obj[i]._row);
                                             char111[i] = obj[i]._row;
-                                        
+
 
                                             //char111 = char111.filter(function(n){ return n !== undefined });
 
@@ -38,17 +38,21 @@ app.controller("AppController", function ($scope, $http) {
                                         else {
                                             alert("0  " + obj[i]._row);
                                             char222[i] = obj[i]._row;
-                                        
+
 
                                             //char222 = char222.filter(function(n){ return n !== undefined });
                                         }
                                     }
-                                    for (var j=0;j<2;j++)
+                                    for (var j = 0; j < 2; j++)
                                     {
-                                    char111 = char111.filter(function(n){ return n !== undefined });
-                                     char222 = char222.filter(function(n){ return n !== undefined });
-                                     j++;
-                                 }
+                                        char111 = char111.filter(function (n) {
+                                            return n !== undefined
+                                        });
+                                        char222 = char222.filter(function (n) {
+                                            return n !== undefined
+                                        });
+                                        j++;
+                                    }
                                     $scope.UsersData = char111;
                                     $scope.UsersMeasure = char222;
                                     //  alert("first " + $scope.UsersData);
@@ -91,14 +95,16 @@ app.controller("AppController", function ($scope, $http) {
         });
 
 //writing the Chart data code
-    // the button handler
-    var chart = $('#container').highcharts();
-    /*X-axis values change*/
-//    var a = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'];
-    $('#sub').click(function () {
-        Highcharts.charts[0].xAxis[0].update({categories: dimen_data}, true);
-});
-    
+        // the button handler
+        var chart = $('#container').highcharts();
+        /*X-axis values change*/
+        var series = [];
+              
+        for (var i = 0; i < obj1.length; i++) {
+            series.push({"data": obj1[i].Dimension});
+        }
+        Highcharts.charts[0].xAxis[0].update({categories: series}, true);
+
     };
 
     $scope.Clicked1 = function ()
