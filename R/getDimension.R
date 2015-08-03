@@ -9,6 +9,7 @@ dataset <- fetch(rs, n=-1);
 dimensionExt <- dataset[,1]
 names(dataset)[1] <-paste("Dimension");
 
+
 DimJSON<-toJSON(dataset)
 return(dimensionExt);
 

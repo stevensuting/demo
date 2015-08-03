@@ -17,7 +17,6 @@ measureExt <- aggData[,2]
 #aggdata <- aggregate(dataset[,2]~ dataset[,1],data=dataset,FUN=sum);
 #aggdata <- aggregate(list(Measure=dataset[,2]),list(Dimension=dataset[,1]),sum);
 
-
 #aggMeasure <- data.frame(dataset[,2]);
 #names(aggMeasure)[1] <-paste("Measure");
 
