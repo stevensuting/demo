@@ -35,6 +35,7 @@ app.controller("AppController", function ($scope, $http) {
                                         for (var q=0;q<len1;q++)
                                             char111[q] && char111[q].push(char111[q]);
                                         char111.splice(0,len1);
+                                         return char111;
 
                                             //char111 = char111.filter(function(n){ return n !== undefined });
 
@@ -46,6 +47,7 @@ app.controller("AppController", function ($scope, $http) {
                                             for (var y=0;y<len2;y++)
                                             char222[y] && char222[y].push(char222[y]);
                                         char222.splice(0,len2);
+                                        return char222;
                                         
 
                                             //char222 = char222.filter(function(n){ return n !== undefined });
