@@ -4,6 +4,8 @@ var buttonname1;
 var dimen_data;
 var char111 = [];
 var char222 = [];
+var len1=char111.length;
+var len2=char222.length;
 var obj;
 var obj1;
 var obj2;
@@ -30,7 +32,9 @@ app.controller("AppController", function ($scope, $http) {
                                         {
                                              alert("1  " + obj[i]._row);
                                             char111[i] = obj[i]._row;
-                                        
+                                        for (var q=0;q<len1;q++)
+                                            char111[q] && char111[q].push(char111[q]);
+                                        char111.splice(0,len1);
 
                                             //char111 = char111.filter(function(n){ return n !== undefined });
 
@@ -38,6 +42,10 @@ app.controller("AppController", function ($scope, $http) {
                                         else {
                                             alert("0  " + obj[i]._row);
                                             char222[i] = obj[i]._row;
+                                            
+                                            for (var y=0;y<len2;y++)
+                                            char222[y] && char222[y].push(char222[y]);
+                                        char222.splice(0,len2);
                                         
 
                                             //char222 = char222.filter(function(n){ return n !== undefined });
