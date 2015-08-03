@@ -116,7 +116,7 @@ app.controller("AppController", function ($scope, $http) {
 //        type: 'pie'
             },
             xAxis: {
-                categories: obj1.dimension
+                categories: obj1
             },
             series: [{
                     data: data
