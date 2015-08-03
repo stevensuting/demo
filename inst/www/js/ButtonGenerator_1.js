@@ -5,9 +5,6 @@ var dimen_data;
 var char111 = [];
 var char222 = [];
 var temp = [];
-var len1 = char111.length;
-var len2 = char222.length;
-var q,y;
 var obj;
 var obj1;
 var obj2;
@@ -35,14 +32,10 @@ app.controller("AppController", function ($scope, $http) {
                                             alert("1  " + obj[i]._row);
                                             char111[i] = obj[i]._row;
 
-                                            for (q=0;q<len1;q++)
-                                                    q && temp.push(q); // copy each non-empty value to the 'temp' array
-
-                                            char111 = temp;
-                                            delete temp;
+                                            
 
 
-                                            //char111 = char111.filter(function(n){ return n !== undefined });
+                                            char111 = char111.filter(function(n){ return n !== undefined });
 
                                         }
                                         else {
@@ -50,17 +43,13 @@ app.controller("AppController", function ($scope, $http) {
                                             char222[i] = obj[i]._row;
                                             
                                            
-                                               for (y=0;y<len2;y++)
-                                                    y && temp.push(y); // copy each non-empty value to the 'temp' array
-
-                                            char222 = temp;
-                                            delete temp;
+                                               
  
                                            
 
 
 
-                                            //char222 = char222.filter(function(n){ return n !== undefined });
+                                            char222 = char222.filter(function(n){ return n !== undefined });
                                         }
                                     }
 
