@@ -119,7 +119,7 @@ app.controller("AppController", function ($scope, $http) {
                 categories: obj1
             },
             series: [{
-                    data: data
+                    data: Dimension
                 }]
 
         });
