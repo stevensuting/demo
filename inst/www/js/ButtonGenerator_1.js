@@ -65,8 +65,8 @@ app.controller("AppController", function ($scope, $http) {
                                     }
 
 
-                                    char111 = char111.filter(character);
-                                    char222 = char222.filter(integer);
+                                    //char111 = char111.filter(character);
+                                    //char222 = char222.filter(integer);
 
 
                                     $scope.UsersData = char111;
