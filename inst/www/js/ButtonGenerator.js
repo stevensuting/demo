@@ -28,31 +28,27 @@ app.controller("AppController", function ($scope, $http) {
                                     for (var i in obj) {
                                         if (obj[i].Variable_Type === "character")
                                         {
-
                                              alert("1  " + obj[i]._row);
                                             char111[i] = obj[i]._row;
                                         
-
-                                            alert("1  " + obj[i]._row);
-                                            char111[i] = obj[i]._row;
-
 
                                             //char111 = char111.filter(function(n){ return n !== undefined });
 
                                         }
                                         else {
                                             alert("0  " + obj[i]._row);
-                                            char222[i] = obj[i]._row
+                                            char222[i] = obj[i]._row;
+                                        
 
                                             //char222 = char222.filter(function(n){ return n !== undefined });
                                         }
-                                    
-                                   
-                                    
+                                    }
+                                    for (var j=0;j<2;j++)
+                                    {
                                     char111 = char111.filter(function(n){ return n !== undefined });
                                      char222 = char222.filter(function(n){ return n !== undefined });
-                                     
-                                 
+                                     j++;
+                                 }
                                     $scope.UsersData = char111;
                                     $scope.UsersMeasure = char222;
                                     //  alert("first " + $scope.UsersData);
