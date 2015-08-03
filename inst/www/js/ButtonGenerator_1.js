@@ -4,7 +4,8 @@ var buttonname1;
 var dimen_data;
 var char111 = [];
 var char222 = [];
-var temp = [];
+var newArray = [];
+var newArray1 = [];
 var obj;
 var obj1;
 var obj2;
@@ -32,24 +33,38 @@ app.controller("AppController", function ($scope, $http) {
                                             alert("1  " + obj[i]._row);
                                             char111[i] = obj[i]._row;
 
-                                            
+                                            for (var i = 0; i < char111.length; i++) {
+                                                if (char111[i] !== undefined && char111[i] !== null && char111[i] !== "") {
+                                                    newArray.push(char111[i]);
+                                                }
+                                            }
+                                            //console.log(newArray.length); // == 3 
+                                            console.log(newArray);
 
 
-                                            char111 = char111.filter(function(n){ return n !== undefined });
+
+                                            //char111 = char111.filter(function(n){ return n !== undefined });
 
                                         }
                                         else {
                                             alert("0  " + obj[i]._row);
                                             char222[i] = obj[i]._row;
-                                            
-                                           
-                                               
- 
-                                           
+
+                                            for (var i = 0; i < char222.length; i++) {
+                                                if (char222[i] !== undefined && char222[i] !== null && char222[i] !== "") {
+                                                    newArray1.push(char222[i]);
+                                                }
+                                            }
+                                            //console.log(newArray.length); // == 3 
+                                            console.log(newArray1);
 
 
 
-                                            char222 = char222.filter(function(n){ return n !== undefined });
+
+
+
+
+                                            //char222 = char222.filter(function(n){ return n !== undefined });
                                         }
                                     }
 
