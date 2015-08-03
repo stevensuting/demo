@@ -4,6 +4,10 @@ var buttonname1;
 var dimen_data;
 var char111 = [];
 var char222 = [];
+var temp = [];
+var len1 = char111.length;
+var len2 = char222.length;
+var q,y;
 var obj;
 var obj1;
 var obj2;
@@ -28,9 +32,15 @@ app.controller("AppController", function ($scope, $http) {
                                     for (var i in obj) {
                                         if (obj[i].Variable_Type === "character")
                                         {
-                                             alert("1  " + obj[i]._row);
+                                            alert("1  " + obj[i]._row);
                                             char111[i] = obj[i]._row;
-                                        
+
+                                            for (q=0;q<len1;q++)
+                                                    q && temp.push(q); // copy each non-empty value to the 'temp' array
+
+                                            char111 = temp;
+                                            delete temp;
+
 
                                             //char111 = char111.filter(function(n){ return n !== undefined });
 
@@ -38,17 +48,27 @@ app.controller("AppController", function ($scope, $http) {
                                         else {
                                             alert("0  " + obj[i]._row);
                                             char222[i] = obj[i]._row;
-                                        
+                                            
+                                           
+                                               for (y=0;y<len2;y++)
+                                                    y && temp.push(y); // copy each non-empty value to the 'temp' array
+
+                                            char222 = temp;
+                                            delete temp;
+ 
+                                           
+
+
 
                                             //char222 = char222.filter(function(n){ return n !== undefined });
                                         }
                                     }
-                                  
-                                    
-                                    char111 = char111.filter(character);
-                                     char222 = char222.filter(integer);
-                                     
-                               
+
+
+                                    //char111 = char111.filter(character);
+                                    //char222 = char222.filter(integer);
+
+
                                     $scope.UsersData = char111;
                                     $scope.UsersMeasure = char222;
                                     //  alert("first " + $scope.UsersData);
@@ -91,14 +111,14 @@ app.controller("AppController", function ($scope, $http) {
         });
 
 //writing the Chart data code
-    // the button handler
-    var chart = $('#container').highcharts();
-    /*X-axis values change*/
+        // the button handler
+        var chart = $('#container').highcharts();
+        /*X-axis values change*/
 //    var a = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'];
-    $('#sub').click(function () {
-        Highcharts.charts[0].xAxis[0].update({categories: dimen_data}, true);
-});
-    
+        $('#sub').click(function () {
+            Highcharts.charts[0].xAxis[0].update({categories: dimen_data}, true);
+        });
+
     };
 
     $scope.Clicked1 = function ()
