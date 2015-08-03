@@ -56,18 +56,18 @@ app.controller("AppController", function ($scope, $http) {
                                         j++;
                                     }
 
-                                  
-                                    
+
+
                                     char111 = char111.filter;
-                                     char222 = char222.filter;
+                                    char222 = char222.filter;
 
-                                  
-                                    
+
+
                                     //char111 = char111.filter;
-                                     //char222 = char222.filter
+                                    //char222 = char222.filter
 
-                                     
-                               
+
+
                                     $scope.UsersData = char111;
                                     $scope.UsersMeasure = char222;
                                     //  alert("first " + $scope.UsersData);
@@ -110,39 +110,17 @@ app.controller("AppController", function ($scope, $http) {
         });
 
 //writing the Chart data code
-        var chart; // global
-var options = {
-    chart: {
-        renderTo: 'container',
-        defaultSeriesType: 'bar'
-    },
-    title:{
-        text: 'No. Schools for different levels'
-    },
-    xAxis:{
-        title:'Education Level',
-        categories:[]
-    },
-    yAxis:{
-        title:{
-            text:'No. Of Schools'
-        }
-    },
-    series:[{
-        name: "No. Schools",
-        data: []
-    }]
-};
+        // the button handler
+        var chart = $('#container').highcharts();
+        /*X-axis values change*/
+        var series = [];
 
-    yData = options.series[0].data; //Array to store data for y column
-    xData = options.xAxis.categories; //Array to store data for x column
-
-    xDataObj = dimen_data[0];
-
-    for(var key in xDataObj){
-        xData.push(xDataObj[key]);
-    }
+        var c = ['1-Jan-2014', '1-Feb-2014', '1-Mar-2014', '1-Apr-2014', '1-May-2014', '1-Jun-2014', '1-Jul-2014', '1-Aug-2014', '1-Sep-2014', '1-Oct-2014', '1-Nov-2014', '1-Dec-2014'];
+        Highcharts.charts[0].xAxis[0].update({categories: c}, true);
     };
+//        alert("series value "+series.data);
+//        Highcharts.charts[0].xAxis[0].update({categories: series.data}, true);
+
 
     $scope.Clicked1 = function ()
     {
