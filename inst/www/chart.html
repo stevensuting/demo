@@ -77,7 +77,7 @@
                         <tr data-ng-repeat="client in UsersData" style="cursor:pointer;" >
                             <td>
                                 <div class="btn-group" id="dimension">
-                                <button type="button" class="btn btn-danger" ng-click="Clicked()" id="{{client}}" name="{{client}}">{{client}}</button>
+                                <button type="button" class="btn btn-danger" ng-click="Clicked()" id="{{client.Dimension}}" name="{{client.Dimension}}">{{client.Dimension}}</button>
                                 <button type="button" class="btn btn-danger dropdown-toggle">
                                     <span class="caret" style="height: 12px"></span>
                                     <!--<span class="sr-only">Split button!</span>-->
@@ -91,7 +91,6 @@
                                 </ul>
                                 </div>
                                 </td>
-
                         </tr>
                     </tbody>
                 </table>
@@ -106,10 +105,10 @@
                 <!-- <table class="table table-condensed uk-overflow-container" ng-table="tableParams" id="PJPTable" style="height:200px;margin-left: 0px;table-layout:fixed;margin-top: -20px;" > -->
                 <table id="PJPTable" class="table table-condensed" style="width: 100px" >
                     <tbody style="">
-                        <tr data-ng-repeat="client1 in UsersMeasure">
+                        <tr data-ng-repeat="client1 in UsersData">
                             <td>
                                 <div class="btn-group" id="measure">
-                                <button type="button" class="btn btn-danger" ng-click="Clicked1()" id="{{client1}}" name="{{client1}}">{{client1}}</button>
+                                <button type="button" class="btn btn-danger" ng-click="Clicked1()" id="{{client1.Measure}}" name="{{client1.Measure}}">{{client1.Measure}}</button>
                                 <button type="button" class="btn btn-danger dropdown-toggle">
                                     <span class="caret" style="height: 12px"></span>
                                     <!--<span class="sr-only">Split button!</span>-->

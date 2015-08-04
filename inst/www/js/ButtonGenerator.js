@@ -26,28 +26,26 @@ app.controller("AppController", function ($scope, $http) {
                                     dim_data = data;
                                     alert("Dimension     "+dim_data);
                                     obj = JSON.parse(dim_data);
-                                    for (var i in obj) {
-                                        if (obj[i].Variable_Type === "character")
-                                        {
-                                            alert("1  " + obj[i]._row);
-                                            char111[i] = obj[i]._row;
-
-
-                                            //char111 = char111.filter(function(n){ return n !== undefined });
-
-                                        }
-                                        else if (obj[i].Variable_Type === "double")
-                                        {
-                                            alert("0  " + obj[i]._row);
-                                            char222[i] = obj[i]._row;
-
-
-                                            //char222 = char222.filter(function(n){ return n !== undefined });
-                                        }
-                                        else{
-                                            
-                                        }
-                                    }
+//                                    for (var i in obj) {
+//                                        if (obj[i].Variable_Type === "character")
+//                                        {
+//                                            alert("1  " + obj[i]._row);
+//                                            char111[i] = obj[i]._row;
+//                                            //char111 = char111.filter(function(n){ return n !== undefined });
+//
+//                                        }
+//                                        else if (obj[i].Variable_Type === "double")
+//                                        {
+//                                            alert("0  " + obj[i]._row);
+//                                            char222[i] = obj[i]._row;
+//
+//
+//                                            //char222 = char222.filter(function(n){ return n !== undefined });
+//                                        }
+//                                        else{
+//                                            
+//                                        }
+//                                    }
 
 
 //                                    for (var j = 0; j < 2; j++)
@@ -73,8 +71,8 @@ app.controller("AppController", function ($scope, $http) {
 
 
 
-                                    $scope.UsersData = char111;
-                                    $scope.UsersMeasure = char222;
+                                    $scope.UsersData = obj;
+//                                    $scope.UsersMeasure = char222;
                                     //  alert("first " + $scope.UsersData);
                                     // alert("second " + $scope.UsersMeasure);
                                 });

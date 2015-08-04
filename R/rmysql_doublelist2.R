@@ -6,13 +6,26 @@ rs = dbSendQuery(mydb, "select * from FactOnlineSales");
 #Pulls only 1st row
 data = fetch(rs, n=1);
 
+Dimension <- subset(preData.df, preData== "character");
+preDim <- data.frame(row.names(Dimension));
+names(preDim)[1] <-paste("Dimension");
+Dim <- toJSON(preDim)
+
+Measure <- subset(preData.df, preData!= "character");
+preMeasure <- data.frame(row.names(Measure));
+names(preMeasure)[1] <-paste("Measure");
+Measure <- toJSON(preMeasure)
+
+dataChar<-paste(Dim,Measure)
+
+
 #get datatypes of columns
-preData<-sapply(data,typeof);
-preData.df=data.frame(preData);
-names(preData.df)[1] <-paste("Variable_Type");
+#preData<-sapply(data,typeof);
+#preData.df=data.frame(preData);
+#names(preData.df)[1] <-paste("Variable_Type");
 
 #Convert data frame to JSON
-dataJSON<- toJSON(preData.df)
+#dataJSON<- toJSON(preData.df)
 
 #Seperate different datatypes
 #integer <- subset(preData.df,Variable_Type == "integer");
@@ -27,5 +40,5 @@ dataJSON<- toJSON(preData.df)
 #intJSON <- toJSON(int.ds);
 #charJSON <- toJSON(char.ds);
 
-return(dataJSON)
+return(dataChar)
 }
