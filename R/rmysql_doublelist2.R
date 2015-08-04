@@ -5,11 +5,13 @@ rs = dbSendQuery(mydb, "select * from FactOnlineSales");
 
 #Pulls only 1st row
 data = fetch(rs, n=1);
+preData<-sapply(data,typeof);
+preData.df=data.frame(preData);
 
 Dimension <- subset(preData.df, preData== "character");
 preDim <- data.frame(row.names(Dimension));
 names(preDim)[1] <-paste("Dimension");
-Dim <- toJSON(preDim)
+Dim <- toJSON(preDim) 
 
 Measure <- subset(preData.df, preData!= "character");
 preMeasure <- data.frame(row.names(Measure));
