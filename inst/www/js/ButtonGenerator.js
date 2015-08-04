@@ -36,12 +36,16 @@ app.controller("AppController", function ($scope, $http) {
                                             //char111 = char111.filter(function(n){ return n !== undefined });
 
                                         }
-                                        else {
+                                        else if (obj[i].Variable_Type === "double")
+                                        {
                                             alert("0  " + obj[i]._row);
                                             char222[i] = obj[i]._row;
 
 
                                             //char222 = char222.filter(function(n){ return n !== undefined });
+                                        }
+                                        else{
+                                            
                                         }
                                     }
 

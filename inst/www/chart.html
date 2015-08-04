@@ -76,6 +76,7 @@
                     <tbody >
                         <tr data-ng-repeat="client in UsersData" style="cursor:pointer;" >
                             <td>
+                                <div class="btn-group" id="dimension">
                                 <button type="button" class="btn btn-danger" ng-click="Clicked()" id="{{client}}" name="{{client}}">{{client}}</button>
                                 <button type="button" class="btn btn-danger dropdown-toggle">
                                     <span class="caret" style="height: 12px"></span>
@@ -87,7 +88,9 @@
                                     <li><a href="#">Something else here</a></li>
                                     <li class="divider"></li>
                                     <li><a href="#">Separated link</a></li>
-                                </ul></td>
+                                </ul>
+                                </div>
+                                </td>
 
                         </tr>
                     </tbody>
@@ -105,6 +108,7 @@
                     <tbody style="">
                         <tr data-ng-repeat="client1 in UsersMeasure">
                             <td>
+                                <div class="btn-group" id="measure">
                                 <button type="button" class="btn btn-danger" ng-click="Clicked1()" id="{{client1}}" name="{{client1}}">{{client1}}</button>
                                 <button type="button" class="btn btn-danger dropdown-toggle">
                                     <span class="caret" style="height: 12px"></span>
@@ -116,7 +120,9 @@
                                     <li><a href="#">Something else here</a></li>
                                     <li class="divider"></li>
                                     <li><a href="#">Separated link</a></li>
-                                </ul></td> 
+                                </ul>
+                                </div>
+                                </td> 
 
                         </tr>
                     </tbody>
