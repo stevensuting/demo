@@ -23,6 +23,7 @@ app.controller("AppController", function ($scope, $http) {
                                     // copy the object data to dim_data
 
                                     dim_data = data;
+                                    alert("Dimension     "+dim_data);
                                     obj = JSON.parse(dim_data);
                                     for (var i in obj) {
                                         if (obj[i].Variable_Type === "character")
