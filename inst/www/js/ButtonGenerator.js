@@ -24,14 +24,15 @@ app.controller("AppController", function ($scope, $http) {
                                     // copy the object data to dim_data
 
                                     dim_data = data;
-                                    alert("Dimension     "+dim_data);
-                                    obj = JSON.parse(dim_data);
-                                    alert("object     "+obj);
+                                    alert("Dimension     " + dim_data);
+//                                    obj = JSON.parse(dim_data);
+                                    obj = dim_data;
+                                    alert("object     " + obj);
                                     for (var i in obj1) {
-                        output = obj[i].Dimension;
-                        output1 = obj[i].Measure;
-                        alert("output " + output+"    "+output1);
-                    }
+                                        output = obj[i].Dimension;
+                                        output1 = obj[i].Measure;
+                                        alert("output " + output + "    " + output1);
+                                    }
 //                                    for (var i in obj) {
 //                                        if (obj[i].Variable_Type === "character")
 //                                        {
@@ -156,7 +157,7 @@ app.controller("AppController", function ($scope, $http) {
             });
 
         });
-Highcharts.charts[0].series[0].setData(dimen_data1, true);
+        Highcharts.charts[0].series[0].setData(dimen_data1, true);
     };
 });
 
