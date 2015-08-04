@@ -28,11 +28,11 @@ app.controller("AppController", function ($scope, $http) {
                                     obj = JSON.parse(dim_data);
 //                                    obj = dim_data;
                                     alert("object     " + obj);
-                                    for (var i in obj1) {
-                                        output = obj[i].Dimension;
-                                        output1 = obj[i].Measure;
-                                        alert("output " + output + "    " + output1);
-                                    }
+//                                    for (var i in obj1) {
+//                                        output = obj[i].Dimension;
+//                                        output1 = obj[i].Measure;
+//                                        alert("output " + output + "    " + output1);
+//                                    }
 //                                    for (var i in obj) {
 //                                        if (obj[i].Variable_Type === "character")
 //                                        {
@@ -103,9 +103,9 @@ app.controller("AppController", function ($scope, $http) {
                 session.getObject(function (dimen)
                 {
 //                    alert(dimen);
-                    dimen_data = dimen;
-                    alert("dimen_data  " + dimen_data);
-                    obj1 = JSON.parse(dimen_data);
+                    dimen_data2 = dimen;
+                    alert("dimen_data  " + dimen_data2);
+                    obj1 = JSON.parse(dimen_data2);
 ////          alert(obj.Variable_Type);
 ////          alert(obj._row);
 //                    alert("OBJdim " + obj1);
