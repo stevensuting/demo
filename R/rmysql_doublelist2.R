@@ -18,29 +18,11 @@ preMeasure <- data.frame(row.names(Measure));
 names(preMeasure)[1] <-paste("Measure");
 Measure <- toJSON(preMeasure)
 
-dataChar<-paste(Dim,Measure)
+Dim2<-fromJSON(Dim); 
+Measure2<-fromJSON(Measure);
+merge <- rbind.fill(Dim2,Measure2);
 
+meregeJSON<- toJSON(merge);
 
-#get datatypes of columns
-#preData<-sapply(data,typeof);
-#preData.df=data.frame(preData);
-#names(preData.df)[1] <-paste("Variable_Type");
-
-#Convert data frame to JSON
-#dataJSON<- toJSON(preData.df)
-
-#Seperate different datatypes
-#integer <- subset(preData.df,Variable_Type == "integer");
-#int <- row.names(integer);
-#int.ds <- data.frame(int);
-
-#character <- subset(preData.df,Variable_Type == "character");
-#char <- row.names(character);
-#char.ds <- data.frame(char);
-
-#Save into JSON
-#intJSON <- toJSON(int.ds);
-charJSON <- toJSON(dataChar);
-
-return(charJSON)
+return(meregeJSON)
 }
