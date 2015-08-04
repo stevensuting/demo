@@ -13,7 +13,7 @@ var app = angular.module('Demo', ['ui.bootstrap', 'ui.directives']);
 app.controller("AppController", function ($scope, $http) {
     $scope.loadUsersrefresh = function ()
     {
-        var req = ocpu.call("rmysql_doublelist", {},
+        var req = ocpu.call("rmysql_doublelist2", {},
                 // myname : myname
                         function (session) {
                             //to print in r console whatever returned by r 
@@ -24,6 +24,7 @@ app.controller("AppController", function ($scope, $http) {
                                     // copy the object data to dim_data
 
                                     dim_data = data;
+                                    alert("Dimension     "+dim_data);
                                     obj = JSON.parse(dim_data);
                                     for (var i in obj) {
                                         if (obj[i].Variable_Type === "character")

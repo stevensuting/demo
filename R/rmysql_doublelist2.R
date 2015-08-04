@@ -1,7 +1,7 @@
-rmysql_doublelist<-function(){
+rmysql_doublelist2<-function(){
 #mydb = dbConnect(MySQL(), user='appuser', password='appuser123', dbname='mstore', host='192.168.2.45');
-mydb_MSSQL = dbConnect(SQLServer(),"192.168.2.113/MicrosoftBIRetailDemo;user=appuser;password=appuser123");
-rs = dbSendQuery(mydb_MSSQL, "select * from FactOnlineSales");
+mydb = dbConnect(SQLServer(),"192.168.2.113/MicrosoftBIRetailDemo;user=appuser;password=appuser123");
+rs = dbSendQuery(mydb, "select * from FactOnlineSales");
 
 #Pulls only 1st row
 data = fetch(rs, n=1);
