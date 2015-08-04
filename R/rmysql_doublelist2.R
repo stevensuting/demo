@@ -40,7 +40,7 @@ dataChar<-paste(Dim,Measure)
 
 #Save into JSON
 #intJSON <- toJSON(int.ds);
-#charJSON <- toJSON(char.ds);
+charJSON <- toJSON(dataChar);
 
-return(dataChar)
+return(charJSON)
 }

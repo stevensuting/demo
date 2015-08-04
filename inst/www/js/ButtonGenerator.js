@@ -25,8 +25,8 @@ app.controller("AppController", function ($scope, $http) {
 
                                     dim_data = data;
                                     alert("Dimension     " + dim_data);
-//                                    obj = JSON.parse(dim_data);
-                                    obj = dim_data;
+                                    obj = JSON.parse(dim_data);
+//                                    obj = dim_data;
                                     alert("object     " + obj);
                                     for (var i in obj1) {
                                         output = obj[i].Dimension;
