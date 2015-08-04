@@ -115,6 +115,7 @@ app.controller("AppController", function ($scope, $http) {
         /*X-axis values change*/
         var series = [];
 
+        var c = ['1-Jan-2014', '1-Feb-2014', '1-Mar-2014', '1-Apr-2014', '1-May-2014', '1-Jun-2014', '1-Jul-2014', '1-Aug-2014', '1-Sep-2014', '1-Oct-2014', '1-Nov-2014', '1-Dec-2014'];
         Highcharts.charts[0].xAxis[0].update({categories: dimen_data}, true);
     };
 //        alert("series value "+series.data);
@@ -145,7 +146,7 @@ app.controller("AppController", function ($scope, $http) {
             });
 
         });
-Highcharts.charts[0].series[0].setData(dimen_data1, true);
+
     };
 });
 

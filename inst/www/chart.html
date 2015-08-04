@@ -1,10 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html ng-app="Demo" ng-controller="AppController">
     <head>
-        <title>
-            Chart
-        </title>
-
         <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" media="screen" href="http://tarruda.github.com/bootstrap-datetimepicker/assets/css/bootstrap-datetimepicker.min.css">
 
@@ -40,40 +35,23 @@
         <script src="opencpu/jquery-1.10.2.min.js"></script>
         <script src="opencpu/opencpu-0.4.js"></script>
 
-        <script type="text/javascript" src="js/ButtonGenerator.js"></script>
+        <script type="text/javascript" src="js/ButtonGenerator_1.js"></script>
         <script type="text/javascript" src="js/rmysql.js"></script>
-        <!--<script type="text/javascript" src="js/Chart.js"></script>-->
-
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <script type="text/javascript" src="//code.jquery.com/jquery-2.0.0.min.js"></script>
-        <script	type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.min.js"></script>
-        <script src="http://code.jquery.com/jquery-1.9.1.js" type="text/javascript"></script>
-        <script src="http://code.highcharts.com/highcharts.js"></script>
-        <script src="http://code.highcharts.com/modules/exporting.js"></script>
-        <!--<script type="text/javascript" src="js/Chart.js"></script>-->
-
-
-
-        <!--    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-            <script type="text/javascript" src="//code.jquery.com/jquery-2.0.0.min.js"></script>
-                <script	type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.min.js"></script>
-                <script src="http://code.jquery.com/jquery-1.9.1.js" type="text/javascript"></script>
-                <script src="http://code.highcharts.com/highcharts.js"></script>
-                <script src="http://code.highcharts.com/modules/exporting.js"></script>
-            <script type="text/javascript" src="js/Chart.js"></script>-->
-        <!--<script type="text/javascript" src="chart_Test1.1.js"></script>-->
-
+        <script type="text/javascript" src="js/Chart.js"></script>
     </head>
     <body>
-        <div id="placeholder" style="float: left" >
+
+        <button id="submitbutton" type="button">Generate</button>
+
+        <div id="placeholder" >
             <!--ng-init="loadUsersrefresh()"-->
             <input type="button" id="111" value="click" ng-click="loadUsersrefresh()"/>
             <br><br>
             <!--<div class="btn-group" data-ng-repeat="client in UsersData" id="dimension">-->
 
             <div id="blueDivUsers" style=""><!-- height: 425px;width: 1310px; -->
-                <table id="UsersTable" class="table table-condensed" style="width: 200px">
-                    <tbody >
+                <table id="UsersTable" class="table table-condensed" style="height: 100px;">
+                    <tbody style="border-bottom: none; border: none">
                         <tr data-ng-repeat="client in UsersData" style="cursor:pointer;" >
                             <td>
                                 <button type="button" class="btn btn-danger" ng-click="Clicked()" id="{{client}}" name="{{client}}">{{client}}</button>
@@ -101,7 +79,7 @@
 
             <div id="blueDivPJP" style=""><!-- height: 425px;width: 1310px; -->
                 <!-- <table class="table table-condensed uk-overflow-container" ng-table="tableParams" id="PJPTable" style="height:200px;margin-left: 0px;table-layout:fixed;margin-top: -20px;" > -->
-                <table id="PJPTable" class="table table-condensed" style="width: 200px" >
+                <table id="PJPTable" class="table table-condensed" style="margin-top: -20px;margin-left: 0px;height: 395px;" >
                     <tbody style="">
                         <tr data-ng-repeat="client1 in UsersMeasure">
                             <td>
@@ -122,32 +100,23 @@
                     </tbody>
                 </table>
             </div>
+
+            
+            
+<!--            <button type="button" class="btn btn-danger" ng-click="Clicked1()" id="{{client1}}" name="{{client1}}">{{client1}}</button>
+            <button type="button" class="btn btn-danger dropdown-toggle">
+                <span class="caret" style="height: 12px"></span>
+                <span class="sr-only">Split button!</span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+            </ul>-->
+            <!--</div>-->
         </div>
-
-<!--        <div style="float: left; margin-top: 50px">
-            <button id="add" class="autocompare" name="add" value="add" onClick="checkBtn(event)">Add Y1</button><br>
-            <button id="add1" class="autocompare" name="add1" value="add1" onClick="checkBtn(event)">Add Y2</button><br>
-            <button id="add2" class="autocompare" name="add2" value="add2" onClick="checkBtn(event)">Add Y3</button><br><br>
-            <button id="sub" class="autocompare" name="sub" value="sub" onClick="checkBtn(event)">Add X1</button><br>
-            <button id="sub1" class="autocompare" name="sub1" value="sub1" onClick="checkBtn(event)">Add X2</button><br>
-            <button id="sub2" class="autocompare" name="sub2" value="sub2" onClick="checkBtn(event)">Add X2</button><br>
-        </div>-->
-
-        <div style="float: right">
-            <button id="swap" class="autocompare">Swap</button>
-
-            <select id="chartType">
-                <option value="line">line</option>
-                <option value="area">area</option>
-                <option value="spline">spline</option>
-                <option value="areaspline">areaspline</option>
-                <option value="scatter">scatter</option>
-                <option value="column">column</option>
-                <option value="pie">pie</option>
-            </select>
-        </div>
-
-        <div id="container" style="height: 600px;width: 1000px; float: right;"></div>
 
     </body>
 </html>
