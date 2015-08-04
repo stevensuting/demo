@@ -26,6 +26,12 @@ app.controller("AppController", function ($scope, $http) {
                                     dim_data = data;
                                     alert("Dimension     "+dim_data);
                                     obj = JSON.parse(dim_data);
+                                    alert("object     "+obj);
+                                    for (var i in obj1) {
+                        output = obj[i].Dimension;
+                        output1 = obj[i].Measure;
+                        alert("output " + output+"    "+output1);
+                    }
 //                                    for (var i in obj) {
 //                                        if (obj[i].Variable_Type === "character")
 //                                        {
@@ -72,6 +78,7 @@ app.controller("AppController", function ($scope, $http) {
 
 
                                     $scope.UsersData = obj;
+                                    alert($scope.UsersData);
 //                                    $scope.UsersMeasure = char222;
                                     //  alert("first " + $scope.UsersData);
                                     // alert("second " + $scope.UsersMeasure);
