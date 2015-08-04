@@ -12,6 +12,7 @@ export(getDimensionMeasure)
 export(rmysql_temp)
 export(rmysql_doublelist2)
 import(RMySQL)
+import(RSQLServer)
 import(jsonlite)
 import(plyr)
 
