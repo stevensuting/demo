@@ -6,6 +6,7 @@ var dimen_data;
 var dimen_data1;
 var char111 = [];
 var char222 = [];
+var char121 = [];
 var obj;
 var obj1;
 var obj2;
