@@ -90,14 +90,22 @@ app.controller("AppController", function ($scope, $http) {
                     for (var i in obj) {
 //                                            alert("1111  " + obj[i].Dimension);
                         char111[i] = obj[i].Dimension;
-                        char121[1] = obj[i].Measure;
                     }
+                    for (var j in obj) {
+//                                            alert("1111  " + obj[i].Dimension);
+                        char121[1] = obj[j].Measure;
+                    }
+                    
 
                     //                    alert("user data  " + $scope.UsersData);
-                    alert("char    " + char111+" measure "+char121);
-                    char222 = $.grep(char111, function (n) { return(n) });
-                    char212 = $.grep(char121, function (n) { return(n) });
-                    alert("char222 "+char222);
+                    alert("char    " + char111 + " measure " + char121);
+                    char222 = $.grep(char111, function (n) {
+                        return(n)
+                    });
+                    char212 = $.grep(char121, function (n) {
+                        return(n)
+                    });
+                    alert("char222 " + char222);
                     $scope.UsersData = char222;
                     $scope.UsersMeasure = char212;
 //                    len = char111.length, i;
