@@ -33,7 +33,7 @@ filepath<- connectionDetails$filepath;
 #mySQL
  	if (data_source_type_id==2){
                 mydb_mySQL <- dbConnect(MySQL(), user=username, password=password, dbname=dbname, host=ip_address);
-                rs = dbSendQuery(mydb_mySQL, paste0( "select " ,dimension, "," ,measure, " from ",tableName," limit 10000;"  , sep=""));
+                rs = dbSendQuery(mydb_mySQL, paste0( "select " ,dimension, "," ,measure, " from ",tableName," limit 1000;"  , sep=""));
                 dataset <- fetch(rs, n=-1);
                 names(dataset)[1] <-paste("Dimension");
                 names(dataset)[2] <-paste("Measure");
@@ -46,7 +46,7 @@ filepath<- connectionDetails$filepath;
 
 		host= paste0(ip_address,"/",dbname,";user=", username ,";password=", password);
                 mydb_MSSQL = dbConnect(SQLServer(), host);
-                rs = dbSendQuery(mydb_MSSQL, paste0( "select top 10000 " ,dimension, "," ,measure, " from ",tableName,";"  , sep=""));
+                rs = dbSendQuery(mydb_MSSQL, paste0( "select top 1000 " ,dimension, "," ,measure, " from ",tableName,";"  , sep=""));
                 dataset <- fetch(rs, n=-1);
                 names(dataset)[1] <-paste("Dimension");
                 names(dataset)[2] <-paste("Measure");

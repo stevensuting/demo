@@ -33,17 +33,34 @@ filepath<- connectionDetails$filepath;
 #mySQL
  	if (data_source_type_id==2){
                 mydb_mySQL <- dbConnect(MySQL(), user=username, password=password, dbname=dbname, host=ip_address);
-                rs = dbSendQuery(mydb_mySQL, paste0("Select * from ",tableName,";",sep=""));
+                rs = dbSendQuery(mydb_mySQL, paste0("Select * from ",tableName," LIMIT 10;",sep=""));
                 tablemySQL <- fetch(rs,n=1);
 
-                #get datatypes of columns
+                ###Convert dataframe to JSON###
+                #Get data tpes
                 preData<-sapply(tablemySQL,typeof);
                 preData.df=data.frame(preData);
-                names(preData.df)[1] <-paste("Variable_Type");
 
-                #Convert data frame to JSON
-                dataJSON<- toJSON(preData.df)
-                return(dataJSON);
+                #Subset of dimensions
+                Dimension <- subset(preData.df, preData== "character");
+                preDim <- data.frame(row.names(Dimension));
+                names(preDim)[1] <-paste("Dimension");
+                Dim <- toJSON(preDim) 
+
+                #Sub set of Measures
+                Measure <- subset(preData.df, preData!= "character");
+                preMeasure <- data.frame(row.names(Measure));
+                names(preMeasure)[1] <-paste("Measure");
+                Measure <- toJSON(preMeasure)
+
+                #Merge Dimensions and Measures
+                Dim2<-fromJSON(Dim); 
+                Measure2<-fromJSON(Measure);
+                merge <- rbind.fill(Dim2,Measure2);
+
+                meregeJSON<- toJSON(merge);
+
+                return(meregeJSON)
                 
 
         }
@@ -52,17 +69,34 @@ filepath<- connectionDetails$filepath;
 
 		host= paste0(ip_address,"/",dbname,";user=", username ,";password=", password);
                 mydb_MSSQL = dbConnect(SQLServer(), host);
-                rs = dbSendQuery(mydb_MSSQL, paste0("Select * from ",tableName,";",sep=""));
+                rs = dbSendQuery(mydb_MSSQL, paste0("Select TOP 10 * from ",tableName,";",sep=""));
                 tableMSSQL <- fetch(rs,n=1);
 
-                #get datatypes of columns
+                ###Convert dataframe to JSON###
+                #Get data tpes
                 preData<-sapply(tableMSSQL,typeof);
                 preData.df=data.frame(preData);
-                names(preData.df)[1] <-paste("Variable_Type");
 
-                #Convert data frame to JSON
-                dataJSON<- toJSON(preData.df)
-                return(dataJSON);
+                #Subset of dimensions
+                Dimension <- subset(preData.df, preData== "character");
+                preDim <- data.frame(row.names(Dimension));
+                names(preDim)[1] <-paste("Dimension");
+                Dim <- toJSON(preDim) 
+
+                #Sub set of Measures
+                Measure <- subset(preData.df, preData!= "character");
+                preMeasure <- data.frame(row.names(Measure));
+                names(preMeasure)[1] <-paste("Measure");
+                Measure <- toJSON(preMeasure)
+
+                #Merge Dimensions and Measures
+                Dim2<-fromJSON(Dim); 
+                Measure2<-fromJSON(Measure);
+                merge <- rbind.fill(Dim2,Measure2);
+
+                meregeJSON<- toJSON(merge);
+
+                return(meregeJSON);
                 
 	}
 #Oracle Database

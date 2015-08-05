@@ -33,8 +33,8 @@ filepath<- connectionDetails$filepath;
 #mySQL
  	if (data_source_type_id==2){
                 mydb_mySQL <- dbConnect(MySQL(), user=username, password=password, dbname=dbname, host=ip_address);
-                rs = dbSendQuery(mydb_mySQL, paste0( "select Distinct( " ,dimension, ") from ",tableName," Limit 10000;" , sep=""));
-                dataset <- fetch(rs, n=10000);
+                rs = dbSendQuery(mydb_mySQL, paste0( "select Distinct( " ,dimension, ") from ",tableName," Limit 1000;" , sep=""));
+                dataset <- fetch(rs, n=1000);
                 names(dataset)[1] <-paste("Dimension");
                 distinctDataset<-unique(dataset[c("Dimension")]);
                 datasetDimension <- distinctDataset[,1];    
@@ -47,8 +47,8 @@ filepath<- connectionDetails$filepath;
 
 		host= paste0(ip_address,"/",dbname,";user=", username ,";password=", password);
                 mydb_MSSQL = dbConnect(SQLServer(), host);
-                rs = dbSendQuery(mydb_MSSQL, paste0( "select top 10000( " ,dimension, ") from ",tableName,";" , sep=""));
-                dataset <- fetch(rs, n=10000);
+                rs = dbSendQuery(mydb_MSSQL, paste0( "select top 1000( " ,dimension, ") from ",tableName,";" , sep=""));
+                dataset <- fetch(rs, n=1000);
                 names(dataset)[1] <-paste("Dimension");
                 distinctDataset<-unique(dataset[c("Dimension")]);
                 datasetDimension <- distinctDataset[,1];    
