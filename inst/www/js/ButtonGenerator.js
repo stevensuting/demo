@@ -113,6 +113,7 @@ app.controller("AppController", function ($scope, $http) {
         for (var i = seriesLength - 1; i > -1; i--) {
             chart.series[i].remove();
         }
+        
         Highcharts.charts[0].xAxis[0].update({categories: dimen_data2}, true);
         Highcharts.charts[0].xAxis[0].update({name: buttonname}, true);
         Highcharts.charts[0].xAxis[0].update({title: buttonname}, true);
