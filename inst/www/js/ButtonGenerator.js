@@ -145,10 +145,10 @@ app.controller("AppController", function ($scope, $http) {
             });
 
         });
+        chart.redraw();
         Highcharts.charts[0].series[0].setData(dimen_data1, true);
         Highcharts.charts[0].series[0].tooltipFormatter = function(item) { return "hiiiiii "+buttonname1+"</b><br/>"; }
-        Highcharts.charts[0].yAxis[0].update({title: buttonname1}, true);
-        chart.redraw();
+        
     };
 });
 
