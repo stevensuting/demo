@@ -86,7 +86,15 @@ app.controller("AppController", function ($scope, $http) {
 
 
                                     $scope.UsersData = obj;
-                                    alert($scope.UsersData);
+                                     for (var i in obj) {
+                                            alert("1111  " + obj[i].Dimension);
+                                            char111[i] = obj[i].Dimension;
+                                        }
+                                    for (var i in $scope.UsersData) {
+                                            alert("000  " + $scope.UsersData[i].Dimension);
+                                        }
+                                    alert("user data  "+$scope.UsersData);
+                                    alert("char    "+char111);
 //                                    $scope.UsersMeasure = char222;
                                     //  alert("first " + $scope.UsersData);
                                     // alert("second " + $scope.UsersMeasure);
