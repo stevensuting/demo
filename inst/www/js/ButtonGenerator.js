@@ -89,6 +89,7 @@ app.controller("AppController", function ($scope, $http) {
                     for (var i in obj) {
 //                                            alert("1111  " + obj[i].Dimension);
                         char111[i] = obj[i].Dimension;
+                        char121[1] = obj[i].Measure;
                     }
 //                                    for (var i in $scope.UsersData) {
 //                                            alert("000  " + $scope.UsersData[i].Dimension);
