@@ -13,7 +13,11 @@ var app = angular.module('Demo', ['ui.bootstrap', 'ui.directives']);
 app.controller("AppController", function ($scope, $http) {
     $scope.loadUsersrefresh = function ()
     {
-        var req = ocpu.call("rmysql_doublelist2", {},
+        var Datasetvalue = document.getElementById("datasetid").value;
+        alert("dataset value "+Datasetvalue);
+        var req = ocpu.call("getDimensionMeasure", {
+            datasetId: Datasetvalue
+        },
                 // myname : myname
                         function (session) {
                             //to print in r console whatever returned by r 
