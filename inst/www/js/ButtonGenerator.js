@@ -96,6 +96,7 @@ app.controller("AppController", function ($scope, $http) {
                                     alert("user data  "+$scope.UsersData);
                                     alert("char    "+char111);
                                     char111 = char111.replace(/,*$/,""); //Removes all commas from the end
+                                    alert("newchar    "+char111);
 //                                    $scope.UsersMeasure = char222;
                                     //  alert("first " + $scope.UsersData);
                                     // alert("second " + $scope.UsersMeasure);
