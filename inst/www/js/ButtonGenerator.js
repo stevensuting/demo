@@ -47,13 +47,13 @@ app.controller("AppController", function ($scope, $http) {
                     }
                     
                     alert("char    " + char111 + " measure " + char121);
-                    char111 = $.grep(char111, function (n) {
+                    char222 = $.grep(char111, function (n) {
                         return(n)
                     });
                     char212 = $.grep(char121, function (n) {
                         return(n)
                     });
-                    alert("char222 " + char111);
+                    alert("char222 " + char222);
                     alert("char212 " + char212);
                     $scope.UsersData = char222;
                     $scope.UsersMeasure = char212;
