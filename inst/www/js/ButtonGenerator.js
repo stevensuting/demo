@@ -91,14 +91,14 @@ app.controller("AppController", function ($scope, $http) {
                         char111[i] = obj[i].Dimension;
                         char121[1] = obj[i].Measure;
                     }
-//                                    for (var i in $scope.UsersData) {
-//                                            alert("000  " + $scope.UsersData[i].Dimension);
-//                                        }
-//                    alert("user data  " + $scope.UsersData);
-                    alert("char    " + char111);
+
+                    //                    alert("user data  " + $scope.UsersData);
+                    alert("char    " + char111+" measure "+char121);
                     char222 = $.grep(char111, function (n) { return(n) });
+                    char212 = $.grep(char121, function (n) { return(n) });
                     alert("char222 "+char222);
-                    $scope.char222;
+                    $scope.UsersData = char222;
+                    $scope.UsersMeasure = char212;
 //                    len = char111.length, i;
 //                    for (i = 0; i < len; i++)
 //                        char111[i] && char111.push(char111[i]);  // copy non-empty values to the end of the array
