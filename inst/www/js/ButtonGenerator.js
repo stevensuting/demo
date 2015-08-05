@@ -121,7 +121,7 @@ app.controller("AppController", function ($scope, $http) {
 
     $scope.Clicked1 = function ()
     {
-        chart.redraw();
+        
         buttonname1 = event.target.name;
         alert(buttonname1 + "  " + buttonname);
         var dim2 = buttonname;
@@ -145,6 +145,7 @@ app.controller("AppController", function ($scope, $http) {
             });
 
         });
+        chart.redraw();
         Highcharts.charts[0].series[0].setData(dimen_data1, true);
         Highcharts.charts[0].yAxis[0].update({title: buttonname1}, true);
 
