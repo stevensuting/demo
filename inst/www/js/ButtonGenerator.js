@@ -13,28 +13,28 @@ var data;
 var app = angular.module('Demo', ['ui.bootstrap', 'ui.directives']);
 
 app.controller("AppController", function ($scope, $http) {
-    
+
     $scope.loadUsersrefresh = function ()
     {
         Datasetvalue = document.getElementById("datasetid").value;
-        alert("dataset value "+Datasetvalue);
+        alert("dataset value " + Datasetvalue);
         var req = ocpu.call("getDimensionMeasure", {
             datasetId: Datasetvalue
         },
-                // myname : myname
-                        function (session) {
-                            //to print in r console whatever returned by r 
-                            session.getConsole(function (outtxt) {
-                                $("#output").text(outtxt);
-                                session.getObject(function (data) {
-                                    //data is the object returned by the R function
-                                    // copy the object data to dim_data
+        // myname : myname
+        function (session) {
+            //to print in r console whatever returned by r 
+            session.getConsole(function (outtxt) {
+                $("#output").text(outtxt);
+                session.getObject(function (data) {
+                    //data is the object returned by the R function
+                    // copy the object data to dim_data
 
-                                    dim_data = data;
-                                    alert("Dimension     " + dim_data);
-                                    obj = JSON.parse(dim_data);
+                    dim_data = data;
+                    alert("Dimension     " + dim_data);
+                    obj = JSON.parse(dim_data);
 //                                    obj = dim_data;
-                                    alert("object     " + obj);
+                    alert("object     " + obj);
 //                                    for (var i in obj1) {
 //                                        output = obj[i].Dimension;
 //                                        output1 = obj[i].Measure;
@@ -80,36 +80,45 @@ app.controller("AppController", function ($scope, $http) {
 
 
 
-                                    //char111 = char111.filter;
-                                    //char222 = char222.filter
+                    //char111 = char111.filter;
+                    //char222 = char222.filter
 
 
 
-                                    $scope.UsersData = obj;
-                                     for (var i in obj) {
+                    $scope.UsersData = obj;
+                    for (var i in obj) {
 //                                            alert("1111  " + obj[i].Dimension);
-                                            char111[i] = obj[i].Dimension;
-                                        }
+                        char111[i] = obj[i].Dimension;
+                    }
 //                                    for (var i in $scope.UsersData) {
 //                                            alert("000  " + $scope.UsersData[i].Dimension);
 //                                        }
-                                    alert("user data  "+$scope.UsersData);
-                                    alert("char    "+char111);
-                                    char222=char111.join('').split(''); 
-                                    alert("newchar    "+char222);
-//                                    $scope.UsersMeasure = char222;
-                                    //  alert("first " + $scope.UsersData);
-                                    // alert("second " + $scope.UsersMeasure);
-                                });
-                            });
-                        });
+                    alert("user data  " + $scope.UsersData);
+                    alert("char    " + char111);
+                    char222 = $.grep(char111, function (n) { return(n) });
+                    alert("char222 "+char222);
+                    
+                    len = char111.length, i;
+                    for (i = 0; i < len; i++)
+                        char111[i] && char111.push(char111[i]);  // copy non-empty values to the end of the array
+                    char111.splice(0, len);
+                    alert("newchar    " + char111);
 
-            };
+//                    char222 = $.grep(char111, function (n) { return(n) });
+//                    alert("char222 "+char222);
+//                                    $scope.UsersMeasure = char222;
+                    //  alert("first " + $scope.UsersData);
+                    // alert("second " + $scope.UsersMeasure);
+                });
+            });
+        });
+
+    };
 
     $scope.Clicked = function ()
     {
         buttonname = event.target.name;
-        alert("Clicked Dimension "+buttonname+", "+Datasetvalue);
+        alert("Clicked Dimension " + buttonname + ", " + Datasetvalue);
         var dim1 = buttonname;
         alert(dim1);
         var req2 = ocpu.call("getDimensionValue", {
@@ -146,8 +155,8 @@ app.controller("AppController", function ($scope, $http) {
 
         var c = ['1-Jan-2014', '1-Feb-2014', '1-Mar-2014', '1-Apr-2014', '1-May-2014', '1-Jun-2014', '1-Jul-2014', '1-Aug-2014', '1-Sep-2014', '1-Oct-2014', '1-Nov-2014', '1-Dec-2014'];
         Highcharts.charts[0].xAxis[0].update({categories: dimen_data2}, true);
-        Highcharts.charts[0].xAxis[0].update({name:buttonname },true);
-        Highcharts.charts[0].xAxis[0].update({title:buttonname },true);
+        Highcharts.charts[0].xAxis[0].update({name: buttonname}, true);
+        Highcharts.charts[0].xAxis[0].update({title: buttonname}, true);
     };
 //        alert("series value "+series.data);
 //        Highcharts.charts[0].xAxis[0].update({categories: series.data}, true);
@@ -159,7 +168,7 @@ app.controller("AppController", function ($scope, $http) {
         alert(buttonname1 + "  " + buttonname);
         var dim2 = buttonname;
         var dim3 = buttonname1;
-        alert("Clicked Measure "+Datasetvalue+", "+dim2 + ", " + dim3);
+        alert("Clicked Measure " + Datasetvalue + ", " + dim2 + ", " + dim3);
         var req = ocpu.call("getMeasureValue", {
             datasetId: Datasetvalue,
             dimension: dim2,
@@ -179,7 +188,7 @@ app.controller("AppController", function ($scope, $http) {
 
         });
         Highcharts.charts[0].series[0].setData(dimen_data1, true);
-        Highcharts.charts[0].yAxis[0].update({title:buttonname1 },true);
+        Highcharts.charts[0].yAxis[0].update({title: buttonname1}, true);
     };
 });
 
