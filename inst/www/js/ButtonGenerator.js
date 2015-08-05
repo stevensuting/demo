@@ -43,7 +43,7 @@ app.controller("AppController", function ($scope, $http) {
                     for (var j in obj) {
                         char121[j] = obj[j].Measure;
                     }
-                    
+
                     char222 = $.grep(char111, function (n) {
                         return(n)
                     });
@@ -108,12 +108,15 @@ app.controller("AppController", function ($scope, $http) {
         var chart = $('#container').highcharts();
         /*X-axis values change*/
         var series = [];
-
-        var c = ['1-Jan-2014', '1-Feb-2014', '1-Mar-2014', '1-Apr-2014', '1-May-2014', '1-Jun-2014', '1-Jul-2014', '1-Aug-2014', '1-Sep-2014', '1-Oct-2014', '1-Nov-2014', '1-Dec-2014'];
+//        chart.redraw();
+        var seriesLength = chart.series.length;
+        for (var i = seriesLength - 1; i > -1; i--) {
+            chart.series[i].remove();
+        }
         Highcharts.charts[0].xAxis[0].update({categories: dimen_data2}, true);
         Highcharts.charts[0].xAxis[0].update({name: buttonname}, true);
         Highcharts.charts[0].xAxis[0].update({title: buttonname}, true);
-        chart.redraw();
+
     };
 //        alert("series value "+series.data);
 //        Highcharts.charts[0].xAxis[0].update({categories: series.data}, true);
@@ -121,6 +124,7 @@ app.controller("AppController", function ($scope, $http) {
 
     $scope.Clicked1 = function ()
     {
+        chart.redraw();
         buttonname1 = event.target.name;
         alert(buttonname1 + "  " + buttonname);
         var dim2 = buttonname;
@@ -146,7 +150,7 @@ app.controller("AppController", function ($scope, $http) {
         });
         Highcharts.charts[0].series[0].setData(dimen_data1, true);
         Highcharts.charts[0].yAxis[0].update({title: buttonname1}, true);
-        chart.redraw();
+
     };
 });
 
