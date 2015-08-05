@@ -1,6 +1,7 @@
 /* global data */
 var buttonname;
 var buttonname1;
+var Datasetvalue;
 var dimen_data;
 var dimen_data1;
 var char111 = [];
@@ -15,7 +16,7 @@ app.controller("AppController", function ($scope, $http) {
     
     $scope.loadUsersrefresh = function ()
     {
-        var Datasetvalue = document.getElementById("datasetid").value;
+        Datasetvalue = document.getElementById("datasetid").value;
         alert("dataset value "+Datasetvalue);
         var req = ocpu.call("getDimensionMeasure", {
             datasetId: Datasetvalue
