@@ -85,7 +85,7 @@ app.controller("AppController", function ($scope, $http) {
 
 
 
-                    $scope.UsersData = obj;
+//                    $scope.UsersData = obj;
                     for (var i in obj) {
 //                                            alert("1111  " + obj[i].Dimension);
                         char111[i] = obj[i].Dimension;
@@ -93,16 +93,16 @@ app.controller("AppController", function ($scope, $http) {
 //                                    for (var i in $scope.UsersData) {
 //                                            alert("000  " + $scope.UsersData[i].Dimension);
 //                                        }
-                    alert("user data  " + $scope.UsersData);
+//                    alert("user data  " + $scope.UsersData);
                     alert("char    " + char111);
                     char222 = $.grep(char111, function (n) { return(n) });
                     alert("char222 "+char222);
-                    
-                    len = char111.length, i;
-                    for (i = 0; i < len; i++)
-                        char111[i] && char111.push(char111[i]);  // copy non-empty values to the end of the array
-                    char111.splice(0, len);
-                    alert("newchar    " + char111);
+                    $scope.char222;
+//                    len = char111.length, i;
+//                    for (i = 0; i < len; i++)
+//                        char111[i] && char111.push(char111[i]);  // copy non-empty values to the end of the array
+//                    char111.splice(0, len);
+//                    alert("newchar    " + char111);
 
 //                    char222 = $.grep(char111, function (n) { return(n) });
 //                    alert("char222 "+char222);
