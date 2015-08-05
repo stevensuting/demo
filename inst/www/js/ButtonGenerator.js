@@ -12,9 +12,10 @@ var data;
 var app = angular.module('Demo', ['ui.bootstrap', 'ui.directives']);
 
 app.controller("AppController", function ($scope, $http) {
-    var Datasetvalue = document.getElementById("datasetid").value;
+    
     $scope.loadUsersrefresh = function ()
     {
+        var Datasetvalue = document.getElementById("datasetid").value;
         alert("dataset value "+Datasetvalue);
         var req = ocpu.call("getDimensionMeasure", {
             datasetId: Datasetvalue
