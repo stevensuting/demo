@@ -7,16 +7,16 @@ dataset_name <- fetch(rs,n=1);
 tableName<- as.character(dataset_name);
 
 #Close connection 
-dbDisconnect( dbListConnections( dbDriver( drv = "MySQL"))[[1]]);
+#dbDisconnect( dbListConnections( dbDriver( drv = "MySQL"))[[1]]);
 
 
 #Connect to BIT_Dev(mysql) database to fetch connection details
-mydb <- dbConnect(MySQL(), user='appuser', password='appuser123', dbname='BIT_dev', host='192.168.2.45');
-rs = dbSendQuery(mydb, paste0( "SELECT * FROM Data_Connection WHERE connection_id = (SELECT connection_id FROM Dataset  WHERE dataset_id= " ,datasetId, ");" , sep=""));    
-connectionDetails <- fetch(rs,n=1);
+mydb2 <- dbConnect(MySQL(), user='appuser', password='appuser123', dbname='BIT_dev', host='192.168.2.45');
+rs2 = dbSendQuery(mydb2, paste0( "SELECT * FROM Data_Connection WHERE connection_id = (SELECT connection_id FROM Dataset  WHERE dataset_id= " ,datasetId, ");" , sep=""));    
+connectionDetails <- fetch(rs2,n=1);
 
 #Close connection 
-dbDisconnect( dbListConnections( dbDriver( drv = "MySQL"))[[1]]);
+#dbDisconnect( dbListConnections( dbDriver( drv = "MySQL"))[[1]]);
 
 #Extract connection details from connectionDetails dataframe
 data_source_type_id <- connectionDetails$data_source_type_id;
