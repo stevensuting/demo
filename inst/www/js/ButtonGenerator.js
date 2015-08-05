@@ -38,15 +38,12 @@ app.controller("AppController", function ($scope, $http) {
                     alert("object     " + obj);
 //                    $scope.UsersData = obj;
                     for (var i in obj) {
-//                                            alert("1111  " + obj[i].Dimension);
                         char111[i] = obj[i].Dimension;
                     }
                     for (var j in obj) {
-                                            alert("1111  " + obj[j].Measure);
                         char121[j] = obj[j].Measure;
                     }
                     
-                    alert("char    " + char111 + " measure " + char121);
                     char222 = $.grep(char111, function (n) {
                         return(n)
                     });
@@ -116,6 +113,7 @@ app.controller("AppController", function ($scope, $http) {
         Highcharts.charts[0].xAxis[0].update({categories: dimen_data2}, true);
         Highcharts.charts[0].xAxis[0].update({name: buttonname}, true);
         Highcharts.charts[0].xAxis[0].update({title: buttonname}, true);
+        chart.redraw();
     };
 //        alert("series value "+series.data);
 //        Highcharts.charts[0].xAxis[0].update({categories: series.data}, true);
@@ -148,6 +146,7 @@ app.controller("AppController", function ($scope, $http) {
         });
         Highcharts.charts[0].series[0].setData(dimen_data1, true);
         Highcharts.charts[0].yAxis[0].update({title: buttonname1}, true);
+        chart.redraw();
     };
 });
 
@@ -206,7 +205,7 @@ $(function () {
 //            id: 'temperature-axis'
         },
         series: [{
-                name: 'Temperature',
+//                name: 'Temperature',
                 data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6],
                 color: '#F33'
             }]
