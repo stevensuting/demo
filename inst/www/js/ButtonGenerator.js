@@ -2,6 +2,7 @@
 var buttonname;
 var buttonname1;
 var dimen_data;
+var dimen_data1;
 var char111 = [];
 var char222 = [];
 var obj;
@@ -11,9 +12,9 @@ var data;
 var app = angular.module('Demo', ['ui.bootstrap', 'ui.directives']);
 
 app.controller("AppController", function ($scope, $http) {
+    var Datasetvalue = document.getElementById("datasetid").value;
     $scope.loadUsersrefresh = function ()
     {
-        var Datasetvalue = document.getElementById("datasetid").value;
         alert("dataset value "+Datasetvalue);
         var req = ocpu.call("getDimensionMeasure", {
             datasetId: Datasetvalue
@@ -96,10 +97,11 @@ app.controller("AppController", function ($scope, $http) {
     $scope.Clicked = function ()
     {
         buttonname = event.target.name;
-        alert(buttonname);
+        alert("Clicked Dimension "+buttonname+", "+Datasetvalue);
         var dim1 = buttonname;
         alert(dim1);
-        var req2 = ocpu.call("getDimension", {
+        var req2 = ocpu.call("getDimensionValue", {
+            datasetId: Datasetvalue,
             dimension: dim1
         }, function (session) {
             session.getConsole(function (outtxt) {
@@ -131,7 +133,8 @@ app.controller("AppController", function ($scope, $http) {
         var series = [];
 
         var c = ['1-Jan-2014', '1-Feb-2014', '1-Mar-2014', '1-Apr-2014', '1-May-2014', '1-Jun-2014', '1-Jul-2014', '1-Aug-2014', '1-Sep-2014', '1-Oct-2014', '1-Nov-2014', '1-Dec-2014'];
-        Highcharts.charts[0].xAxis[0].update({categories: dimen_data}, true);
+        Highcharts.charts[0].xAxis[0].update({categories: dimen_data2}, true);
+        Highcharts.charts[0].xAxis[0].update({name:buttonname },true);
     };
 //        alert("series value "+series.data);
 //        Highcharts.charts[0].xAxis[0].update({categories: series.data}, true);
@@ -143,8 +146,9 @@ app.controller("AppController", function ($scope, $http) {
         alert(buttonname1 + "  " + buttonname);
         var dim2 = buttonname;
         var dim3 = buttonname1;
-        alert(dim2 + "  " + dim3);
-        var req = ocpu.call("getMeasure", {
+        alert("Clicked Measure "+Datasetvalue+", "+dim2 + ", " + dim3);
+        var req = ocpu.call("getMeasureValue", {
+            datasetId: Datasetvalue,
             dimension: dim2,
             measure: dim3
         }, function (session) {
@@ -152,7 +156,7 @@ app.controller("AppController", function ($scope, $http) {
                 $("#output").text(outtxt);
                 session.getObject(function (dimen1)
                 {
-                    alert(dimen1);
+//                    alert(dimen1);
                     dimen_data1 = dimen1;
                     alert("dimen_data measure  " + dimen_data1);
                     obj12 = JSON.parse(dimen_data1);
@@ -162,6 +166,7 @@ app.controller("AppController", function ($scope, $http) {
 
         });
         Highcharts.charts[0].series[0].setData(dimen_data1, true);
+        Highcharts.charts[0].yAxis[0].update({title:buttonname1 },true);
     };
 });
 
@@ -213,11 +218,11 @@ $(function () {
         },
         yAxis: {
             title: {
-                text: 'Temperature'
+//                text: 'Temperature'
             },
             lineWidth: 2,
-            lineColor: '#F33',
-            id: 'temperature-axis'
+            lineColor: '#F33'
+//            id: 'temperature-axis'
         },
         series: [{
                 name: 'Temperature',
