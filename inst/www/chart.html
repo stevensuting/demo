@@ -57,8 +57,7 @@
         <div id="placeholder" style="float: left" ng-controller="AppController">
             <!--ng-init="loadUsersrefresh()"-->
             <input type="text" name="input" id="datasetid"><br>
-            <!--            <input type="button" id="111" value="click" ng-click="loadUsersrefresh()"/>-->
-            <a ng-click="loadPJPrefresh()" style="FONT-WEIGHT: bold;">PJP</a>
+            <input type="button" id="111" value="click" ng-click="loadUsersrefresh()"/>
             <br><br>
             <p id="ppp">UsersData</p>
             <div id="blueDivUsers" style=""><!-- height: 425px;width: 1310px; -->
@@ -84,7 +83,7 @@
                                                 </tr>-->
                         <tr data-ng-repeat="client in UsersData" style="cursor:pointer;" >
                             <td style="width:200px;">{{client}}</td>
-
+                            
                         </tr>
                     </tbody>
                 </table>
