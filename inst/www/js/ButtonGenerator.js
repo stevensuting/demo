@@ -23,7 +23,10 @@ app.controller("AppController", function ($scope, $http) {
             datasetId: Datasetvalue
         },
         // myname : myname
-        function (data) {
+        function (session) {
+            //to print in r console whatever returned by r 
+            
+                session.getObject(function (data) {
                     //data is the object returned by the R function
                     // copy the object data to dim_data
 
@@ -62,7 +65,8 @@ app.controller("AppController", function ($scope, $http) {
                     //  alert("first " + $scope.UsersData);
                     // alert("second " + $scope.UsersMeasure);
                 });
-           
+            });
+       
 
     };
 
