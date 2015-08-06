@@ -24,36 +24,35 @@ app.controller("AppController", function ($scope, $http) {
         },
         // myname : myname
         function (session) {
-            //to print in r console whatever returned by r 
-            
+
                 session.getObject(function (data) {
                     //data is the object returned by the R function
                     // copy the object data to dim_data
 
                     dim_data = data;
                     alert("Dimension     " + dim_data);
-                    $scope.UsersData=dim_data;
-//                    obj = JSON.parse(dim_data);
-//
-//                    alert("object     " + obj);
+                    obj = JSON.parse(dim_data);
+                    document.write(obj);
+
+                    alert("object     " + obj);
 //                    $scope.UsersData = obj;
-//                    for (var i in obj) {
-//                        char111[i] = obj[i].Dimension;
-//                    }
-//                    for (var j in obj) {
-//                        char121[j] = obj[j].Measure;
-//                    }
-//                    
-//                    char222 = $.grep(char111, function (n) {
-//                        return(n)
-//                    });
-//                    char212 = $.grep(char121, function (n) {
-//                        return(n)
-//                    });
-//                    alert("char222 " + char222);
-//                    alert("char212 " + char212);
-//                    $scope.UsersData = char222;
-//                    $scope.UsersMeasure = char212;
+                    for (var i in obj) {
+                        char111[i] = obj[i].Dimension;
+                    }
+                    for (var j in obj) {
+                        char121[j] = obj[j].Measure;
+                    }
+                    
+                    char222 = $.grep(char111, function (n) {
+                        return(n)
+                    });
+                    char212 = $.grep(char121, function (n) {
+                        return(n)
+                    });
+                    alert("char222 " + char222);
+                    alert("char212 " + char212);
+                    $scope.UsersData = char222;
+                    $scope.UsersMeasure = char212;
 //                    len = char111.length, i;
 //                    for (i = 0; i < len; i++)
 //                        char111[i] && char111.push(char111[i]);  // copy non-empty values to the end of the array
