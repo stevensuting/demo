@@ -52,7 +52,7 @@ app.controller("AppController", function ($scope, $http) {
                     alert("char212 " + char212);
                     $scope.UsersData = char222;
                     $scope.UsersMeasure = char212;
-                    document.write(char222,char212);
+//                    document.write(char222,char212);
                     
 //                    len = char111.length, i;
 //                    for (i = 0; i < len; i++)
