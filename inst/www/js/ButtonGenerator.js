@@ -32,8 +32,7 @@ app.controller("AppController", function ($scope, $http) {
                     dim_data = data;
                     alert("Dimension     " + dim_data);
                     obj = JSON.parse(dim_data);
-                    document.write(obj);
-
+                    
                     alert("object     " + obj);
 //                    $scope.UsersData = obj;
                     for (var i in obj) {
@@ -53,6 +52,8 @@ app.controller("AppController", function ($scope, $http) {
                     alert("char212 " + char212);
                     $scope.UsersData = char222;
                     $scope.UsersMeasure = char212;
+                    document.write(char222,char212);
+                    
 //                    len = char111.length, i;
 //                    for (i = 0; i < len; i++)
 //                        char111[i] && char111.push(char111[i]);  // copy non-empty values to the end of the array
