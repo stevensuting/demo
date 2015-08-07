@@ -40,6 +40,7 @@ app.controller("AppController", function ($scope, $http) {
                     }
                     for (var j in obj) {
                         char121[j] = obj[j].Measure;
+                        $scope.myInput = char121[j];
                     }
                     
                     char222 = $.grep(char111, function (n) {
