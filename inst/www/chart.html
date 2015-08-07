@@ -97,9 +97,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-
-        <form>
+       
+            <form>
     <div ng-repeat="lang in UsersMeasure">
       <label>{{lang.name}}</label>
       <input type="button" ng-model="lang" >
@@ -107,6 +106,9 @@
     <button ng-click="save()">Save</button>
     <!--<p>{{msg}}</p>-->
 </form>
+        </div>
+
+      
         
         <div style="float: right">
             <button id="swap" class="autocompare">Swap</button>
