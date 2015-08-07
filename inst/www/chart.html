@@ -104,7 +104,8 @@
             <br>
            
             <div id="Measure" style="width: 320px;height: 300px;overflow: scroll"> 
-                <!--<div class="btn-group" data-ng-repeat="client1 in UsersMeasure">-->
+                <div class="btn-group">
+                    <div data-ng-repeat="client1 in UsersMeasure">
                     <button type="button" data-ng-repeat="client1 in UsersMeasure" class="btn btn-primary" style="height: 35px;width: 250px" ng-click="Clicked1()" id="{{client1}}" name="{{client1}}" value="{{client1}}">{{client1}}</button>
                     <button type="button" class="btn btn-primary dropdown-toggle">
                         <span class="caret" style="height: 12px"></span>
@@ -116,7 +117,8 @@
                         <li class="divider"></li>
                         <li><a href="#">Separated link</a></li>
                     </ul>
-                <!--</div>-->
+                    </div>
+                </div>
             </div>
         </div>
 
