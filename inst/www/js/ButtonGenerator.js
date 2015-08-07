@@ -162,11 +162,10 @@ chart.redraw();
 ]));
 
 
-function PeopleCtrl($scope, $http) {
-
-    $scope.people = [];
+$scope.people = [];
 
     $scope.loadPeople = function() {
+        alert("called");
         var httpRequest = $http({
             method: 'POST',
             url: '/echo/json/',
@@ -177,8 +176,6 @@ function PeopleCtrl($scope, $http) {
         });
 
     };
-
-}
     
     
 });
