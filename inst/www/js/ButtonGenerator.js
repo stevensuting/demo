@@ -40,7 +40,7 @@ app.controller("AppController", function ($scope, $http) {
                     }
                     for(var k in char111)
                     {
-                        $scope.myInput[k] = char111[k];
+                        $scope.myInput = char111[k];
                     }
                     for (var j in obj) {
                         char121[j] = obj[j].Measure;
