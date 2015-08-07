@@ -136,11 +136,13 @@ app.directive('rightClick',function(){
     document.oncontextmenu = function (e) {
        if(e.target.hasAttribute('right-click')) {
            return false;
+           alert("hiiiii");
        }
     };
     return function(scope,el,attrs){
         el.bind('contextmenu',function(e){
             alert(attrs.alert);
+            alert("bye");
             
         }) ;
     };
