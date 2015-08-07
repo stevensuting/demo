@@ -98,14 +98,19 @@
                 </div>
             </div>
        
-            <form>
-    <div ng-repeat="lang in UsersMeasure">
-      <label>{{lang.name}}</label>
-      <input type="button" ng-model="lang" >
-    </div>
-    <button ng-click="save()">Save</button>
-    <!--<p>{{msg}}</p>-->
-</form>
+            <p>    Click <a ng-click="loadPeople()">here</a> to load data.</p>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+    </tr>
+    <tr ng-repeat="person in people">
+        <td>{{person.id}}</td>
+        <td>{{person.firstName}}</td>
+        <td>{{person.lastName}}</td>
+    </tr>
+</table>
         </div>
 
       
