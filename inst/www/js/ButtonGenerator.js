@@ -53,18 +53,7 @@ app.controller("AppController", function ($scope, $http) {
                     $scope.UsersData = char222;
                     $scope.UsersMeasure = char212;
 //                    document.write(char222,char212);
-                    
-//                    len = char111.length, i;
-//                    for (i = 0; i < len; i++)
-//                        char111[i] && char111.push(char111[i]);  // copy non-empty values to the end of the array
-//                    char111.splice(0, len);
-//                    alert("newchar    " + char111);
 
-//                    char222 = $.grep(char111, function (n) { return(n) });
-//                    alert("char222 "+char222);
-//                                    $scope.UsersMeasure = char222;
-                    //  alert("first " + $scope.UsersData);
-                    // alert("second " + $scope.UsersMeasure);
                 });
             });
        
@@ -89,15 +78,6 @@ app.controller("AppController", function ($scope, $http) {
                     dimen_data2 = dimen;
                     alert("dimen_data  " + dimen_data2);
                     obj1 = JSON.parse(dimen_data2);
-////          alert(obj.Variable_Type);
-////          alert(obj._row);
-//                    alert("OBJdim " + obj1);
-//
-//                    for (var i in obj1) {
-//                        output = obj1[i].Dimension;
-//                        alert("output " + output);
-//                    }
-
                 });
             });
 
@@ -147,37 +127,23 @@ chart.redraw();
         Highcharts.charts[0].series[0].setData(dimen_data1, true);
         Highcharts.charts[0].series[0].tooltipFormatter = function(item) { return "hiiiiii "+buttonname1+"</b><br/>"; }
         chart.redraw();
+    };    
+    
+});
+
+app.directive('rightClick',function(){
+
+    document.oncontextmenu = function (e) {
+       if(e.target.hasAttribute('right-click')) {
+           return false;
+       }
     };
-    
-    
-    var mockDataForThisTest = "json=" + encodeURI(JSON.stringify([
-    {
-    id: 1,
-    firstName: "Peter",
-    lastName: "Jhons"},
-{
-    id: 2,
-    firstName: "David",
-    lastName: "Bowie"}
-]));
-
-
-$scope.people = [];
-
-    $scope.loadPeople = function() {
-        alert("called");
-        var httpRequest = $http({
-            method: 'POST',
-            url: '/echo/json/',
-            data: mockDataForThisTest
-
-        }).success(function(data, status) {
-            $scope.people = data;
-        });
-
+    return function(scope,el,attrs){
+        el.bind('contextmenu',function(e){
+            alert(attrs.alert);
+            
+        }) ;
     };
-    
-    
 });
 
 var buttonname333 = null;
