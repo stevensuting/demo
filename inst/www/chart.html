@@ -59,71 +59,87 @@
             <input type="text" name="input" id="datasetid"><br>
             <input type="button" id="111" value="click" ng-click="loadUsersrefresh()"/>
             <br><br>
-           
-            <div id="blueDivUsers" style=""><!-- height: 425px;width: 1310px; -->
+
+<!--            <div id="blueDivUsers" style=""> height: 425px;width: 1310px; 
                 <table id="UsersTable" style="width: 300px;">
                     <tbody >
-                                                <tr data-ng-repeat="client in UsersData" style="cursor:pointer;" >
-                                                    <td>
-                                                        <div class="btn-group" id="dimension">
-                                                            <button type="button" class="btn btn-primary" style="height: 35px;width: 250px" ng-click="Clicked()" id="{{client}}" name="{{client}}">{{client}}</button>
-                                                        <button type="button" class="btn btn-primary dropdown-toggle">
-                                                            <span class="caret" style="height: 12px"></span>
-                                                            
-                                                        </button>
-                                                        <ul class="dropdown-menu" role="menu">
-                                                            <li><a href="#">Action</a></li>
-                                                            <li><a href="#">Another action</a></li>
-                                                            <li><a href="#">Something else here</a></li>
-                                                            <li class="divider"></li>
-                                                            <li><a href="#">Separated link</a></li>
-                                                        </ul>
-                                                        </div>
-                                                        </td>
-                                                </tr>
-                        
+                        <tr data-ng-repeat="client in UsersData" style="cursor:pointer;" >
+                            <td>
+                                <div class="btn-group" id="dimension">
+                                    <button type="button" class="btn btn-primary" style="height: 35px;width: 250px" ng-click="Clicked()" id="{{client}}" name="{{client}}">{{client}}</button>
+                                    <button type="button" class="btn btn-primary dropdown-toggle">
+                                        <span class="caret" style="height: 12px"></span>
+
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+
                     </tbody>
                 </table>
+            </div>-->
+            <div id="Dimension" style="width: 320px;height: 300px;overflow: scroll">
+                <div class="btn-group" data-ng-repeat="client in UsersData">
+                                    <button type="button" class="btn btn-primary" style="height: 35px;width: 250px" ng-click="Clicked()" id="{{client}}" name="{{client}}">{{client}}</button>
+                                    <button type="button" class="btn btn-primary dropdown-toggle">
+                                        <span class="caret" style="height: 12px"></span>
+
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                    </ul>
+                                </div>
+                
             </div>
-
             <br>
             <br>
-            <table style="width: 300px;" id="PJPTable" >
-                <tbody style="">
-                    <tr data-ng-repeat="client1 in UsersMeasure">
-                        <td >
-                            <div class="btn-group" id="measure">
-                                <button type="button" class="btn btn-primary" style="height: 35px;width: 250px" ng-click="Clicked1()" id="{{client1}}" name="{{client1}}" value="{{client1}}"><span style="">{{client1}}</span></button>
-                                <button type="button" class="btn btn-primary dropdown-toggle">
-                                    <span class="caret" style="height: 12px"></span>
-                                </button>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#">Action</a></li>
-                                    <li><a href="#">Another action</a></li>
-                                    <li><a href="#">Something else here</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="#">Separated link</a></li>
-                                </ul>
-                            </div>
-                        </td> 
-
-                    </tr>
-                </tbody>
-            </table>
+            <!--            <table style="width: 300px;" id="PJPTable" >
+                            <tbody style="">
+                                <tr data-ng-repeat="client1 in UsersMeasure">
+                                    <td >
+                                        <div class="btn-group" id="measure">
+                                            <button type="button" class="btn btn-primary" style="height: 35px;width: 250px" ng-click="Clicked1()" id="{{client1}}" name="{{client1}}" value="{{client1}}"><span style="">{{client1}}</span></button>
+                                            <button type="button" class="btn btn-primary dropdown-toggle">
+                                                <span class="caret" style="height: 12px"></span>
+                                            </button>
+                                            <ul class="dropdown-menu" role="menu">
+                                                <li><a href="#">Action</a></li>
+                                                <li><a href="#">Another action</a></li>
+                                                <li><a href="#">Something else here</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="#">Separated link</a></li>
+                                            </ul>
+                                        </div>
+                                    </td> 
             
-            <div style="width: 320px;height: 300px;overflow: scroll"> 
+                                </tr>
+                            </tbody>
+                        </table>-->
+
+            <div id="Measure" style="width: 320px;height: 300px;overflow: scroll"> 
                 <div class="btn-group" data-ng-repeat="client1 in UsersMeasure">
-            <button type="button" class="btn btn-primary" style="height: 35px;width: 250px" ng-click="Clicked1()" id="{{client1}}" name="{{client1}}" value="{{client1}}"><span style="">{{client1}}</span></button>
-                                <button type="button" class="btn btn-primary dropdown-toggle">
-                                    <span class="caret" style="height: 12px"></span>
-                                </button>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#">Action</a></li>
-                                    <li><a href="#">Another action</a></li>
-                                    <li><a href="#">Something else here</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="#">Separated link</a></li>
-                                </ul>
+                    <button type="button" class="btn btn-primary" style="height: 35px;width: 250px" ng-click="Clicked1()" id="{{client1}}" name="{{client1}}" value="{{client1}}"><span style="">{{client1}}</span></button>
+                    <button type="button" class="btn btn-primary dropdown-toggle">
+                        <span class="caret" style="height: 12px"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
