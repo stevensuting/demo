@@ -64,7 +64,7 @@
                 <div class="btn-group">
                     <div data-ng-repeat="client in UsersData">
                         <button type="button" class="btn btn-default" style="height: 35px;width: 250px;border: none" ng-click="Clicked()" id="{{client}}" name="{{client}}">{{client}}</button>
-                        <button type="button" class="btn btn-default dropdown-toggle">
+                        <button type="button" style="border: none" class="btn btn-default dropdown-toggle">
                             <span class="caret" style="height: 12px"></span>
                         </button>
                         <ul class="dropdown-menu" role="menu">
@@ -83,9 +83,9 @@
             <div id="Measure" style="width: 320px;height: 300px;overflow: scroll"> 
                 <div class="btn-group">
                     <div data-ng-repeat="client1 in UsersMeasure">
-                        <button type="button" class="btn btn-default" style="height: 35px;width: 250px;" ng-click="Clicked1()" id="{{client1}}" name="{{client1}}" value="{{client1}}" ></button>
-                        <button type="button" class="btn btn-default dropdown-toggle">
-                            <span class="caret" style="height: 12px"></span>
+                        <button type="button" class="btn btn-default" style="height: 35px;width: 250px;" ng-click="Clicked1()" id="{{client1}}" name="{{client1}}" value="{{client1}}" >{{client1}}</button>
+                        <button type="button" style="border: none" class="btn btn-default dropdown-toggle">
+                            <span class="caret" style="height: 12px;"></span>
                         </button>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="#">Action</a></li>
