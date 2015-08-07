@@ -38,9 +38,9 @@ app.controller("AppController", function ($scope, $http) {
                     for (var i in obj) {
                         char111[i] = obj[i].Dimension;
                     }
-                    
                     for (var j in obj) {
                         char121[j] = obj[j].Measure;
+                        $scope.myInput = char121[j];
                     }
                     
                     char222 = $.grep(char111, function (n) {
@@ -49,10 +49,6 @@ app.controller("AppController", function ($scope, $http) {
                     char212 = $.grep(char121, function (n) {
                         return(n)
                     });
-                    for(var k in char222)
-                    {
-                        $scope.myInput = char222[k];
-                    }
                     alert("char222 " + char222);
                     alert("char212 " + char212);
                     $scope.UsersData = char222;
